@@ -1,11 +1,12 @@
 import React from 'react'
 import SignupLoginButton from '../../components/SignupLoginButton'
 import TextInput from '../../components/TextInput'
+import Background from '../../assets/background.jpg'
 
 const Signup = () => {
   return (
-    <div className='flex justify-end h-screen'>
-        <div className='flex flex-col items-center justify-around w-[375px] h-[450px] bg-[#3AA346] mt-28 mr-28'>
+    <div className='flex justify-end h-screen' style={{backgroundImage : `url(${Background})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+        <div className='flex flex-col items-center justify-around w-[375px] h-[450px] bg-[#3AA346] mt-28 mr-56'>
             <h1 className='font-sans font-bold text-[24px] text-white'>Signup</h1>
             <TextInput label={"Name"} type={"text"} placeholder={"Name"}/>
             <TextInput label={"Email"} type={"email"} placeholder={"Email"}/>
