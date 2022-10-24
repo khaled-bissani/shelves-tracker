@@ -4,13 +4,19 @@ import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 
 const Signup = () => {
-    
+
     const [user, setUser] = useState({
         full_name: '',
         email: '',
         password: '',
         current_password: ''
     });
+
+    const handleChange=(e,input)=> {
+        setUser({
+          ...user, [`${input}`]: e.target.value
+        });
+      }
 
   return (
     <div className='flex justify-end h-screen' style={{backgroundImage : `url(${Background})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
