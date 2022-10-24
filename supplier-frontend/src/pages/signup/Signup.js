@@ -22,7 +22,7 @@ const Signup = () => {
     }
 
     const handleClick = async () => {
-        console.log('clicked')
+        navigate("/home")
     }
 
   return (
