@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 import SignupLoginButton from '../../components/SignupLoginButton'
 import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 
 const Signup = () => {
+
+    const navigate = useNavigate();
 
     const [user, setUser] = useState({
         full_name: '',
