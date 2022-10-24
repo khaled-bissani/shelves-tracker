@@ -16,7 +16,11 @@ const Signup = () => {
         setUser({
           ...user, [`${input}`]: e.target.value
         });
-      }
+    }
+
+    const handleClick = async () => {
+        console.log('clicked')
+    }
 
   return (
     <div className='flex justify-end h-screen' style={{backgroundImage : `url(${Background})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
@@ -26,7 +30,7 @@ const Signup = () => {
             <TextInput label={"Email"} type={"email"} placeholder={"Email"} value={user.email} onChange={(e)=>handleChange(e,"email")}/>
             <TextInput label={"Password"} type={"password"} placeholder={"Password"} value={user.password} onChange={(e)=>handleChange(e,"password")}/>
             <TextInput label={"Current Password"} type={"password"} placeholder={"Current Password"} value={user.current_password} onChange={(e)=>handleChange(e,"current_password")}/>
-            <SignupLoginButton text={"SIGNUP"}/>
+            <SignupLoginButton text={"SIGNUP"} onClick={handleClick}/>
             <p className='font-sans'>Already Have an account? <span className='text-white cursor-pointer'>Login</span></p>
         </div>
     </div>
