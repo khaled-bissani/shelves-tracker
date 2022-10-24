@@ -11,6 +11,12 @@ const Login = () => {
         current_password: ''
     });
 
+    const handleChange=(e,input)=> {
+        setUser({
+          ...user, [`${input}`]: e.target.value
+        });
+    }
+
   return (
     <div className='flex justify-end h-screen' style={{backgroundImage : `url(${Background})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
         <div className='flex flex-col items-center justify-around w-[375px] h-[450px] bg-[#3AA346] mt-28 mr-56'>
