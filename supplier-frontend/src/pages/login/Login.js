@@ -33,7 +33,9 @@ const Login = () => {
             <TextInput label={"Current Password"} type={"password"} placeholder={"Current Password"} value={user.current_password} onChange={(e)=>handleChange(e,"current_password")}/>
             <SignupLoginButton text={"LOGIN"} onClick={handleClick}/>
             <p className='font-sans'>Don't have an account?
-                <span className='text-white cursor-pointer'> Signup</span>
+                <span className='text-white cursor-pointer' onClick={() =>{navigate("/")}}>
+                     Signup
+                </span>
             </p>
         </div>
     </div>
