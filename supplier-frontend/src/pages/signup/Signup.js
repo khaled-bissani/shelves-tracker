@@ -34,7 +34,11 @@ const Signup = () => {
             <TextInput label={"Password"} type={"password"} placeholder={"Password"} value={user.password} onChange={(e)=>handleChange(e,"password")}/>
             <TextInput label={"Current Password"} type={"password"} placeholder={"Current Password"} value={user.current_password} onChange={(e)=>handleChange(e,"current_password")}/>
             <SignupLoginButton text={"SIGNUP"} onClick={handleClick}/>
-            <p className='font-sans'>Already Have an account? <span className='text-white cursor-pointer'>Login</span></p>
+            <p className='font-sans'>Already Have an account?
+                <span className='text-white cursor-pointer' onClick={() =>{navigate("/login")}}>
+                    Login
+                </span>
+            </p>
         </div>
     </div>
   )
