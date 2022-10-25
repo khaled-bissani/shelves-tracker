@@ -1,8 +1,11 @@
 import React from 'react'
+import SideBar from '../../components/SideBar'
 
 const Client = () => {
   return (
-    <div>Client</div>
+    <div className='flex'>
+        <SideBar/>
+    </div>
   )
 }
 

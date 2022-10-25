@@ -2,6 +2,7 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
 import Chat from "./pages/home/Chat";
+import Client from "./pages/home/Client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/chat" element={<Chat/>} />
+          <Route path="/client" element={<Client/>} />
         </Routes>
       </Router>
     </div>
