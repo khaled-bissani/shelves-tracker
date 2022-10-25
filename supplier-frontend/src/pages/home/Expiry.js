@@ -13,10 +13,10 @@ const Expiry = () => {
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-between w-full'>
                     <InputField placeholder={"Product Name"} />
-                    <Button bgColor="#3AA346" name={"ADD"}/>
-                    <Button bgColor="#6EDA79" name={"EDIT"}/>
-                    <Button bgColor="#FF0000" opacity="70" name={"DELETE"}/>
-                    <Button bgColor="#3AA346" name={"SEND"}/>
+                    <Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"}/>
+                    <Button bgColor="#6EDA79" width="170px" height="46px" name={"EDIT"}/>
+                    <Button bgColor="#FF0000" width="170px" height="46px" opacity="70" name={"DELETE"}/>
+                    <Button bgColor="#3AA346" width="170px" height="46px" name={"SEND"}/>
                 </div> 
                 <div>
                     <TableHeader column1={"Product photo"} column2={"Product name"} column3={"Expiry date"} />
