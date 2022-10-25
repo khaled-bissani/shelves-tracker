@@ -10,7 +10,7 @@ const Client = () => {
         <SideBar/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <p className='text-[24px] font-sans font-bold'>Client</p>
-            <div className='flex flex-col justify-between w-[900px] h-[420px] border border-[#868282]'>
+            <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-between w-full'>
                     <InputField placeholder={"Client Name"} />
                     <Button bgColor="#3AA346" name={"ADD"}/>
@@ -20,6 +20,7 @@ const Client = () => {
                 </div> 
                 <div>
                     <TableHeader column1={"Client photo"} column2={"Client name"} column3={"Client email"} />
+                    <div className='h-[300px] bg-[#D9D9D9] overflow-auto'></div>
                 </div>
             </div>
         </div>
