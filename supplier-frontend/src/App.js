@@ -19,6 +19,7 @@ function App() {
           <Route path="/client" element={<Client/>} />
           <Route path="/expiry" element={<Expiry/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/edit_profile" element={<Profile/>} />
         </Routes>
       </Router>
     </div>
