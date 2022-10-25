@@ -1,4 +1,5 @@
 import React from 'react'
+import InputField from '../../components/InputField'
 import SideBar from '../../components/SideBar'
 
 const Client = () => {
@@ -9,7 +10,7 @@ const Client = () => {
             <p className='text-[24px] font-sans font-bold'>Client</p>
             <div className='flex w-[900px] h-[420px] border border-[#868282]'>
                 <div className='flex justify-between w-full'>
-                    <input className='w-[170px] h-[46px] text-[18px] pl-[10px] border border-black outline-none' type={"text"} placeholder={"Client name"} />
+                    <InputField placeholder={"Client Name"} />
                     <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#3AA346] cursor-pointer'>ADD</button>
                     <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#6EDA79] cursor-pointer'>EDIT</button>
                     <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#FF0000] opacity-70 cursor-pointer'>DELETE</button>
