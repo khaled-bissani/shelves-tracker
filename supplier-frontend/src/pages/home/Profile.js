@@ -1,6 +1,7 @@
 import React from 'react'
 import ProfileOption from '../../components/ProfileOption'
 import SideBar from '../../components/SideBar'
+import TextInput from '../../components/TextInput'
 
 const Profile = () => {
   return (
@@ -13,7 +14,12 @@ const Profile = () => {
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'></div>
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'><ProfileOption/></div>
                 </div>
-                <div className='w-[400px] h-[370px] bg-white rounded-[10px] my-6'></div>
+                <div className='flex flex-col items-center justify-around w-[400px] h-[370px] bg-white rounded-[10px] my-6'>
+                  <TextInput label={"Name"} type={"text"} placeholder={"Name"} textColor="black" bgColor="#D9D9D9"/>
+                  <TextInput label={"Email"} type={"text"} placeholder={"Email"} textColor="black" bgColor="#D9D9D9"/>
+                  <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} textColor="black" bgColor="#D9D9D9"/>
+                  <TextInput label={"Address"} type={"text"} placeholder={"Address"} textColor="black" bgColor="#D9D9D9"/>
+                </div>
             </div>
         </div>
     </div>
