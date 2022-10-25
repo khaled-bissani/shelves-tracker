@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../components/Button'
 import InputField from '../../components/InputField'
 import SideBar from '../../components/SideBar'
 
@@ -11,10 +12,10 @@ const Client = () => {
             <div className='flex w-[900px] h-[420px] border border-[#868282]'>
                 <div className='flex justify-between w-full'>
                     <InputField placeholder={"Client Name"} />
-                    <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#3AA346] cursor-pointer'>ADD</button>
-                    <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#6EDA79] cursor-pointer'>EDIT</button>
-                    <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#FF0000] opacity-70 cursor-pointer'>DELETE</button>
-                    <button className='w-[170px] h-[46px] text-white text-[16px] bg-[#3AA346] cursor-pointer'>CHAT</button>
+                    <Button bgColor="#3AA346" name={"ADD"}/>
+                    <Button bgColor="#6EDA79" name={"EDIT"}/>
+                    <Button bgColor="#FF0000" opacity="70" name={"DELETE"}/>
+                    <Button bgColor="#3AA346" name={"CHAT"}/>
                 </div> 
             </div>
         </div>
