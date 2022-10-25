@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from '../../components/SideBar'
 import ChatContact from '../../components/ChatContact'
 import ChatHeader from '../../components/ChatHeader'
+import ChatSend from '../../components/ChatSend'
 
 const Chat = () => {
   return (
@@ -16,11 +17,8 @@ const Chat = () => {
                 <div className='h-[400px] border border-[#868282]'></div>
                 <div className='flex flex-col justify-between w-2/3'>
                     <ChatHeader name={"name"}/>
-                    <div className='overflow-auto h-4/6'></div>
-                    <div className='flex justify-around items-center h-1/6 bg-[#3AA346]'>
-                        <input className='outline-none w-[450px] h-[40px] pl-4 bg-white font-sans text-[14px] border rounded-[10px]' type={"text"}/>
-                        <button className='bg-white text-[#3AA346] w-[70px] h-[40px] border rounded-full'>Send</button>
-                    </div>
+                    <div className='flex flex-col items-center overflow-auto h-4/6 pt-6'></div>
+                    <ChatSend/>
                 </div>
             </div>
         </div>
