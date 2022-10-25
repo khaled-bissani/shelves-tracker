@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../components/Button'
 import ProfileOption from '../../components/ProfileOption'
 import SideBar from '../../components/SideBar'
 import TextInput from '../../components/TextInput'
@@ -19,6 +20,7 @@ const Profile = () => {
                   <TextInput label={"Email"} type={"text"} placeholder={"Email"} textColor="black" bgColor="#D9D9D9"/>
                   <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} textColor="black" bgColor="#D9D9D9"/>
                   <TextInput label={"Address"} type={"text"} placeholder={"Address"} textColor="black" bgColor="#D9D9D9"/>
+                  <Button bgColor="#3AA346" width="300px" height="40px" name={"SAVE"}/>
                 </div>
             </div>
         </div>
