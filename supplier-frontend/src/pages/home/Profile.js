@@ -1,8 +1,7 @@
 import React from 'react'
-import Button from '../../components/Button'
+import EditProfile from '../../components/EditProfile'
 import ProfileOption from '../../components/ProfileOption'
 import SideBar from '../../components/SideBar'
-import TextInput from '../../components/TextInput'
 
 const Profile = () => {
   return (
@@ -15,13 +14,7 @@ const Profile = () => {
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'></div>
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'><ProfileOption/></div>
                 </div>
-                <div className='flex flex-col items-center justify-around w-[400px] h-[370px] bg-white rounded-[10px] my-6'>
-                  <TextInput label={"Name"} type={"text"} placeholder={"Name"} textColor="black" bgColor="#D9D9D9"/>
-                  <TextInput label={"Email"} type={"text"} placeholder={"Email"} textColor="black" bgColor="#D9D9D9"/>
-                  <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} textColor="black" bgColor="#D9D9D9"/>
-                  <TextInput label={"Address"} type={"text"} placeholder={"Address"} textColor="black" bgColor="#D9D9D9"/>
-                  <Button bgColor="#3AA346" width="300px" height="40px" name={"SAVE"}/>
-                </div>
+                <div className='w-[400px] h-[370px] bg-white rounded-[10px] my-6'><EditProfile/></div>
             </div>
         </div>
     </div>
