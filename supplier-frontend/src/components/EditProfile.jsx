@@ -23,7 +23,7 @@ const EditProfile = () => {
   }
 
   return (
-    <div className='flex flex-col items-center justify-around h-full'>
+    <div className='flex flex-col items-center justify-around w-[400px] h-[370px] bg-white rounded-[10px] my-6'>
         <TextInput label={"Name"} type={"text"} placeholder={"Name"} textColor="black" bgColor="#D9D9D9" value={profile.name} onChange={(e)=>handleChange(e,"name")}/>
         <TextInput label={"Email"} type={"text"} placeholder={"Email"} textColor="black" bgColor="#D9D9D9" value={profile.email} onChange={(e)=>handleChange(e,"email")}/>
         <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} textColor="black" bgColor="#D9D9D9" value={profile.phone_number} onChange={(e)=>handleChange(e,"phone_number")}/>

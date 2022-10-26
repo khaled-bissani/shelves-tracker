@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Button from './Button'
+import TextInput from './TextInput'
 
 const ChangePassword = () => {
 
@@ -19,7 +21,7 @@ const ChangePassword = () => {
   }
 
   return (
-    <div className='flex flex-col items-center justify-around h-full'>
+    <div className='flex flex-col items-center justify-around w-[400px] h-[370px] bg-white rounded-[10px] my-6'>
         <TextInput label={"Old Password"} type={"password"} placeholder={"Old Password"} textColor="black" bgColor="#D9D9D9" value={password.old_password} onChange={(e)=>handleChange(e,"old_password")}/>
         <TextInput label={"New Password"} type={"password"} placeholder={"New Password"} textColor="black" bgColor="#D9D9D9" value={password.new_password} onChange={(e)=>handleChange(e,"new_password")}/>
         <TextInput label={"Confirm Password"} type={"password"} placeholder={"Confirm Password"} textColor="black" bgColor="#D9D9D9" value={password.confirm_password} onChange={(e)=>handleChange(e,"confirm_password")}/>
