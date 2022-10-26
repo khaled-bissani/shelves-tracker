@@ -38,7 +38,7 @@ const Client = () => {
                     <InputField placeholder={"Client Name"} value={name} onChange={handleChange}/>
                     <Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"} onClick={handleAdd}/>
                     <Button bgColor="#6EDA79" width="170px" height="46px" name={"EDIT"} onClick={handleEdit}/>
-                    <Button bgColor="#FF0000" width="170px" height="46px" opacity="70" name={"DELETE"} onClick={handleDelete}/>
+                    <Button bgColor="#FF0000" width="170px" height="46px" opacity="0.7" name={"DELETE"} onClick={handleDelete}/>
                     <Button bgColor="#3AA346" width="170px" height="46px" name={"CHAT"} onClick={handleChat}/>
                 </div> 
                 <div>
