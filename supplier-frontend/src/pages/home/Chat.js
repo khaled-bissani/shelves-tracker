@@ -12,7 +12,11 @@ const Chat = () => {
     const handleChange=(e)=> {
         setMessage(e.target.value);
     }
-    
+
+    const handleClick=()=> {
+        console.log('clicked')
+    }
+
   return (
     <div className='flex'>
         <SideBar/>
@@ -28,7 +32,7 @@ const Chat = () => {
                     <div className='flex flex-col items-center overflow-auto h-4/6 pt-6'>
                         <ChatMessage name={"name"} message={"message"} time={"time"}/>
                     </div>
-                    <ChatSend value={message} onChange={handleChange}/>
+                    <ChatSend value={message} onChange={handleChange} onClick={handleClick}/>
                 </div>
             </div>
         </div>
