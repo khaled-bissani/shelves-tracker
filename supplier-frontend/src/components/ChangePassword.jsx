@@ -1,6 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const ChangePassword = () => {
+
+  const[password,setPassword]=useState({
+    old_password: '',
+    new_password: '',
+    confirm_password: ''
+  })
+
+  const handleChange=(e,input)=> {
+    setPassword({
+      ...password, [`${input}`]: e.target.value
+    });
+  }
+
   return (
     <div className='flex flex-col items-center justify-around h-full'>
         <TextInput label={"Old Password"} type={"password"} placeholder={"Old Password"} textColor="black" bgColor="#D9D9D9"/>
