@@ -3,6 +3,7 @@ import SideBar from '../../components/SideBar'
 import Button from '../../components/Button'
 import InputField from '../../components/InputField'
 import TableHeader from '../../components/TableHeader'
+import Title from '../../components/Title'
 
 const Expiry = () => {
 
@@ -31,7 +32,7 @@ const Expiry = () => {
     <div className='flex'>
         <SideBar/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
-            <p className='text-[24px] font-sans font-bold'>Expiry Date</p>
+            <Title title={"Expiry page"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-between w-full'>
                     <InputField placeholder={"Product Name"} value={name} onChange={handleChange}/>
