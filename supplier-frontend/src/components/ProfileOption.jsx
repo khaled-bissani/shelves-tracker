@@ -9,7 +9,7 @@ const ProfileOption = () => {
     const iconClass={color: "#3AA346", fontSize:"25px", marginRight:"10px"}
 
     return (
-        <div className='flex flex-col items-start justify-around pl-8 h-[175px]'>
+        <div className='flex flex-col items-start justify-around pl-8 w-[400px] h-[175px] bg-white rounded-[10px]'>
             <Link className={linkClass} to={"/edit_profile"}>
                 <FaEdit style={iconClass}/>
                 <p>Edit profile</p>

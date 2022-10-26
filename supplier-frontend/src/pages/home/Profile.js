@@ -12,7 +12,7 @@ const Profile = () => {
             <div className='flex justify-center w-[900px] h-[420px] bg-[#D9D9D9] rounded-[10px]'>
                 <div className='flex flex-col justify-between my-6 mr-6'>
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'></div>
-                    <div className='w-[400px] h-[175px] bg-white rounded-[10px]'><ProfileOption/></div>
+                    <ProfileOption/>
                 </div>
                 <ProfileInformation/>
             </div>
