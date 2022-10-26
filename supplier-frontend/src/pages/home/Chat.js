@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SideBar from '../../components/SideBar'
 import ChatContact from '../../components/ChatContact'
 import ChatHeader from '../../components/ChatHeader'
@@ -6,6 +6,13 @@ import ChatSend from '../../components/ChatSend'
 import ChatMessage from '../../components/ChatMessage'
 
 const Chat = () => {
+
+    const [message,setMessage]=useState('')
+
+    const handleChange=(e)=> {
+        setMessage(e.target.value);
+    }
+    
   return (
     <div className='flex'>
         <SideBar/>
@@ -21,7 +28,7 @@ const Chat = () => {
                     <div className='flex flex-col items-center overflow-auto h-4/6 pt-6'>
                         <ChatMessage name={"name"} message={"message"} time={"time"}/>
                     </div>
-                    <ChatSend/>
+                    <ChatSend value={message} onChange={handleChange}/>
                 </div>
             </div>
         </div>
