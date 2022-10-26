@@ -1,5 +1,5 @@
 import React from 'react'
-import EditProfile from '../../components/EditProfile'
+import ProfileInformation from '../../components/ProfileInformation'
 import ProfileOption from '../../components/ProfileOption'
 import SideBar from '../../components/SideBar'
 
@@ -14,7 +14,7 @@ const Profile = () => {
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'></div>
                     <div className='w-[400px] h-[175px] bg-white rounded-[10px]'><ProfileOption/></div>
                 </div>
-                <div className='w-[400px] h-[370px] bg-white rounded-[10px] my-6'><EditProfile/></div>
+                <div className='w-[400px] h-[370px] bg-white rounded-[10px] my-6'><ProfileInformation/></div>
             </div>
         </div>
     </div>
