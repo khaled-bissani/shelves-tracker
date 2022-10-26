@@ -1,9 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from './Button'
 import TextInput from './TextInput'
 
 
 const EditProfile = () => {
+
+  const[profile,setProfile]=useState({
+    name: '',
+    email: '',
+    phone_number: '',
+    address: ''
+  })
+
+  const handleChange=(e,input)=> {
+    setProfile({
+      ...profile, [`${input}`]: e.target.value
+    });
+  }
+
   return (
     <div className='flex flex-col items-center justify-around h-full'>
         <TextInput label={"Name"} type={"text"} placeholder={"Name"} textColor="black" bgColor="#D9D9D9"/>
