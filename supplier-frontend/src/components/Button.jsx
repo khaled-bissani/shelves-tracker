@@ -1,10 +1,12 @@
 import React from 'react'
-import classnames  from "classnames";
 
 const Button = ({bgColor,opacity,width,height,name}) => {
+
+  const buttonClass=`bg-[${bgColor}] opacity-${opacity} w-[${width}] h-[${height}] text-white text-[16px] cursor-pointer`
+
   return (
     <div>
-        <button className={classnames(`bg-[${bgColor}] opacity-${opacity} w-[${width}] h-[${height}] text-white text-[16px] cursor-pointer`)}>{name}</button>
+        <button className={buttonClass}>{name}</button>
     </div>
   )
 }
