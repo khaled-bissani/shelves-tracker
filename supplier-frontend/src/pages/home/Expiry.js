@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import SideBar from '../../components/SideBar'
 import Button from '../../components/Button'
 import InputField from '../../components/InputField'
 import TableHeader from '../../components/TableHeader'
 
 const Expiry = () => {
+
+    const[name,setName]=useState('')
+
+    const handleChange=(e)=> {
+        setName(e.target.value);
+    }
+
   return (
     <div className='flex'>
         <SideBar/>
@@ -12,7 +19,7 @@ const Expiry = () => {
             <p className='text-[24px] font-sans font-bold'>Expiry Date</p>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-between w-full'>
-                    <InputField placeholder={"Product Name"} />
+                    <InputField placeholder={"Product Name"} value={name} onChange={handleChange}/>
                     <Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"}/>
                     <Button bgColor="#6EDA79" width="170px" height="46px" name={"EDIT"}/>
                     <Button bgColor="#FF0000" width="170px" height="46px" opacity="70" name={"DELETE"}/>
