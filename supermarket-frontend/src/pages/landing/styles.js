@@ -4,10 +4,8 @@ import {colors, fonts} from '../../constants/palette';
 export default StyleSheet.create({
     landingContainer:{
         flex:1,
-        // flexDirection:'column',
         alignItems:'center',
         justifyContent:'space-between',
-
     },
     image:{
         flex:3,
@@ -21,12 +19,10 @@ export default StyleSheet.create({
     titleText:{
         color: colors.primary,
         fontSize: fonts.title,
-        fontFamily: fonts.family,
         fontWeight: fonts.bold
     },
     subTitle: {
         color: colors.placeholder,
         fontSize: fonts.subTitle,
-        fontFamily: fonts.family,
     }
 });
