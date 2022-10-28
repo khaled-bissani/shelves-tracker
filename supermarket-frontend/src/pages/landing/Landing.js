@@ -5,7 +5,7 @@ const Landing = () => {
     return(
         <>
             <View>
-                <Image source={require('')}/>
+                <Image source={require('../../../assets/images/landing.png')} style={styles.image}/>
             </View>
         </>
     )
