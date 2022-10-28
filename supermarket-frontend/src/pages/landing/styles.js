@@ -17,5 +17,10 @@ export default StyleSheet.create({
         fontSize: fonts.title,
         fontFamily: fonts.family,
         fontWeight: fonts.bold
+    },
+    subTitle: {
+        color: colors.placeholder,
+        fontSize: fonts.subTitle,
+        fontFamily: fonts.family,
     }
 });

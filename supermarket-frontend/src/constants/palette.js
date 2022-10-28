@@ -4,7 +4,8 @@ export const colors = {
     black: '#000000',
     white: '#FFFFFF',
     light_gray: '#D9D9D9',
-    background: '#EEEEEE'
+    background: '#EEEEEE',
+    placeholder: '#9B9B9B'
 }
 
 export const fonts = {
