@@ -7,4 +7,11 @@ export const colors = {
     background: '#EEEEEE'
 }
 
-export default colors;
+export const fonts = {
+    title: '24px',
+    subTitle:'20px',
+    text:'16px',
+    family:'sans-serif'
+}
+
+export default {colors, fonts};
