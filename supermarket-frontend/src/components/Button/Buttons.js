@@ -3,9 +3,9 @@ import styles from "./styles";
 
 const Buttons = (props) => {
     return(
-        <View>
+        <View style={styles.buttonContainer}>
             <Pressable onPress={props.onClick}>
-                <Text>{props.text}</Text>
+                <Text style={styles.text}>{props.text}</Text>
             </Pressable>
         </View>
     )
