@@ -10,7 +10,7 @@ export default StyleSheet.create({
 
     },
     image:{
-        flex:2,
+        flex:3,
         width:'50%',
         resizeMode:'contain'
     },
