@@ -4,13 +4,12 @@ import {colors, fonts} from '../../constants/palette';
 export default StyleSheet.create({
     buttonContainer:{
         justifyContent:'center',
-        backgroundColor: colors.primary,
         width: '75%',
-        height: '8%',
+        height: 60,
     },
     text: {
         textAlign:'center',
         color: colors.white,
-        
+        fontSize: fonts.text
     }
 })

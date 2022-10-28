@@ -3,7 +3,7 @@ import styles from "./styles";
 
 const Buttons = (props) => {
     return(
-        <View style={styles.buttonContainer}>
+        <View style={[styles.buttonContainer ,{backgroundColor:`${props.color}`}]}>
             <Pressable onPress={props.onClick}>
                 <Text style={styles.text}>{props.text}</Text>
             </Pressable>
