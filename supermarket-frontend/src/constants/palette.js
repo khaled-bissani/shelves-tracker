@@ -8,10 +8,11 @@ export const colors = {
 }
 
 export const fonts = {
-    title: '24px',
-    subTitle:'20px',
-    text:'16px',
-    family:'sans-serif'
+    title: 24,
+    subTitle:20,
+    text:16,
+    family:'sans-serif',
+    bold: 'bold'
 }
 
 export default {colors, fonts};
