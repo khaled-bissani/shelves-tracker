@@ -6,6 +6,7 @@ export default StyleSheet.create({
         justifyContent:'center',
         width: '75%',
         height: 60,
+        marginBottom:30
     },
     text: {
         textAlign:'center',

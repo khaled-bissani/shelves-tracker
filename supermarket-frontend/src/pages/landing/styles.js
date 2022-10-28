@@ -3,14 +3,20 @@ import {colors, fonts} from '../../constants/palette';
 
 export default StyleSheet.create({
     landingContainer:{
-        flexDirection:'column',
+        flex:1,
+        // flexDirection:'column',
         alignItems:'center',
-        justifyContent:'space-around',
+        justifyContent:'space-between',
 
     },
     image:{
+        flex:2,
         width:'50%',
         resizeMode:'contain'
+    },
+    textContainer:{
+        flex:1,
+        alignItems:'center'
     },
     titleText:{
         color: colors.primary,
