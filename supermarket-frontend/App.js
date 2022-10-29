@@ -2,6 +2,7 @@ import {StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Landing from './src/pages/landing/Landing';
+import Signup from './src/pages/signup/Signup';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,7 +11,8 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='Landing' component={Landing}/>
+          <Stack.Screen name='Landing' component={Landing} options={{headerShown: false}}/>
+          <Stack.Screen name='Register' component={Signup}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>    
