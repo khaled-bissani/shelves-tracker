@@ -10,7 +10,12 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+          headerStyle:{backgroundColor: '#EEEEEE', },
+          headerTitleAlign:'center',
+          headerTitleStyle:{fontWeight: 'bold'},
+          contentStyle:{backgroundColor: '#EEEEEE'},          
+        }}>
           <Stack.Screen name='Landing' component={Landing} options={{headerShown: false}}/>
           <Stack.Screen name='Register' component={Signup}/>
         </Stack.Navigator>
