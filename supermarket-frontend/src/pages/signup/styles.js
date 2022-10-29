@@ -23,5 +23,10 @@ export default StyleSheet.create({
     },
     textContainer:{
         flexDirection:'row',
+    },
+    horizontalLine:{
+        width:'100%',
+        borderBottomWidth: 2,
+        borderBottomColor: colors.light_gray
     }
 })

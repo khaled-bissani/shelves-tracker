@@ -23,6 +23,7 @@ const Signup = () => {
                 </Text>
                 <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text}/>
             </View>  
+            <View style={styles.horizontalLine}></View>
         </View>
     )
 }
