@@ -1,11 +1,19 @@
 import {StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Landing from './src/pages/landing/Landing';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.mainContainer}>
-      <Landing/>
-    </View>
+    <>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name='Landing' component={Landing}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>    
   );
 }
 
