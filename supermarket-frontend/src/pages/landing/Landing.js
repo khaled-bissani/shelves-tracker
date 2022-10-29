@@ -6,7 +6,7 @@ import styles from "./styles";
 const Landing = ({navigation}) => {
 
     const signinHandling = () =>{
-        console.log('signin clicked')
+        navigation.navigate('Login');
     }
 
     const signupHandling = () =>{
