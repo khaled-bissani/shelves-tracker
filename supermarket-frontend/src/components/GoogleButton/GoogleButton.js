@@ -1,4 +1,5 @@
 import { Image, Pressable, Text, View } from "react-native";
+import styles from "./styles";
 
 const GoogleButton = (props) => {
     return(
