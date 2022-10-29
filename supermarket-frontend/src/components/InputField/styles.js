@@ -3,14 +3,11 @@ import {colors, fonts} from '../../constants/palette';
 
 export default StyleSheet.create({
     signupContainer:{
-        flex:1,
-        flexDirection:'column',
-        justifyContent:'space-around',
-        alignItems:'center'
+        width:'100%'
     },
     inputContainer: {
         width:'75%',
-        height:60,
+        height:50,
         borderBottomWidth:2,
         borderBottomColor: colors.light_gray,
         fontSize: fonts.text,
