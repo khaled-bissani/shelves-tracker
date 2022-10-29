@@ -9,13 +9,10 @@ export default StyleSheet.create({
         alignItems:'center'
     },
     inputs:{
-        flex:1,
         width:'100%',
         justifyContent:'space-around',
-        alignItems:'center'
-    },
-    button:{
-        width:'100%'
+        alignItems:'center',
+        marginTop:20
     },
     text:{
         fontSize: fonts.text,

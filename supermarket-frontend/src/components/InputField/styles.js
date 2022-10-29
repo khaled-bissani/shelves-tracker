@@ -12,5 +12,6 @@ export default StyleSheet.create({
         borderBottomColor: colors.light_gray,
         fontSize: fonts.text,
         paddingLeft:10,
+        marginBottom:20
     }
 })
