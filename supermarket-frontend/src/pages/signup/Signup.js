@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import InputField from "../../components/InputField/InputField";
+import styles from "./styles";
 
 const Signup = () => {
     return(
