@@ -6,7 +6,12 @@ import PressableText from "../../components/PressableText/PressableText";
 import { colors, fonts } from "../../constants/palette";
 import styles from "./styles";
 
-const Signup = () => {
+const Signup = ({navigation}) => {
+
+    const goToLogin = () => {
+        navigation.navigate('Login');
+    }
+
     return(
         <View style={styles.signup}>
             <View style={styles.inputs}>
@@ -22,7 +27,7 @@ const Signup = () => {
                 <Text style={styles.text}>
                         Already have an account?
                 </Text>
-                <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text}/>
+                <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text} onClick={goToLogin}/>
             </View>  
             <View style={styles.horizontalLine}></View>
             <GoogleButton text={'Sign Up with Google'}/>
