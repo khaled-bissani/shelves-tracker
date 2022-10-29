@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import Buttons from "../../components/Button/Buttons";
+import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import InputField from "../../components/InputField/InputField";
 import PressableText from "../../components/PressableText/PressableText";
 import { colors, fonts } from "../../constants/palette";
@@ -24,6 +25,7 @@ const Signup = () => {
                 <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text}/>
             </View>  
             <View style={styles.horizontalLine}></View>
+            <GoogleButton text={'Sign Up with Google'}/>
         </View>
     )
 }
