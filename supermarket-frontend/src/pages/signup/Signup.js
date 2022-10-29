@@ -1,9 +1,10 @@
 import { Text, View } from "react-native";
+import InputField from "../../components/InputField/InputField";
 
 const Signup = () => {
     return(
         <View>
-            <Text>Signup</Text>
+            <InputField type={"default"} placeholder={"Full Name"}/>
         </View>
     )
 }
