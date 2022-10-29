@@ -1,4 +1,5 @@
 import { View, TextInput } from "react-native";
+import styles from "./styles";
 
 const InputField = (props) => {
     return(
