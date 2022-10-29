@@ -3,14 +3,14 @@ import Buttons from "../../components/Button/Buttons";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
 
-const Landing = () => {
+const Landing = ({navigation}) => {
 
     const signinHandling = () =>{
         console.log('signin clicked')
     }
 
     const signupHandling = () =>{
-        console.log('signup clicked')
+        navigation.navigate('Register');
     }
 
     return(
