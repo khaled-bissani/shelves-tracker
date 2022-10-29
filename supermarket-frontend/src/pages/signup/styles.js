@@ -16,5 +16,12 @@ export default StyleSheet.create({
     },
     button:{
         width:'100%'
+    },
+    text:{
+        fontSize: fonts.text,
+        paddingRight:5
+    },
+    textContainer:{
+        flexDirection:'row',
     }
 })

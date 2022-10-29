@@ -1,7 +1,8 @@
 import { Text, View } from "react-native";
 import Buttons from "../../components/Button/Buttons";
 import InputField from "../../components/InputField/InputField";
-import { colors } from "../../constants/palette";
+import PressableText from "../../components/PressableText/PressableText";
+import { colors, fonts } from "../../constants/palette";
 import styles from "./styles";
 
 const Signup = () => {
@@ -16,6 +17,12 @@ const Signup = () => {
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Current Password"}/>
             </View>
             <Buttons text={'CREATE ACCOUNT'} color={colors.primary}/>
+            <View style={styles.textContainer}>
+                <Text style={styles.text}>
+                        Already have an account?
+                </Text>
+                <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text}/>
+            </View>  
         </View>
     )
 }
