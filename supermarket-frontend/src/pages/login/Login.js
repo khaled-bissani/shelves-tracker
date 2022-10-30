@@ -8,7 +8,7 @@ import styles from "./styles";
 const Login = ({navigation}) => {
 
     const loginHandler = () => {
-        navigation.navigate('Home');
+        navigation.navigate('Main');
     }
 
     return(
