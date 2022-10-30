@@ -12,6 +12,10 @@ const Signup = ({navigation}) => {
         navigation.navigate('Login');
     }
 
+    const signupHandler = () => {
+        console.log('clicked')
+    }
+
     return(
         <View style={styles.signup}>
             <View style={styles.inputs}>
@@ -22,7 +26,7 @@ const Signup = ({navigation}) => {
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Password"}/>
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Current Password"}/>
             </View>
-            <Buttons text={'CREATE ACCOUNT'} color={colors.primary}/>
+            <Buttons text={'CREATE ACCOUNT'} color={colors.primary} onClick={signupHandler}/>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>
                         Already have an account?
