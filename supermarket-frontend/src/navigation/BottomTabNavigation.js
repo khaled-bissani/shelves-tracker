@@ -1,21 +1,17 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../constants/palette';
 import { Ionicons } from '@expo/vector-icons';
-import { Pressable } from 'react-native';
 import Home from '../pages/home/Home';
 import Notification from '../pages/notification/Notification';
 import Chat from '../pages/chat/Chat';
 import Profile from '../pages/profile/Profile';
+import MenuButton from '../components/MenuButton/MenuButton';
 
 const BottomTab = createBottomTabNavigator();
 
 const BottomTabNavigation = ({navigation}) => {
     return <BottomTab.Navigator  screenOptions={{
-      headerLeft:()=>(
-        <Pressable onPress={()=>{navigation.toggleDrawer()}}>
-          <Ionicons name='menu' size={36} color={colors.white} />
-        </Pressable>
-      ),
+      headerLeft:() => <MenuButton onPress={()=> navigation.toggleDrawer()}/>,
       headerStyle:{backgroundColor: colors.primary, },
       headerTitleAlign:'center',
       headerTitleStyle:{fontWeight: 'bold'},
