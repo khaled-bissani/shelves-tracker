@@ -13,7 +13,7 @@ const Signup = ({navigation}) => {
     }
 
     const signupHandler = () => {
-        console.log('clicked')
+        navigation.navigate('Home');
     }
 
     return(

@@ -5,10 +5,10 @@ import InputField from "../../components/InputField/InputField";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
 
-const Login = () => {
+const Login = ({navigation}) => {
 
     const loginHandler = () => {
-        console.log('clicked')
+        navigation.navigate('Home');
     }
 
     return(
