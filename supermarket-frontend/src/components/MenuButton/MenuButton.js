@@ -1,6 +1,5 @@
 import { Pressable } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { colors } from '../../constants/palette';
 import styles from "./styles";
 
 const MenuButton = (props) => {
