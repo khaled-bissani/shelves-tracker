@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { colors } from '../constants/palette';
+import { colors,fonts } from '../constants/palette';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../pages/home/Home';
 import Notification from '../pages/notification/Notification';
@@ -16,7 +16,7 @@ const BottomTabNavigation = ({navigation}) => {
       headerRight:() => <SearchButton onPress={()=> console.log('search')}/>,
       headerStyle:{backgroundColor: colors.primary, },
       headerTitleAlign:'center',
-      headerTitleStyle:{fontWeight: 'bold'},
+      headerTitleStyle:{fontWeight: 'bold', fontSize:fonts.subTitle},
       headerTintColor:colors.white,
       tabBarActiveTintColor: colors.white,
       tabBarInactiveTintColor: colors.secondary,
