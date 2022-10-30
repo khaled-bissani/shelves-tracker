@@ -6,12 +6,14 @@ import Notification from '../pages/notification/Notification';
 import Chat from '../pages/chat/Chat';
 import Profile from '../pages/profile/Profile';
 import MenuButton from '../components/MenuButton/MenuButton';
+import SearchButton from '../components/SearchButton/SearchButton';
 
 const BottomTab = createBottomTabNavigator();
 
 const BottomTabNavigation = ({navigation}) => {
     return <BottomTab.Navigator  screenOptions={{
       headerLeft:() => <MenuButton onPress={()=> navigation.toggleDrawer()}/>,
+      headerRight:() => <SearchButton onPress={()=> console.log('search')}/>,
       headerStyle:{backgroundColor: colors.primary, },
       headerTitleAlign:'center',
       headerTitleStyle:{fontWeight: 'bold'},
