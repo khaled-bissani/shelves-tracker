@@ -10,6 +10,7 @@ import { colors } from './src/constants/palette';
 import { Ionicons } from '@expo/vector-icons';
 import Notification from './src/pages/notification/Notification';
 import Chat from './src/pages/chat/Chat';
+import Profile from './src/pages/profile/Profile';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -20,20 +21,22 @@ const BottomTabNavigator = () => {
     headerTitleAlign:'center',
     headerTitleStyle:{fontWeight: 'bold'},
     headerTintColor:colors.white,
-    contentStyle:{backgroundColor: '#EEEEEE'},      
     tabBarActiveTintColor: colors.white,
     tabBarInactiveTintColor: colors.secondary,
     tabBarShowLabel:false,
-    tabBarStyle:{backgroundColor: colors.primary}
+    tabBarStyle:{backgroundColor: colors.primary},
   }}>
     <BottomTab.Screen name='Home' component={Home} options={{
-      tabBarIcon: ({color, size}) => <Ionicons name='home' color={color} size={size}/>
+      tabBarIcon: ({color}) => <Ionicons name='home' color={color} size={36}/>
     }}/>
     <BottomTab.Screen name='Notification' component={Notification} options={{
-      tabBarIcon: ({color, size}) => <Ionicons name='notifications-sharp' color={color} size={size}/>
+      tabBarIcon: ({color}) => <Ionicons name='notifications-sharp' color={color} size={36}/>
     }}/>
     <BottomTab.Screen name='Chat' component={Chat} options={{
-      tabBarIcon: ({color, size}) => <Ionicons name='chatbubble' color={color} size={size}/>
+      tabBarIcon: ({color}) => <Ionicons name='chatbubble' color={color} size={36}/>
+    }}/>
+    <BottomTab.Screen name='Profile' component={Profile} options={{
+      tabBarIcon: ({color}) => <Ionicons name='person-circle-outline' color={color} size={36}/>
     }}/>
   </BottomTab.Navigator>
 }
