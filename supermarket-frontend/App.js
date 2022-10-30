@@ -1,7 +1,6 @@
 import {Pressable, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from './src/pages/home/Home';
 import { colors } from './src/constants/palette';
 import { Ionicons } from '@expo/vector-icons';
@@ -11,15 +10,6 @@ import Profile from './src/pages/profile/Profile';
 import MainStackNavigation from './src/navigation/MainStackNavigation';
 
 const BottomTab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
-
-const DrawerNavigator = () => {
-  return <Drawer.Navigator screenOptions={{
-    headerShown:false
-  }}>
-    <Drawer.Screen name='DrawerHome' component={BottomTabNavigator}/>
-  </Drawer.Navigator>
-}
 
 const BottomTabNavigator = ({navigation}) => {
   return <BottomTab.Navigator  screenOptions={{

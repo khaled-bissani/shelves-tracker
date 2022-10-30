@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Landing from '../pages/landing/Landing';
 import Login from '../pages/login/Login';
 import Signup from '../pages/signup/Signup';
-import DrawerNavigator from '../../App'
+import DrawerNavigator from '../navigation/DrawerNavigation';
 
 const Stack = createNativeStackNavigator();
 
