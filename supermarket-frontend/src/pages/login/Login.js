@@ -6,6 +6,11 @@ import { colors } from "../../constants/palette";
 import styles from "./styles";
 
 const Login = () => {
+
+    const loginHandler = () => {
+        console.log('clicked')
+    }
+
     return(
         <View style={styles.login}>
             <View style={styles.inputs}>
@@ -13,7 +18,7 @@ const Login = () => {
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Password"}/>
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Current Password"}/>
             </View>
-            <Buttons text={'LOGIN'} color={colors.primary}/>
+            <Buttons text={'LOGIN'} color={colors.primary} onClick={loginHandler}/>
             <Text style={styles.text}>or</Text>
             <GoogleButton text={'Continue with Google'}/>
         </View>
