@@ -6,13 +6,27 @@ import Landing from './src/pages/landing/Landing';
 import Login from './src/pages/login/Login';
 import Signup from './src/pages/signup/Signup';
 import Home from './src/pages/home/Home';
+import { colors } from './src/constants/palette';
+import { Ionicons } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
-  return <BottomTab.Navigator>
-    <BottomTab.Screen name='Home' component={Home}/>
+  return <BottomTab.Navigator screenOptions={{
+    headerStyle:{backgroundColor: colors.primary, },
+    headerTitleAlign:'center',
+    headerTitleStyle:{fontWeight: 'bold'},
+    headerTintColor:colors.white,
+    contentStyle:{backgroundColor: '#EEEEEE'},      
+    tabBarActiveTintColor: colors.white,
+    tabBarInactiveTintColor: colors.light_gray,
+    tabBarShowLabel:false,
+    tabBarStyle:{backgroundColor: colors.primary}
+  }}>
+    <BottomTab.Screen name='Home' component={Home} options={{
+      tabBarIcon: ({color, size}) => <Ionicons name='home' color={color} size={size}/>
+    }}/>
   </BottomTab.Navigator>
 }
 
