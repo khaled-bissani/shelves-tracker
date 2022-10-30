@@ -9,6 +9,7 @@ import Home from './src/pages/home/Home';
 import { colors } from './src/constants/palette';
 import { Ionicons } from '@expo/vector-icons';
 import Notification from './src/pages/notification/Notification';
+import Chat from './src/pages/chat/Chat';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -21,7 +22,7 @@ const BottomTabNavigator = () => {
     headerTintColor:colors.white,
     contentStyle:{backgroundColor: '#EEEEEE'},      
     tabBarActiveTintColor: colors.white,
-    tabBarInactiveTintColor: colors.light_gray,
+    tabBarInactiveTintColor: colors.secondary,
     tabBarShowLabel:false,
     tabBarStyle:{backgroundColor: colors.primary}
   }}>
@@ -30,6 +31,9 @@ const BottomTabNavigator = () => {
     }}/>
     <BottomTab.Screen name='Notification' component={Notification} options={{
       tabBarIcon: ({color, size}) => <Ionicons name='notifications-sharp' color={color} size={size}/>
+    }}/>
+    <BottomTab.Screen name='Chat' component={Chat} options={{
+      tabBarIcon: ({color, size}) => <Ionicons name='chatbubble' color={color} size={size}/>
     }}/>
   </BottomTab.Navigator>
 }
