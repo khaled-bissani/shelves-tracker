@@ -1,7 +1,8 @@
-import {StyleSheet, View } from 'react-native';
+import {Pressable, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Landing from './src/pages/landing/Landing';
 import Login from './src/pages/login/Login';
 import Signup from './src/pages/signup/Signup';
@@ -14,9 +15,23 @@ import Profile from './src/pages/profile/Profile';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-const BottomTabNavigator = () => {
-  return <BottomTab.Navigator screenOptions={{
+const DrawerNavigator = () => {
+  return <Drawer.Navigator screenOptions={{
+    headerShown:false
+  }}>
+    <Drawer.Screen name='DrawerHome' component={BottomTabNavigator}/>
+  </Drawer.Navigator>
+}
+
+const BottomTabNavigator = ({navigation}) => {
+  return <BottomTab.Navigator  screenOptions={{
+    headerLeft:()=>(
+      <Pressable onPress={()=>{navigation.toggleDrawer()}}>
+        <Ionicons name='menu' size={36} color={colors.white} />
+      </Pressable>
+    ),
     headerStyle:{backgroundColor: colors.primary, },
     headerTitleAlign:'center',
     headerTitleStyle:{fontWeight: 'bold'},
@@ -54,7 +69,7 @@ export default function App() {
           <Stack.Screen name='Landing' component={Landing} options={{headerShown: false}}/>
           <Stack.Screen name='Register' component={Signup}/>
           <Stack.Screen name='Login' component={Login}/>
-          <Stack.Screen name='Main' component={BottomTabNavigator} options={{
+          <Stack.Screen name='Main' component={DrawerNavigator} options={{
             headerShown:false
           }}/>
         </Stack.Navigator>
