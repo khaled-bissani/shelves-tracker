@@ -9,6 +9,7 @@ export default StyleSheet.create({
         backgroundColor: colors.white,
         width: 100,
         height:100,
+        borderRadius:10
     },
     text:{
         fontSize: fonts.text,

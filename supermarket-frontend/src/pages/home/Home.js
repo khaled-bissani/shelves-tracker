@@ -7,7 +7,7 @@ const Home = () => {
         <View>
             <Text>All Categories</Text>
         </View>
-        <Categories/>
+        <Categories label={'Fruits'}/>
 
     </View>
     </>
