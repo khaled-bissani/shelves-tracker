@@ -3,7 +3,7 @@ import styles from "./styles";
 
 const SingleItem = (props) => {
     return <>
-        <Pressable>
+        <Pressable android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
             <View style={styles.singleItemContainer}>
                 <View style={styles.singleItemBox}>
                     <Image source={props.imageURL} style={styles.imageContainer}/>
