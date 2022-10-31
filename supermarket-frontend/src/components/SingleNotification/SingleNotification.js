@@ -1,7 +1,9 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
-const SingleNotification = () => {
-    return <Text>Single Notification</Text>
+const SingleNotification = (props) => {
+    return <View>
+        <Text>{props.notification}</Text>
+    </View>
 }
 
 export default SingleNotification;
