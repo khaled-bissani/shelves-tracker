@@ -1,7 +1,16 @@
-import { Text } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 
-const SingleItem = () => {
-    return <Text>Single Item</Text>
+const SingleItem = (props) => {
+    return <>
+        <Pressable>
+            <View>
+                <View>
+                    <Image source={props.imageURL}/>
+                </View>
+                <Text>{props.label}</Text>
+            </View>
+        </Pressable>
+    </>
 }
 
 export default SingleItem;

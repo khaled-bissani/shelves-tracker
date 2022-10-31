@@ -10,7 +10,7 @@ const SingleCategory = (props) => {
         </View>
         <ScrollView horizontal={true}>
             <View >
-                <SingleItem/>
+                <SingleItem label={"item name"}/>
             </View>
         </ScrollView>
     </View>
