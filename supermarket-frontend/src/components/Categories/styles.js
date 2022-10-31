@@ -11,6 +11,11 @@ export default StyleSheet.create({
         height:100,
         borderRadius:10
     },
+    imageContainer: {
+        width:'100%',
+        height:'100%',
+        resizeMode:"contain"
+    },
     text:{
         fontSize: fonts.text,
         marginTop:10

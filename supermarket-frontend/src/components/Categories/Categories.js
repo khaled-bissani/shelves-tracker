@@ -1,4 +1,4 @@
-import { Text, View, Pressable } from "react-native";
+import { Text, View, Pressable, Image } from "react-native";
 import styles from "./styles";
 
 const Categories = (props) => {
@@ -6,7 +6,9 @@ const Categories = (props) => {
         <>
             <Pressable android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
                 <View style={styles.categoryContainer}>
-                    <View style={styles.categoryBox}></View>
+                    <View style={styles.categoryBox}>
+                        <Image source={props.imageURL} style={styles.imageContainer}/>
+                    </View>
                     <Text style={styles.text}>{props.label}</Text>
                 </View>
             </Pressable>

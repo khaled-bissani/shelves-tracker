@@ -7,7 +7,7 @@ const Home = () => {
         <View>
             <Text>All Categories</Text>
         </View>
-        <Categories label={'Fruits'}/>
+        <Categories label={'Fruits'} imageURL={require('../../../assets/images/landing.png')}/>
 
     </View>
     </>
