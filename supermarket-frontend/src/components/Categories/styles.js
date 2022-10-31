@@ -13,5 +13,8 @@ export default StyleSheet.create({
     text:{
         fontSize: fonts.text,
         marginTop:10
+    },
+    pressedItem:{
+        opacity:0.5,
     }
 })
