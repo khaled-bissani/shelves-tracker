@@ -4,6 +4,7 @@ import { colors,fonts } from "../../constants/palette";
 export default StyleSheet.create({
     categoryContainer: {
         alignItems:'center',
+        marginRight:25
     },
     categoryBox: {
         backgroundColor: colors.white,

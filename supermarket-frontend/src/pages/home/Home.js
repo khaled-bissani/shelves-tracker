@@ -1,13 +1,20 @@
-import { Text, View } from "react-native";
+import { Text, View, ScrollView } from "react-native";
+import styles from "./styles";
 import Categories from "../../components/Categories/Categories";
+import PressableText from "../../components/PressableText/PressableText";
 
 const Home = () => {
     return <>
-    <View>
-        <View>
-            <Text>All Categories</Text>
+    <View style={styles.homeContainer}>
+        <View style={styles.mainTitleContainer}>
+            <Text style={styles.allCategoriesTitle}>All Categories</Text>
+            <PressableText text={'view more'} textColor={'#545454'} fontSize={12} />
         </View>
-        <Categories label={'Fruits'} imageURL={require('../../../assets/images/landing.png')}/>
+        <ScrollView horizontal={true}>
+            <View style={styles.categoriesContainer}>
+                <Categories label={'Fruits'} imageURL={require('../../../assets/images/landing.png')}/>
+                </View>
+        </ScrollView>
 
     </View>
     </>
