@@ -1,7 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { colors, fonts } from '../constants/palette';
 import AddCategory from '../pages/addCategory/AddCategory';
+import AddProduct from '../pages/addProduct/AddProduct';
 import BottomTabNavigation from './BottomTabNavigation';
 
 const Drawer = createDrawerNavigator();
@@ -9,6 +10,7 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
     return <Drawer.Navigator screenOptions={{
       headerShown:false,
+      headerLeftContainerStyle:{marginLeft:5},
       headerStyle:{backgroundColor: colors.primary},
       headerTitleAlign:'center',
       headerTitleStyle:{fontWeight: 'bold', fontSize:fonts.subTitle},
@@ -28,6 +30,12 @@ const DrawerNavigator = () => {
         drawerLabel: 'Add Category',
         headerShown:true,
         headerTitle: 'Add Category'
+      }}/>
+      <Drawer.Screen name='AddProduct' component={AddProduct} options={{
+        drawerIcon: ({color}) => <MaterialIcons name="add-shopping-cart" color={color} size={fonts.iconSize} />,
+        drawerLabel: 'Add Product',
+        headerShown:true,
+        headerTitle: 'Add Product'
       }}/>
     </Drawer.Navigator>
 }

@@ -4,7 +4,7 @@ import styles from "./styles";
 
 const MenuButton = (props) => {
     return <Pressable onPress={props.onPress} style={styles.buttonContainer}>
-            <Ionicons name='menu' size={36} style={styles.icon} />
+            <Ionicons name='menu-outline' size={26} style={styles.icon} />
         </Pressable>
 }
 
