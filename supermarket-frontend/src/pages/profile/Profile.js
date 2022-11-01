@@ -1,7 +1,13 @@
-import { Text} from "react-native";
+import { Text, View, Image} from "react-native";
 
 const Profile = () => {
-    return <Text>Profile page</Text>
+    return <View>
+        <View>
+            <Image source={''}/>
+        </View>
+        <Text>Spermarket</Text>
+        <View></View>
+    </View>
 }
 
 export default Profile;
