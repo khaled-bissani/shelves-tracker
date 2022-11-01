@@ -1,7 +1,10 @@
-import { Text} from "react-native";
+import { ScrollView} from "react-native";
+import SingleContact from "../../components/SingleContact/SingleContact";
 
 const Chat = () => {
-    return <Text>Chat page</Text>
+    return <ScrollView>
+        <SingleContact/>
+    </ScrollView>
 }
 
 export default Chat;
