@@ -28,5 +28,8 @@ export default StyleSheet.create({
     },
     singleContactMessage: {
         fontSize: 14
+    },
+    pressedItem:{
+        opacity:0.5,
     }
 })
