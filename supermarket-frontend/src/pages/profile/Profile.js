@@ -10,6 +10,8 @@ const Profile = () => {
         <View></View>
         <View>
             <ProfileOption icon={"create-outline"} text={"Edit profile"}/>
+            <ProfileOption icon={"person-circle-outline"} text={"Change profile picture"}/>
+            <ProfileOption icon={"lock-closed-sharp"} text={"Change password"}/>
         </View>
     </View>
 }
