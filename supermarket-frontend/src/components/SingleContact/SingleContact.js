@@ -2,7 +2,7 @@ import { Image, Text, View, Pressable } from "react-native";
 import styles from "./styles";
 
 const SingleContact = (props) => {
-    return <Pressable android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
+    return <Pressable onPress={props.onClick} android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
         <View style={styles.singleContactContainer}>
             <View style={styles.singleContactImageContainer}>
                 <Image style={styles.singleContactImage} source={props.imageURL}/>
