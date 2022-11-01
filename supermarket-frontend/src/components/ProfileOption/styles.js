@@ -10,5 +10,8 @@ export default StyleSheet.create({
     profileOptionText: {
         fontSize: fonts.text,
         marginLeft:25
+    },
+    pressedItem:{
+        opacity:0.5,
     }
 })
