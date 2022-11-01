@@ -15,7 +15,7 @@ const SingleCategory = (props) => {
         </View>
         <ScrollView horizontal={true}>
             <View style={styles.singleItemContainer}>
-                <SingleItem label={"item name"} quantity={'number'}/>
+                <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={"item name"} quantity={'number'}/>
             </View>
         </ScrollView>
     </View>
