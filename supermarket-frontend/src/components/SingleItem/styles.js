@@ -3,7 +3,7 @@ import { colors, fonts } from "../../constants/palette";
 
 export default StyleSheet.create({
     singleItemContainer: {
-        alignItems:'center',
+        // alignItems:'center',
         marginRight:25
     },
     singleItemBox: {
@@ -20,6 +20,10 @@ export default StyleSheet.create({
     text:{
         fontSize: fonts.text,
         marginTop:10
+    },
+    quantity: {
+        fontSize: 14,
+        color: colors.primary
     },
     pressedItem:{
         opacity:0.5,

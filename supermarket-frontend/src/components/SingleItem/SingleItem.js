@@ -9,6 +9,7 @@ const SingleItem = (props) => {
                     <Image source={props.imageURL} style={styles.imageContainer}/>
                 </View>
                 <Text style={styles.text}>{props.label}</Text>
+                <Text style={styles.quantity}>{props.quantity}</Text>
             </View>
         </Pressable>
     </>
