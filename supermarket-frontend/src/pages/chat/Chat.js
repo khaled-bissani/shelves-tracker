@@ -3,7 +3,7 @@ import SingleContact from "../../components/SingleContact/SingleContact";
 
 const Chat = () => {
     return <ScrollView>
-        <SingleContact/>
+        <SingleContact imageURL={''} name={'Name'} message={'Last message'}/>
     </ScrollView>
 }
 
