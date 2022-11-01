@@ -9,6 +9,10 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
     return <Drawer.Navigator screenOptions={{
       headerShown:false,
+      headerStyle:{backgroundColor: colors.primary},
+      headerTitleAlign:'center',
+      headerTitleStyle:{fontWeight: 'bold', fontSize:fonts.subTitle},
+      headerTintColor:colors.white,
       drawerActiveBackgroundColor: colors.primary,
       drawerActiveTintColor: colors.white,
       drawerInactiveTintColor: colors.secondary,
@@ -23,6 +27,7 @@ const DrawerNavigator = () => {
         drawerIcon: ({color}) => <Ionicons name='add' color={color} size={fonts.iconSize}/>,
         drawerLabel: 'Add Category',
         headerShown:true,
+        headerTitle: 'Add Category'
       }}/>
     </Drawer.Navigator>
 }
