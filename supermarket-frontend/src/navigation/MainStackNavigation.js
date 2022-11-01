@@ -6,6 +6,7 @@ import DrawerNavigator from '../navigation/DrawerNavigation';
 import ViewMoreItem from '../pages/viewMoreItem/ViewMoreItem';
 import ViewMoreCategory from '../pages/viewMoreCategory/ViewMoreCategory';
 import SingleItemView from '../pages/singleItemView/SingleItemView';
+import EditProfile from '../pages/editProfile/EditProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ const MainStackNavigation = () => {
         <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory}/>
         <Stack.Screen name='ViewMoreItem' component={ViewMoreItem}/>
         <Stack.Screen name='SingleItemView' component={SingleItemView}/>
+        <Stack.Screen name='EditProfile' component={EditProfile}/>
       </Stack.Navigator>
 }
 

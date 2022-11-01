@@ -1,8 +1,12 @@
 import { Text, View, Image} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import ProfileOption from "../../components/ProfileOption/ProfileOption";
 import styles from "./styles";
 
 const Profile = () => {
+
+    const navigation = useNavigation();
+
     return <View>
         <View style={styles.container}>
             <View style={styles.profilePictureContainer}>
@@ -12,7 +16,7 @@ const Profile = () => {
             <View style={styles.profileLine}></View>
         </View>
         <View style={styles.profileOptionContainer}>
-            <ProfileOption icon={"create-outline"} text={"Edit profile"}/>
+            <ProfileOption onClick={()=>navigation.navigate('EditProfile')} icon={"create-outline"} text={"Edit profile"}/>
             <ProfileOption icon={"person-circle-outline"} text={"Change profile picture"}/>
             <ProfileOption icon={"lock-closed-sharp"} text={"Change password"}/>
         </View>
