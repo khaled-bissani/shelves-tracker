@@ -4,6 +4,7 @@ import Login from '../pages/login/Login';
 import Signup from '../pages/signup/Signup';
 import DrawerNavigator from '../navigation/DrawerNavigation';
 import ViewMoreItem from '../pages/viewMoreItem/ViewMoreItem';
+import ViewMoreCategory from '../pages/viewMoreCategory/ViewMoreCategory';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ const MainStackNavigation = () => {
         <Stack.Screen name='Main' component={DrawerNavigator} options={{
           headerShown:false
         }}/>
+        <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory}/>
         <Stack.Screen name='ViewMoreItem' component={ViewMoreItem}/>
       </Stack.Navigator>
 }
