@@ -4,7 +4,7 @@ import styles from "./styles";
 const Categories = (props) => {
     return (
         <>
-            <Pressable android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
+            <Pressable onPress={props.onClick} android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
                 <View style={styles.categoryContainer}>
                     <View style={styles.categoryBox}>
                         <Image source={props.imageURL} style={styles.imageContainer}/>
