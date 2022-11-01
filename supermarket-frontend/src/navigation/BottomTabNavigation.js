@@ -22,6 +22,7 @@ const BottomTabNavigation = ({navigation}) => {
       tabBarInactiveTintColor: colors.secondary,
       tabBarShowLabel:false,
       tabBarStyle:{backgroundColor: colors.primary},
+      tabBarHideOnKeyboard: true
     }}>
       <BottomTab.Screen name='Home' component={Home} options={{
         tabBarIcon: ({color}) => <Ionicons name='home' color={color} size={fonts.iconSize}/>
