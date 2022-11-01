@@ -13,7 +13,8 @@ export const fonts = {
     subTitle:20,
     text:16,
     family:'sans-serif',
-    bold: 'bold'
+    bold: 'bold',
+    iconSize: 30,
 }
 
 export default {colors, fonts};

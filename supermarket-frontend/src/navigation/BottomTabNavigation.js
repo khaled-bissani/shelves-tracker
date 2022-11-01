@@ -24,16 +24,16 @@ const BottomTabNavigation = ({navigation}) => {
       tabBarStyle:{backgroundColor: colors.primary},
     }}>
       <BottomTab.Screen name='Home' component={Home} options={{
-        tabBarIcon: ({color}) => <Ionicons name='home' color={color} size={36}/>
+        tabBarIcon: ({color}) => <Ionicons name='home' color={color} size={fonts.iconSize}/>
       }}/>
       <BottomTab.Screen name='Notification' component={Notification} options={{
-        tabBarIcon: ({color}) => <Ionicons name='notifications-sharp' color={color} size={36}/>
+        tabBarIcon: ({color}) => <Ionicons name='notifications-sharp' color={color} size={fonts.iconSize}/>
       }}/>
       <BottomTab.Screen name='Chat' component={Chat} options={{
-        tabBarIcon: ({color}) => <Ionicons name='chatbubble' color={color} size={36}/>
+        tabBarIcon: ({color}) => <Ionicons name='chatbubble' color={color} size={fonts.iconSize}/>
       }}/>
       <BottomTab.Screen name='Profile' component={Profile} options={{
-        tabBarIcon: ({color}) => <Ionicons name='person-circle-outline' color={color} size={36}/>
+        tabBarIcon: ({color}) => <Ionicons name='person-circle-outline' color={color} size={fonts.iconSize}/>
       }}/>
     </BottomTab.Navigator>
 }
