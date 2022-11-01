@@ -17,7 +17,7 @@ const Profile = () => {
         </View>
         <View style={styles.profileOptionContainer}>
             <ProfileOption onClick={()=>navigation.navigate('EditProfile')} icon={"create-outline"} text={"Edit profile"}/>
-            <ProfileOption icon={"person-circle-outline"} text={"Change profile picture"}/>
+            <ProfileOption onClick={()=>navigation.navigate('ChangeProfilePicture')} icon={"person-circle-outline"} text={"Change profile picture"}/>
             <ProfileOption icon={"lock-closed-sharp"} text={"Change password"}/>
         </View>
     </View>
