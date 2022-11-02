@@ -4,7 +4,7 @@ import { colors, fonts } from "../../constants/palette";
 import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
 
-const ViewMoreItem = () => {
+const ViewMoreItem = ({navigation}) => {
     return <View style={styles.pageContainer}>
         <View style={styles.iconContainer}>
             <Pressable>
@@ -13,7 +13,7 @@ const ViewMoreItem = () => {
         </View>
         <ScrollView>
             <View style={styles.itemContainer}>
-                <SingleItem label={"item name"} quantity={'number'} width={150} height={150}/>
+                <SingleItem label={"item name"} quantity={'number'} width={150} height={150} onClick={()=>navigation.navigate('SingleItemView')}/>
             </View>
         </ScrollView>
     </View>
