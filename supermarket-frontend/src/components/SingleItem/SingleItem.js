@@ -5,7 +5,7 @@ const SingleItem = (props) => {
     return <>
         <Pressable onPress={props.onClick} android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
             <View style={styles.singleItemContainer}>
-                <View style={styles.singleItemBox}>
+                <View style={[styles.singleItemBox, {width:props.width, height:props.height}]}>
                     <Image source={props.imageURL} style={styles.imageContainer}/>
                 </View>
                 <Text style={styles.text}>{props.label}</Text>
