@@ -1,14 +1,21 @@
 import { FontAwesome } from "@expo/vector-icons";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View, Pressable } from "react-native";
 import { colors, fonts } from "../../constants/palette";
 import SingleItem from "../../components/SingleItem/SingleItem";
+import styles from "./styles";
 
 const ViewMoreItem = () => {
     return <View>
         <View>
-            <FontAwesome name="sort-amount-asc" size={fonts.iconSize} color={colors.primary} />
+            <Pressable>
+                <FontAwesome name="sort-amount-asc" size={fonts.iconSize} color={colors.primary} />
+            </Pressable>
         </View>
-        <SingleItem label={"item name"} quantity={'number'} width={170} height={170}/>
+        <ScrollView>
+            <View>
+                <SingleItem label={"item name"} quantity={'number'} width={170} height={170}/>
+            </View>
+        </ScrollView>
     </View>
 }
 
