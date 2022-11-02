@@ -15,17 +15,17 @@ const SingleItemView = () => {
                 <Text style={styles.text}>Item Name</Text>
                 <Ionicons name="create-outline" color={colors.primary} size={36}/>
             </View>
-            <View>
-                <View>
-                    <Text>Quantity on shelves</Text>
-                    <Text>Number</Text>
+            <View style={styles.elementContainer}>
+                <View style={styles.boxContainer}>
+                    <Text style={styles.textElement}>Quantity on shelves</Text>
+                    <Text style={styles.value}>Number</Text>
                 </View>
-                <View>
-                    <Text>Expiry Date</Text>
-                    <Text>Number</Text>
+                <View style={styles.boxContainer}>
+                    <Text style={styles.textElement}>Expiry Date</Text>
+                    <Text style={styles.value}>Number</Text>
                 </View>
-                <View>
-                    <Text>Bar Code</Text>
+                <View style={styles.boxContainer}>
+                    <Text style={styles.textElement}>Bar Code</Text>
                     <Text>Image</Text>
                 </View>
             </View>

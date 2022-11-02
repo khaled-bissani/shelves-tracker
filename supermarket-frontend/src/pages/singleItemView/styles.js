@@ -35,4 +35,25 @@ export default StyleSheet.create({
         fontSize: fonts.subTitle,
         fontWeight: fonts.bold
     },
+    elementContainer:{
+        height:'70%',
+        justifyContent:'space-evenly',
+        alignItems:'center'
+    },
+    boxContainer: {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        width:'85%',
+        height: 60,
+        paddingHorizontal:20,
+        backgroundColor: colors.background,
+    },
+    textElement: {
+        color:'#9B9B9B',
+        fontSize:fonts.text,
+    },
+    value: {
+        fontSize:fonts.text,
+    }
 })
