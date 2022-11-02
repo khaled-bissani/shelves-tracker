@@ -48,6 +48,7 @@ export default StyleSheet.create({
         height: 60,
         paddingHorizontal:20,
         backgroundColor: colors.background,
+        borderRadius:7
     },
     textElement: {
         color:'#9B9B9B',
