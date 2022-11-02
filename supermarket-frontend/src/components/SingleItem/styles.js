@@ -3,7 +3,8 @@ import { colors, fonts } from "../../constants/palette";
 
 export default StyleSheet.create({
     singleItemContainer: {
-        marginRight:25
+        marginRight:25,
+        marginBottom:20
     },
     singleItemBox: {
         backgroundColor: colors.white,

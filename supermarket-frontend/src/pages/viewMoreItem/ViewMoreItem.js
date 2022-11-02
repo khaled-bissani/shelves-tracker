@@ -5,15 +5,15 @@ import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
 
 const ViewMoreItem = () => {
-    return <View>
-        <View>
+    return <View style={styles.pageContainer}>
+        <View style={styles.iconContainer}>
             <Pressable>
                 <FontAwesome name="sort-amount-asc" size={fonts.iconSize} color={colors.primary} />
             </Pressable>
         </View>
         <ScrollView>
-            <View>
-                <SingleItem label={"item name"} quantity={'number'} width={170} height={170}/>
+            <View style={styles.itemContainer}>
+                <SingleItem label={"item name"} quantity={'number'} width={150} height={150}/>
             </View>
         </ScrollView>
     </View>
