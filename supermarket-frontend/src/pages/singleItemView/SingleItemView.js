@@ -26,7 +26,9 @@ const SingleItemView = () => {
                 </View>
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Bar Code</Text>
-                    <Text>Image</Text>
+                    <View style={styles.barCodeContainer}>
+                        <Image style={styles.image} source={''}/>
+                    </View>
                 </View>
             </View>
         </View>
