@@ -13,7 +13,7 @@ const BottomTab = createBottomTabNavigator();
 const BottomTabNavigation = ({navigation}) => {
     return <BottomTab.Navigator  screenOptions={{
       headerLeft:() => <MenuButton onPress={()=> navigation.toggleDrawer()}/>,
-      headerRight:() => <SearchButton onPress={()=> console.log('search')}/>,
+      headerRight:() => <SearchButton color={colors.white} onPress={()=> console.log('search')}/>,
       headerStyle:{backgroundColor: colors.primary, },
       headerTitleAlign:'center',
       headerTitleStyle:{fontWeight: 'bold', fontSize:fonts.subTitle},

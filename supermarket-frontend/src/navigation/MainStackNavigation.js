@@ -10,6 +10,7 @@ import EditProfile from '../pages/editProfile/EditProfile';
 import ChangeProfilePicture from '../pages/changeProfilePicture/ChangeProfilePicture';
 import ChangePassword from '../pages/changePassword/ChangePassword';
 import ChatMessage from '../pages/chatMessage/ChatMessage';
+import SearchButton from '../components/SearchButton/SearchButton';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +28,10 @@ const MainStackNavigation = () => {
           headerShown:false
         }}/>
         <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory}/>
-        <Stack.Screen name='ViewMoreItem' component={ViewMoreItem}/>
+        <Stack.Screen name='ViewMoreItem' component={ViewMoreItem} options={{
+          headerTitle:'Category name',
+          headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
+        }}/>
         <Stack.Screen name='SingleItemView' component={SingleItemView} options={{
           headerTitle:''
         }}/>

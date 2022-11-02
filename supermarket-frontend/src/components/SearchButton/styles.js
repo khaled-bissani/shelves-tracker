@@ -5,7 +5,4 @@ export default StyleSheet.create({
     buttonContainer: {
         paddingRight: 20
     },
-    icon: {
-        color:colors.white
-    }
 })
