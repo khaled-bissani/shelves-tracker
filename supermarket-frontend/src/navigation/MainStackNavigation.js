@@ -29,9 +29,9 @@ const MainStackNavigation = () => {
         <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory}/>
         <Stack.Screen name='ViewMoreItem' component={ViewMoreItem}/>
         <Stack.Screen name='SingleItemView' component={SingleItemView}/>
-        <Stack.Screen name='EditProfile' component={EditProfile}/>
+        <Stack.Screen name='EditProfile' component={EditProfile} options={{headerTitle:'Edit Profile'}}/>
         <Stack.Screen name='ChangeProfilePicture' component={ChangeProfilePicture}/>
-        <Stack.Screen name='ChangePassword' component={ChangePassword}/>
+        <Stack.Screen name='ChangePassword' component={ChangePassword} options={{headerTitle:'Change Password'}}/>
         <Stack.Screen name='ChatMessage' component={ChatMessage}/>
       </Stack.Navigator>
 }
