@@ -15,6 +15,20 @@ const SingleItemView = () => {
                 <Text style={styles.text}>Item Name</Text>
                 <Ionicons name="create-outline" color={colors.primary} size={36}/>
             </View>
+            <View>
+                <View>
+                    <Text>Quantity on shelves</Text>
+                    <Text>Number</Text>
+                </View>
+                <View>
+                    <Text>Expiry Date</Text>
+                    <Text>Number</Text>
+                </View>
+                <View>
+                    <Text>Bar Code</Text>
+                    <Text>Image</Text>
+                </View>
+            </View>
         </View>
     </View>
 }
