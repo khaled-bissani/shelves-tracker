@@ -3,13 +3,10 @@ import { colors, fonts } from "../../constants/palette";
 
 export default StyleSheet.create({
     singleItemContainer: {
-        // alignItems:'center',
         marginRight:25
     },
     singleItemBox: {
         backgroundColor: colors.white,
-        width: 130,
-        height:130,
         borderRadius:10
     },
     imageContainer: {
