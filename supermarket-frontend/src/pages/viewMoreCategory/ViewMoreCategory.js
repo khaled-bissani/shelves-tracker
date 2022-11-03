@@ -1,11 +1,10 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { ScrollView, Text, View, Pressable } from "react-native";
 import { colors, fonts } from "../../constants/palette";
-import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
 import Categories from "../../components/Categories/Categories";
 
-const ViewMoreCategory = () => {
+const ViewMoreCategory = ({navigation}) => {
     return <View style={styles.pageContainer}>
         <View style={styles.iconContainer}>
             <Pressable>
@@ -14,7 +13,7 @@ const ViewMoreCategory = () => {
         </View>
         <ScrollView>
             <View style={styles.itemContainer}>
-                <Categories label={'Category'} width={150} height={150}/>
+                <Categories label={'Category'} width={150} height={150} onClick={()=> navigation.navigate('ViewMoreItem')}/>
             </View>
         </ScrollView>
     </View>
