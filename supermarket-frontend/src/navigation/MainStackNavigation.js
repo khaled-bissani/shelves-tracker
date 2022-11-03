@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { colors } from '../constants/palette';
 import Landing from '../pages/landing/Landing';
 import Login from '../pages/login/Login';
 import Signup from '../pages/signup/Signup';
@@ -43,7 +44,11 @@ const MainStackNavigation = () => {
         <Stack.Screen name='EditProfile' component={EditProfile} options={{headerTitle:'Edit Profile'}}/>
         <Stack.Screen name='ChangeProfilePicture' component={ChangeProfilePicture}/>
         <Stack.Screen name='ChangePassword' component={ChangePassword} options={{headerTitle:'Change Password'}}/>
-        <Stack.Screen name='ChatMessage' component={ChatMessage}/>
+        <Stack.Screen name='ChatMessage' component={ChatMessage} options={{
+          headerTitle:'Name',
+          headerStyle:{backgroundColor: colors.primary, },
+          headerTintColor:colors.white,
+        }}/>
       </Stack.Navigator>
 }
 
