@@ -19,13 +19,15 @@ const MainStackNavigation = () => {
         headerStyle:{backgroundColor: '#EEEEEE', },
         headerTitleAlign:'center',
         headerTitleStyle:{fontWeight: 'bold'},
-        contentStyle:{backgroundColor: '#EEEEEE'},          
+        contentStyle:{backgroundColor: '#EEEEEE'},
+        animation: 'slide_from_right',          
       }}>
         <Stack.Screen name='Landing' component={Landing} options={{headerShown: false}}/>
         <Stack.Screen name='Register' component={Signup}/>
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name='Main' component={DrawerNavigator} options={{
-          headerShown:false
+          headerShown:false,
+          animation: 'fade', 
         }}/>
         <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory} options={{
           headerTitle:'All Categories',
