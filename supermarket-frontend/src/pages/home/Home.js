@@ -17,7 +17,7 @@ const Home = () => {
         </View>
         <ScrollView horizontal={true}>
             <View style={styles.categoriesContainer}>
-                <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={'Fruits'} imageURL={require('../../../assets/images/landing.png')}/>
+                <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={'Fruits'} imageURL={require('../../../assets/images/landing.png')} width={100} height={100}/>
                 </View>
         </ScrollView>
         <SingleCategory categoryTitle={"Fruits"}/>

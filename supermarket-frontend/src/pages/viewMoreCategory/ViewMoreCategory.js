@@ -3,6 +3,7 @@ import { ScrollView, Text, View, Pressable } from "react-native";
 import { colors, fonts } from "../../constants/palette";
 import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
+import Categories from "../../components/Categories/Categories";
 
 const ViewMoreCategory = () => {
     return <View style={styles.pageContainer}>
@@ -13,7 +14,7 @@ const ViewMoreCategory = () => {
         </View>
         <ScrollView>
             <View style={styles.itemContainer}>
-                <SingleItem label={"item name"} quantity={'number'} width={150} height={150}/>
+                <Categories label={'Category'} width={150} height={150}/>
             </View>
         </ScrollView>
     </View>
