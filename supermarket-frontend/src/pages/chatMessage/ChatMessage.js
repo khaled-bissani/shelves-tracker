@@ -1,4 +1,5 @@
-import { ScrollView, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { ScrollView, Text, TextInput, View } from "react-native";
 import styles from "./styles";
 
 const ChatMessage = () => {
@@ -14,7 +15,10 @@ const ChatMessage = () => {
                 </View>
             </View>
         </ScrollView>
-        <View style={styles.footerContainer}></View>
+        <View style={styles.footerContainer}>
+            <TextInput keyboardType={'default'}/>
+            <Ionicons name="send"/>
+        </View>
     </View>
 }
 
