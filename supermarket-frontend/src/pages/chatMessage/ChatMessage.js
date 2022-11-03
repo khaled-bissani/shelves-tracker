@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { ScrollView, Text, TextInput, View } from "react-native";
+import { colors, fonts } from "../../constants/palette";
 import styles from "./styles";
 
 const ChatMessage = () => {
@@ -14,10 +15,10 @@ const ChatMessage = () => {
                     <Text style={styles.time}>Time</Text>
                 </View>
             </View>
-        </ScrollView>
+            </ScrollView>
         <View style={styles.footerContainer}>
-            <TextInput keyboardType={'default'}/>
-            <Ionicons name="send"/>
+            <TextInput keyboardType={'default'} style={styles.textInput}/>
+            <Ionicons name="send" color={colors.white} size={fonts.iconSize}/>
         </View>
     </View>
 }

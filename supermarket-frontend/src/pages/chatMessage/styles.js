@@ -32,7 +32,17 @@ export default StyleSheet.create({
         fontSize: 12
     },
     footerContainer: {
+        flexDirection:'row',
+        justifyContent:'space-evenly',
+        alignItems:'center',
         backgroundColor: colors.primary,
         height:50
     },
+    textInput: {
+        width:'75%',
+        backgroundColor: colors.white,
+        borderRadius:10,
+        fontSize: fonts.text,
+        paddingHorizontal:10,
+    }
 })
