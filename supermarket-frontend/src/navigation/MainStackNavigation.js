@@ -27,7 +27,10 @@ const MainStackNavigation = () => {
         <Stack.Screen name='Main' component={DrawerNavigator} options={{
           headerShown:false
         }}/>
-        <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory}/>
+        <Stack.Screen name='ViewMoreCategory' component={ViewMoreCategory} options={{
+          headerTitle:'All Categories',
+          headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
+        }}/>
         <Stack.Screen name='ViewMoreItem' component={ViewMoreItem} options={{
           headerTitle:'Category name',
           headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
