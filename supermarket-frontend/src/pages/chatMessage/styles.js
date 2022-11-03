@@ -44,5 +44,8 @@ export default StyleSheet.create({
         borderRadius:10,
         fontSize: fonts.text,
         paddingHorizontal:10,
+    },
+    pressedItem:{
+        opacity:0.5,
     }
 })
