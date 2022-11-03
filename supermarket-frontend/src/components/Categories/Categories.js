@@ -6,7 +6,7 @@ const Categories = (props) => {
         <>
             <Pressable onPress={props.onClick} android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
                 <View style={styles.categoryContainer}>
-                    <View style={styles.categoryBox}>
+                    <View style={[styles.categoryBox, {width:props.width, height:props.height}]}>
                         <Image source={props.imageURL} style={styles.imageContainer}/>
                     </View>
                     <Text style={styles.text}>{props.label}</Text>
