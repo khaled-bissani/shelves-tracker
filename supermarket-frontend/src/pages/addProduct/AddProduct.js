@@ -7,10 +7,14 @@ import Barcode from "../../components/Barcode/Barcode";
 
 const AddProduct = () => {
 
+    let RandomNumber = Math.floor(Math.random() * 10000000) + 1 ;
+
+    const [number, setNumber]=useState();
     const [barcode, setBarcode] = useState(false);
 
     const showBarcode = () => {
         setBarcode(true);
+        setNumber(RandomNumber);
     }
 
     return <View style={styles.pageContainer}>
@@ -20,7 +24,7 @@ const AddProduct = () => {
     <TextInput style={styles.input} placeholder={'Product Name'}/>
     <TextInput style={styles.input} placeholder={'Product Quantity '}/>
     <TextInput style={styles.input} placeholder={'Product Expiry Date'}/>
-    {barcode ? <Barcode number={'123'}/> : null}
+    {barcode ? <Barcode number={number}/> : null}
     <View style={styles.buttonContainer}>
         <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
         <Buttons text={'UPLOAD IMAGE'} color={colors.primary}/>
