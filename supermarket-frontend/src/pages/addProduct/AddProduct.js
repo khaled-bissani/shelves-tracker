@@ -39,6 +39,7 @@ const AddProduct = () => {
     </View>
     <TextInput style={styles.input} placeholder={'Product Name'}/>
     <TextInput style={styles.input} placeholder={'Product Quantity '}/>
+    <TextInput style={styles.input} placeholder={'Product Category'}/>
     <TextInput style={styles.input} placeholder={'Product Expiry Date'}/>
     {barcode ? <Barcode number={number}/> : null}
     <View style={styles.buttonContainer}>

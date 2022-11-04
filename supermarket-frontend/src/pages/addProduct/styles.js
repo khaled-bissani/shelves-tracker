@@ -9,7 +9,7 @@ export default StyleSheet.create({
     },
     input: {
         width:'75%',
-        height:50,
+        height:40,
         backgroundColor: colors.white,
         fontSize: fonts.text,
         paddingLeft:10,
@@ -23,7 +23,8 @@ export default StyleSheet.create({
     image: {
         width:'100%',
         height:'100%',
-        resizeMode:"cover"
+        resizeMode:"cover",
+        borderRadius:10
     },
     buttonContainer: {
         width:'100%',
