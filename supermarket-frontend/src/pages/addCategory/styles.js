@@ -4,7 +4,7 @@ import { colors, fonts } from "../../constants/palette";
 export default StyleSheet.create({
     pageContainer: {
         flex:1,
-        justifyContent:'space-around',
+        justifyContent:'space-evenly',
         alignItems:'center'
     },
     input: {
@@ -17,14 +17,14 @@ export default StyleSheet.create({
     },
     imageContainer: {
         backgroundColor: colors.white,
-        width:250,
+        width:315,
         height:250,
         borderRadius:10
     },
     image: {
         width:'100%',
         height:'100%',
-        resizeMode:"contain"
+        resizeMode:"cover"
     },
     buttonContainer: {
         width:'100%',
