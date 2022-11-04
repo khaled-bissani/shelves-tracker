@@ -1,7 +1,10 @@
-import { Text } from "react-native";
+import {Text, View, Image } from "react-native";
 
-const Barcode = () => {
-    return <Text>Barcode</Text>
+const Barcode = (props) => {
+    return <View>
+        <Image source={require('../../../assets/images/Barcode.jpg')}/>
+        <Text>{props.number}</Text>
+    </View>
 }
 
 export default Barcode;
