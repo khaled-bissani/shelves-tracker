@@ -1,4 +1,6 @@
 const User = require('../models/users.model');
+const fs = require("fs");
+const crypto = require("crypto");
 
 const viewProfile = async(req, res) => {
     const {id} = req.body;
@@ -10,7 +12,7 @@ const viewProfile = async(req, res) => {
 
 const editProfile = async(req,res) => {
     const {id, full_name, email, phone_number, location} = req.body;
-    
+
     User.findOneAndUpdate(id, {
         full_name, email, phone_number, location
     })
@@ -18,4 +20,25 @@ const editProfile = async(req,res) => {
     .catch((err)=>res.status(400).send(err))
 }
 
-module.exports = {viewProfile, editProfile};
+const profilePicture = async(req,res) => {
+    const {id, picture} = req.body;
+
+    const image_id = crypto.randomBytes(16).toString("hex");
+
+    var base64Data = picture.replace("data:image/png;base64,", "");
+    const image = Buffer.from(base64Data, "base64");
+
+    fs.writeFile(__dirname.replace('controllers', 'public/images/') + image_id + ".png", image, 
+    (err) => {
+        console.log(err);
+    })
+    
+
+    User.findOneAndUpdate(id, {
+        picture: image_id + '.png'
+    })
+    .then((user)=>res.send(user))
+    .catch((err)=>res.status(400).send(err))
+}
+
+module.exports = {viewProfile, editProfile, profilePicture};
