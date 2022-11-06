@@ -20,4 +20,12 @@ const addCategory = async(req,res) => {
     }
 }
 
-module.exports = {addCategory};
+const getCategory = async(req,res) => {
+    const {id} = req.body;
+
+    const categories = await User.findOne({id}).select('products.category');
+
+    res.status(200).json(categories);
+}
+
+module.exports = {addCategory, getCategory};
