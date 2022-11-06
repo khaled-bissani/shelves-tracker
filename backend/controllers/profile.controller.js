@@ -33,7 +33,6 @@ const profilePicture = async(req,res) => {
         console.log(err);
     })
     
-
     User.findOneAndUpdate(id, {
         picture: image_id + '.png'
     })
