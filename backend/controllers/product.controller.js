@@ -19,4 +19,12 @@ const addProduct = async(req,res) => {
     }
 }
 
-module.exports={addProduct};
+const getProduct = async(req,res) => {
+    const {id} = req.body;
+
+    const products = await User.findOne({id}).select('products');
+
+    res.status(200).json(products);
+}
+
+module.exports={addProduct, getProduct};
