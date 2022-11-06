@@ -43,4 +43,4 @@ const login = async(req,res) => {
     res.status(200).json({token,user_id:user.id});
 }
 
-module.exports = {signup}
+module.exports = {signup, login}
