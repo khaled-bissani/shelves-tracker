@@ -12,6 +12,9 @@ app.use(cors());
 const authRouter = require('./routes/auth.routes');
 app.use('/auth', authRouter);
 
+const categoryRouter = require('./routes/category.routes');
+app.use('/category', categoryRouter);
+
 app.listen(process.env.PORT, (err)=>{
     if(err) console.log(err);
     console.log(`Running server on port ${process.env.PORT}`);
