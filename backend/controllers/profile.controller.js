@@ -10,18 +10,12 @@ const viewProfile = async(req, res) => {
 
 const editProfile = async(req,res) => {
     const {id, full_name, email, phone_number, location} = req.body;
-    try{
-        const profile = User.findOneAndUpdate(id, {
-            full_name, email, phone_number, location
-        })
-        
-        res.send(profile);
-    }
-    catch(err) {
-        res.status(400).json({
-            message: err.message
-        });
-    }
+    
+    User.findOneAndUpdate(id, {
+        full_name, email, phone_number, location
+    })
+    .then((user)=>res.send(user))
+    .catch((err)=>res.status(400).send(err))
 }
 
 module.exports = {viewProfile, editProfile};
