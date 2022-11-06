@@ -6,7 +6,7 @@ const addProduct = async(req,res) => {
         const new_product = await User.findOne({id});
 
         new_product.products.push({
-            product_name, quantity_shelf, expiry_date, image, barcode, category
+            product_name, quantity_shelf, expiry_date, image, barcode, category:{category}
         });
 
         await new_product.save();
