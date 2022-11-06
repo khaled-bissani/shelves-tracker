@@ -32,32 +32,25 @@ const userSchema = new mongoose.Schema({
     products: [{
         product_name: {
             type: String,
-            required: 'product name is required'
         },
         quantity_shelf: {
             type: String,
-            required: 'quantity on shelf is required'
         },
         expiry_date: {
             type: String,
-            required: 'expiry date is required'
         },
         image: {
             type: String,
-            required: 'image is required'
         },
         barcode: {
             type: String,
-            required: 'barcode is required'
         },
         category: {
             category:{
                 type: String,
-                required: 'category name is required'
             },
             image:{
                 type: String,
-                required: 'image is required'
             },
         },
     }],
