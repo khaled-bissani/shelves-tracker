@@ -18,6 +18,9 @@ app.use('/category', categoryRouter);
 const productRouter = require('./routes/product.routes');
 app.use('/product', productRouter);
 
+const profileRouter = require('./routes/profile.routes');
+app.use('/profile', profileRouter);
+
 app.listen(process.env.PORT, (err)=>{
     if(err) console.log(err);
     console.log(`Running server on port ${process.env.PORT}`);
