@@ -8,4 +8,20 @@ const viewProfile = async(req, res) => {
     res.status(200).json(profile);
 }
 
-module.exports = {viewProfile};
+const editProfile = async(req,res) => {
+    const {id, full_name, email, phone_number, location} = req.body;
+    try{
+        const profile = User.findOneAndUpdate(id, {
+            full_name, email, phone_number, location
+        })
+        
+        res.send(profile);
+    }
+    catch(err) {
+        res.status(400).json({
+            message: err.message
+        });
+    }
+}
+
+module.exports = {viewProfile, editProfile};
