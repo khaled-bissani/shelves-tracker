@@ -1,4 +1,5 @@
-const User = require('../models/users.model')
+const User = require('../models/users.model');
+const bcrypt = require('bcrypt');
 
 const signup = async(req,res) => {
     const {full_name, username, email, phone_number, password, user_type} = req.body;
@@ -19,6 +20,17 @@ const signup = async(req,res) => {
             message: err.message
         });
     }
+}
+
+const login = async(req,res) => {
+    const {username, password} =req.body;
+
+    const user = await User.findOne({username}).select("+password");
+
+    if(!user) return res.status(404).json({message: "Wrong email or password"})
+
+    const matchPassword = bcrypt.compare(password, user.password);
+    if(!matchPassword) return res.status(404).json({message: "Wrong email or password"});
 }
 
 module.exports = {signup}
