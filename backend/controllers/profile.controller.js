@@ -25,7 +25,7 @@ const profilePicture = async(req,res) => {
 
     const image_id = crypto.randomBytes(16).toString("hex");
 
-    var base64Data = picture.replace("data:image/png;base64,", "");
+    const base64Data = picture.replace("data:image/png;base64,", "");
     const image = Buffer.from(base64Data, "base64");
 
     fs.writeFile(__dirname.replace('controllers', 'public/images/') + image_id + ".png", image, 
