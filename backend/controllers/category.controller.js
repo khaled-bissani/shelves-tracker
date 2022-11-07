@@ -18,11 +18,10 @@ const addCategory = async(req,res) => {
     try {
         const new_category = await User.findOne({id});
 
-        new_category.products.push({
-            category:{
-                category, 
-                image: image_id + '.png'
-            }});
+        new_category.category.push({
+            category, 
+            image: image_id + '.png'
+            });
 
         await new_category.save();
         res.send(new_category);
