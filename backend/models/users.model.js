@@ -29,27 +29,27 @@ const userSchema = new mongoose.Schema({
         type: String,            
         enum: ['Admin', 'Supplier', 'Supermarket'],
     },
-    products: [{
-        product_name: {
+    category: [{
+        category:{
             type: String,
         },
-        quantity_shelf: {
+        image:{
             type: String,
         },
-        expiry_date: {
-            type: String,
-        },
-        image: {
-            type: String,
-        },
-        barcode: {
-            type: String,
-        },
-        category: {
-            category:{
+        products: {
+            product_name: {
                 type: String,
             },
-            image:{
+            quantity_shelf: {
+                type: String,
+            },
+            expiry_date: {
+                type: String,
+            },
+            image: {
+                type: String,
+            },
+            barcode: {
                 type: String,
             },
         },
