@@ -36,7 +36,7 @@ const addCategory = async(req,res) => {
 const getCategory = async(req,res) => {
     const {id} = req.body;
 
-    const categories = await User.findOne({id}).select('products.category');
+    const categories = await User.findOne({id}).select('category');
 
     res.status(200).json(categories);
 }
