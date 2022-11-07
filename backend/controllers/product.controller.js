@@ -39,7 +39,7 @@ const addProduct = async(req,res) => {
 const getProduct = async(req,res) => {
     const {id} = req.body;
 
-    const products = await User.findOne({id}).select('products');
+    const products = await User.find({id}).select('category.products');
 
     res.status(200).json(products);
 }
