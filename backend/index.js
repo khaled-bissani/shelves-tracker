@@ -21,6 +21,9 @@ app.use('/product', productRouter);
 const profileRouter = require('./routes/profile.routes');
 app.use('/profile', profileRouter);
 
+const path = require('path')
+app.use(express.static(path.join(__dirname,'./public')));
+
 app.listen(process.env.PORT, (err)=>{
     if(err) console.log(err);
     console.log(`Running server on port ${process.env.PORT}`);
