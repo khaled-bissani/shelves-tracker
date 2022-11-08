@@ -1,6 +1,7 @@
 const User = require('../models/users.model');
 const fs = require("fs");
 const crypto = require("crypto");
+const bcrypt = require('bcrypt');
 
 const viewProfile = async(req, res) => {
     const {id} = req.body;
@@ -40,4 +41,19 @@ const profilePicture = async(req,res) => {
     .catch((err)=>res.status(400).send(err))
 }
 
-module.exports = {viewProfile, editProfile, profilePicture};
+const changePassword = async(req,res) => {
+    const {id, old_password, new_password} = req.body;
+
+    const user = await User.findOne({id}).select("+password");
+
+    const matchPassword = bcrypt.compare(old_password, user.password);
+    if(matchPassword) {
+        user.update({id},{password:new_password})
+        
+        await user.save();
+        return res.status(200).json({message: "Password changed"});
+    }
+    return res.status(404).json({message: "Wrong password"});
+}
+
+module.exports = {viewProfile, editProfile, profilePicture, changePassword};
