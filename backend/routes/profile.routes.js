@@ -3,7 +3,7 @@ const {viewProfile , editProfile, profilePicture} = require('../controllers/prof
 const router = Router();
 
 router.post('/view',viewProfile);
-router.post('/edit',editProfile);
+router.put('/edit',editProfile);
 router.post('/picture',profilePicture);
 
 module.exports= router;
