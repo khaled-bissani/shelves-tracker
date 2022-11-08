@@ -66,7 +66,7 @@ const getSingleProduct = async(req,res) => {
 }
 
 const updateSingleProduct = async(req,res) => {
-    const {id, category_id, product_id, product_name, quantity_shelf} = req.body;
+    const {id, category_id, product_id, product_name, quantity_shelf, expiry_date} = req.body;
 
     const user = await User.findOneAndUpdate(
         {
@@ -76,6 +76,7 @@ const updateSingleProduct = async(req,res) => {
             $set: {
             "category.$[outer].products.$[inner].product_name": product_name,
             "category.$[outer].products.$[inner].quantity_shelf": quantity_shelf,
+            "category.$[outer].products.$[inner].expiry_date": expiry_date,
             }
         },
         {
