@@ -65,4 +65,28 @@ const getSingleProduct = async(req,res) => {
     res.status(200).json(filteredProducts);
 }
 
-module.exports={addProduct, getProduct, getSingleProduct};
+const updateSingleProduct = async(req,res) => {
+    const {id, category_id, product_id, product_name, quantity_shelf} = req.body;
+
+    const user = await User.findOneAndUpdate(
+        {
+            "id" : id,
+        },
+        {
+            $set: {
+            "category.$[outer].products.$[inner].product_name": product_name,
+            "category.$[outer].products.$[inner].quantity_shelf": quantity_shelf,
+            }
+        },
+        {
+            arrayFilters: [
+            { "outer._id": category_id},
+            {"inner._id": product_id}
+        ]
+        }
+    );
+        
+    res.status(200).json(user)
+}
+
+module.exports={addProduct, getProduct, getSingleProduct, updateSingleProduct};
