@@ -38,11 +38,15 @@ const addProduct = async(req,res) => {
 }
 
 const getProduct = async(req,res) => {
-    const {id} = req.body;
+    const {id,category} = req.body;
 
-    const products = await User.find({id}).select('category.products');
+    const user = await User.findById(id);
 
-    res.status(200).json(products);
+    const filteredProducts = user.category.filter((singleCategory)=>{
+        return singleCategory.category==category
+    })
+
+    res.status(200).json(filteredProducts);
 }
 
 module.exports={addProduct, getProduct};
