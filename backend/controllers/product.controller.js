@@ -16,18 +16,19 @@ const addProduct = async(req,res) => {
     })
 
     try {
-        const new_product = await User.findOne({id});
+        const user = await User.findOne({id});
 
-        new_product.category.push({
-            category,
-            products:{
-                product_name, quantity_shelf, expiry_date, barcode, category:{category},
-                image: image_id + '.png'
-            }
-        });
+        const product = {product_name, quantity_shelf, expiry_date, barcode,
+        image: image_id + '.png'}
 
-        await new_product.save();
-        res.send(new_product);
+        const filteredCategories = user.category.filter((singleCategory)=>{
+            return singleCategory.category==category
+        })
+
+        filteredCategories[0].products.push(product)
+
+        await user.save();
+        res.send(filteredCategories);
     }
     catch(err) {
         res.status(400).json({
