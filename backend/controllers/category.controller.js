@@ -16,15 +16,15 @@ const addCategory = async(req,res) => {
     })
 
     try {
-        const new_category = await User.findOne({id});
+        const user = await User.findOne({id});
 
-        new_category.category.push({
+        user.category.push({
             category, 
             image: image_id + '.png'
             });
 
-        await new_category.save();
-        res.send(new_category);
+        await user.save();
+        res.send(user);
     }
     catch(err) {
         res.status(400).json({
