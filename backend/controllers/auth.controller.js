@@ -28,10 +28,10 @@ const login = async(req,res) => {
 
     const user = await User.findOne({username}).select("+password");
 
-    if(!user) return res.status(404).json({message: "Wrong email or password"})
+    if(!user) return res.status(404).json({message: "Wrong username or password"})
 
     const matchPassword = bcrypt.compare(password, user.password);
-    if(!matchPassword) return res.status(404).json({message: "Wrong email or password"});
+    if(!matchPassword) return res.status(404).json({message: "Wrong username or password"});
 
     const token = jwt.sign({
         id:user.id,
