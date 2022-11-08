@@ -21,6 +21,9 @@ app.use('/product', productRouter);
 const profileRouter = require('./routes/profile.routes');
 app.use('/profile', profileRouter);
 
+const clientRouter = require('./routes/client.routes');
+app.use('/client', clientRouter);
+
 const path = require('path')
 app.use(express.static(path.join(__dirname,'./public')));
 
