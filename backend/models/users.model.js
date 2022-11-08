@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
         image:{
             type: String,
         },
-        products: {
+        products: [{
             product_name: {
                 type: String,
             },
@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema({
             barcode: {
                 type: String,
             },
-        },
+        },]
     }],
 })
 
