@@ -49,4 +49,20 @@ const getProduct = async(req,res) => {
     res.status(200).json(filteredProducts);
 }
 
-module.exports={addProduct, getProduct};
+const getSingleProduct = async(req,res) => {
+    const {id, category, product} = req.body;
+
+    const user = await User.findById(id);
+
+    const filteredCategories = user.category.filter((singleCategory)=>{
+        return singleCategory.category==category
+    });
+
+    const filteredProducts = filteredCategories[0].products.filter((singleProduct) => {
+        return singleProduct.product_name == product;
+    })
+
+    res.status(200).json(filteredProducts);
+}
+
+module.exports={addProduct, getProduct, getSingleProduct};
