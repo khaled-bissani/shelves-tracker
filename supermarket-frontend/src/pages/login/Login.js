@@ -14,6 +14,12 @@ const Login = ({navigation}) => {
         confirm_password: ''
     });
 
+    const handleChange=(e,input)=> {
+        setUser({
+          ...user, [`${input}`]: e.target.value
+        });
+    }
+
     const loginHandler = () => {
         navigation.navigate('Main');
     }
