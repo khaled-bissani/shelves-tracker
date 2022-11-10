@@ -8,11 +8,6 @@ import { colors } from "../../constants/palette";
 import styles from "./styles";
 
 const Login = ({navigation}) => {
-
-    const loginHandler = () => {
-        navigation.navigate('Main');
-    }
-
     return(
         <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <View style={styles.login}>
@@ -22,8 +17,10 @@ const Login = ({navigation}) => {
                             password: '',
                             confirm_password: ''
                         }}
-                        onSubmit={(values) => {
-
+                        onSubmit={(values, actions) => {
+                            actions.resetForm();
+                            console.log('submitted');
+                            navigation.navigate('Main');
                         }}
                     >
                         {(props) => (
@@ -33,10 +30,10 @@ const Login = ({navigation}) => {
                                 <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')}/>
 
                                 <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')}/>
+                                <Buttons text={'LOGIN'} color={colors.primary} onClick={props.handleSubmit}/>
                             </View>
                         )}
                     </Formik>
-                <Buttons text={'LOGIN'} color={colors.primary} onClick={loginHandler}/>
                 <Text style={styles.text}>or</Text>
                 <GoogleButton text={'Continue with Google'}/>
             </View>
