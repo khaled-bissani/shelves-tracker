@@ -1,11 +1,17 @@
-import { useState } from "react";
 import { Text, View, ScrollView } from "react-native";
 import {Formik} from "formik";
+import * as yup from "yup";
 import Buttons from "../../components/Button/Buttons";
 import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import InputField from "../../components/InputField/InputField";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
+
+const userSchema = yup.object({
+    username: yup.string().required().min(6),
+    password: yup.string().required().min(8),
+    confirm_password: yup.string().required().min(8),
+})
 
 const Login = ({navigation}) => {
     return(
@@ -17,6 +23,7 @@ const Login = ({navigation}) => {
                             password: '',
                             confirm_password: ''
                         }}
+                        validationSchema={userSchema}
                         onSubmit={(values, actions) => {
                             actions.resetForm();
                             console.log('submitted');
