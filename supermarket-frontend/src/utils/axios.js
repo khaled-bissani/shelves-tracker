@@ -1,30 +1,17 @@
-import axios from 'axios';
+import axios from "axios";
 
-axios.defaults.headers.authorization = "Bearer " + token;
-axios.defaults.baseURL = "http://localhost:3000";
-
-const getApi = async(url, data=null) => {
-    try{
-        return await axios.get(url, data);
-    }catch(error){
-        console.log("Error from GET API", error);
+const sendRequest = async ({ method = "GET", data = null, route = null }) => {
+    if (!route) throw Error("URL Required");
+    if (method === "GET") {
+        const response = await axios.get(route);
+        return response.data;
     }
-}
+    const response = await axios.request({
+        url: route,
+        method: method,
+        data: data,
+    });
+    return response.data;
+};
 
-const postApi = async(url, data) => {
-    try{
-        return await axios.post(url, data);
-    }catch(error){
-        console.log("Error from POST API", error);
-    }
-}
-
-const updateApi = async(url, data) => {
-    try{
-        return await axios.put(url, data);
-    }catch(error){
-        console.log("Error from PUT API", error);
-    }
-}
-
-export  {getApi, postApi, updateApi};
+export default sendRequest;
