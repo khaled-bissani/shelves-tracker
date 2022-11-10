@@ -32,13 +32,13 @@ const Login = ({navigation}) => {
                     >
                         {(props) => (
                             <View style={styles.inputs}>
-                                <InputField type={"default"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange('username')}/>
+                                <InputField type={"default"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange('username')} onBlur={props.handleBlur('username')}/>
                                 <Text style={styles.errorText}>{props.touched.username && props.errors.username}</Text>
                                 
-                                <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')}/>
+                                <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')} onBlur={props.handleBlur('password')}/>
                                 <Text style={styles.errorText}>{props.touched.password && props.errors.password}</Text>
 
-                                <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')}/>
+                                <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')} onBlur={props.handleBlur('confirm_password')}/>
                                 <Text style={styles.errorText}>{props.touched.confirm_password && props.errors.confirm_password}</Text>
 
                                 <View style={styles.buttonContainer}>
