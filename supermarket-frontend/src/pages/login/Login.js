@@ -28,9 +28,9 @@ const Login = ({navigation}) => {
         <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <View style={styles.login}>
                 <View style={styles.inputs}>
-                    <InputField type={"default"} placeholder={"Username"} value={user.username} onChange={(e)=>handleChange(e,"username")}/>
-                    <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={user.password} onChange={(e)=>handleChange(e,"password")}/>
-                    <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={user.confirm_password} onChange={(e)=>handleChange(e,"confirm_password")}/>
+                    <InputField type={"default"} placeholder={"Username"} value={user.username} onChangeText={(e)=>handleChange(e,"username")}/>
+                    <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={user.password} onChangeText={(e)=>handleChange(e,"password")}/>
+                    <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={user.confirm_password} onChangeText={(e)=>handleChange(e,"confirm_password")}/>
                 </View>
                 <Buttons text={'LOGIN'} color={colors.primary} onClick={loginHandler}/>
                 <Text style={styles.text}>or</Text>
