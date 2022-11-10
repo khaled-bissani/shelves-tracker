@@ -19,4 +19,12 @@ const postApi = async(url, data) => {
     }
 }
 
-export  {getApi};
+const updateApi = async(url, data) => {
+    try{
+        return await axios.put(url, data);
+    }catch(error){
+        console.log("Error from PUT API", error);
+    }
+}
+
+export  {getApi, postApi, updateApi};
