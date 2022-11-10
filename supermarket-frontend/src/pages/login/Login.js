@@ -30,7 +30,9 @@ const Login = ({navigation}) => {
                                 <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')}/>
 
                                 <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')}/>
-                                <Buttons text={'LOGIN'} color={colors.primary} onClick={props.handleSubmit}/>
+                                <View style={styles.buttonContainer}>
+                                    <Buttons text={'LOGIN'} color={colors.primary} onClick={props.handleSubmit}/>
+                                </View>
                             </View>
                         )}
                     </Formik>

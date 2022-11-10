@@ -14,6 +14,11 @@ export default StyleSheet.create({
         alignItems:'center',
         marginTop:20
     },
+    buttonContainer: {
+        marginTop:75,
+        width:'100%',
+        alignItems:'center'
+    },
     text:{
         color:colors.primary,
         fontSize: fonts.text,
