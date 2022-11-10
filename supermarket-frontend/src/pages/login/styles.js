@@ -24,4 +24,9 @@ export default StyleSheet.create({
         fontSize: fonts.text,
         paddingRight:5
     },
+    errorText: {
+        textAlign: 'center',
+        color:'red',
+        fontWeight: fonts.bold,
+    }
 })
