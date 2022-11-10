@@ -11,4 +11,12 @@ const getApi = async(url, data=null) => {
     }
 }
 
+const postApi = async(url, data) => {
+    try{
+        return await axios.post(url, data);
+    }catch(error){
+        console.log("Error from POST API", error);
+    }
+}
+
 export  {getApi};
