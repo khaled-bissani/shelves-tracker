@@ -23,3 +23,18 @@
 - As a user, I want to have a chat interface, so that I can communicate with the supplier easily
 
 <br><br>
+
+| Wireframes: |
+| ----------------------|
+
+| Landing  | Home/Dashboard  |
+| -----------------| -----|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-landing-page-wireframe.png) | ![Home/Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-home-page-wireframe.png) |
+
+| Chat  | Client  |
+| -----------------| -----|
+| ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-Chat-page-wireframe.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-Client-page-wireframe.png) |
+
+| Expiry  | Profile  |
+| -----------------| -----|
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-Expiry-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-profile-page-wireframe.png) |
