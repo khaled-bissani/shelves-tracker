@@ -87,3 +87,15 @@
 | Chat  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
 | ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page2-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
+
+<br><br>
+
+<img src="./readme/title4.svg"/>
+
+Here's a brief high-level overview of the tech stack the Well app uses:
+
+- This project uses [Expo React Native](https://expo.dev/). Expo is a toolchain built around React Native to help you quickly start an app. It provides a set of tools that simplify the development and testing of React Native app and arms you with the components of users interface and services that are usually available in third-party native React Native components.
+- For the website, this project uses [React](https://reactjs.org/) . React is a JavaScript library for building user interfaces.  React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+- For the server side, the app uses [NodeJs](https://nodejs.org/)  JavaScript runtime. NodeJS is used for server-side programming, and primarily deployed for non-blocking, event-driven servers, such as traditional web sites and back-end API services.
+- For the NodeJs, the app uses [Express](https://expressjs.com/) framework. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- For database, the app uses the [Mongo](https://www.mongodb.com/) database . MongoDB is a document database used to build highly available and scalable internet applications. With its flexible schema approach, it's popular with development teams using agile methodologies.
