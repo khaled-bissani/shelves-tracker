@@ -83,3 +83,7 @@
 | View-more  | Single-item  | notification  | Chat  |
 | -----------------| -----|------|------|
 | ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-single-page-mockup.png) | ![notification](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page-mockup.png) |
+
+| Chat  | Profile  | Edit-profile  | Change-password  |
+| -----------------| -----|------|------|
+| ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page2-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
