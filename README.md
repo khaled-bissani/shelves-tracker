@@ -24,6 +24,10 @@
 
 <br><br>
 
+<img src="./readme/title3.svg"/>
+
+> This design was planned before on paper, then moved to Figma app for the fine details.
+
 | Wireframes: |
 | ----------------------|
 
