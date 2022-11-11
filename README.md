@@ -79,3 +79,7 @@
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
 | ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-landing-page-mockup.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-signup-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-login-page-mockup.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-home-page-mockup.png) |
+
+| View-more  | Single-item  | notification  | Chat  |
+| -----------------| -----|------|------|
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-single-page-mockup.png) | ![notification](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page-mockup.png) |
