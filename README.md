@@ -9,3 +9,17 @@
 </div>
 
 <br><br>
+
+
+<img src="./readme/title2.svg"/>
+
+> The Shelves Tracker app is an app that track all the items in the supermarket. Using a weight sensor, we can get the quantity of a specific product directly to the application that shows each item with the quantity.
+>
+> Aside of the quantity, The Shelves Tracker app keep tracking the expiry date for all the products in the supermarket and send a notification if the product will expire soon.
+
+### User Stories
+- As a user, I want to check all the products in the supermarket, so that I can see the quantity of each item
+- As a user, I want to explore and search items, so that I can check a single item
+- As a user, I want to have a chat interface, so that I can communicate with the supplier easily
+
+<br><br>
