@@ -63,7 +63,7 @@
 
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
-|  <img src="https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-landing-page-wireframe.png" width="428" height="450"/>| <img src="https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-signup-page-wireframe.png" width="428" height="450"/>| ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-landing-page-wireframe.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-signup-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
 
 | View-more  | Single-item  | notification  | Chat  |
 | -----------------| -----|------|------|
