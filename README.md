@@ -42,3 +42,18 @@
 | Expiry  | Profile  |
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-Expiry-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-profile-page-wireframe.png) |
+
+| Mockups: |
+| ----------------------|
+
+| Landing  | Dashboard  |
+| -----------------| -----|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-landing-page-mockup.png) | ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-home-page-mockup.png) |
+
+| Chat  | Client  |
+| -----------------| -----|
+| ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Chat-page-mockup.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Client-page-mockup.png) |
+
+| Expiry  | Profile  |
+| -----------------| -----|
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-profile-page-mockup.png) |
