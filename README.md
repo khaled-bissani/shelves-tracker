@@ -28,7 +28,7 @@
 
 > This design was planned before on paper, then moved to Figma app for the fine details.
 
-| Wireframes: |
+| Website - Wireframes: |
 | ----------------------|
 
 | Landing  | Dashboard  |
@@ -43,7 +43,7 @@
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-Expiry-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/website/Supplier-profile-page-wireframe.png) |
 
-| Mockups: |
+| Website - Mockups: |
 | ----------------------|
 
 | Landing  | Dashboard  |
@@ -57,3 +57,10 @@
 | Expiry  | Profile  |
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-profile-page-mockup.png) |
+
+| Application - Wireframes: |
+| ----------------------|
+
+| Landing  | Signup  | Login  | Home  |
+| -----------------| -----|------|------|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-landing-page-wireframe.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-signup-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
