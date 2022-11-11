@@ -99,3 +99,8 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 - For the server side, the app uses [NodeJs](https://nodejs.org/)  JavaScript runtime. NodeJS is used for server-side programming, and primarily deployed for non-blocking, event-driven servers, such as traditional web sites and back-end API services.
 - For the NodeJs, the app uses [Express](https://expressjs.com/) framework. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - For database, the app uses the [Mongo](https://www.mongodb.com/) database . MongoDB is a document database used to build highly available and scalable internet applications. With its flexible schema approach, it's popular with development teams using agile methodologies.
+
+<br><br>
+<img src="./readme/title5.svg"/>
+
+> Uing the above mentioned tecch stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
