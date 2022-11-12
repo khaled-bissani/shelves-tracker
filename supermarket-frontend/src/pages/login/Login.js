@@ -1,4 +1,4 @@
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, Alert } from "react-native";
 import {Formik} from "formik";
 import * as yup from "yup";
 import Buttons from "../../components/Button/Buttons";
@@ -6,6 +6,7 @@ import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import InputField from "../../components/InputField/InputField";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
+import sendRequest from "../../utils/axios";
 
 const userSchema = yup.object({
     username: yup.string().required().min(6),
@@ -26,8 +27,15 @@ const Login = ({navigation}) => {
                         validationSchema={userSchema}
                         onSubmit={(values, actions) => {
                             actions.resetForm();
-                            console.log('submitted');
-                            navigation.navigate('Main');
+                            sendRequest({method:"post",data:values,route:"http://192.168.44.144:3000/auth/login"})
+                            .then((res)=>{
+                                console.log(res)
+                                navigation.navigate('Main');
+                            })
+                            .catch((err)=>{
+                                Alert.alert('Invalid', 'Wrong username or password')
+                                console.log(err.response.data)
+                            })
                         }}
                     >
                         {(props) => (
