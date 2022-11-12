@@ -7,6 +7,8 @@ import InputField from "../../components/InputField/InputField";
 import PressableText from "../../components/PressableText/PressableText";
 import { colors, fonts } from "../../constants/palette";
 import styles from "./styles";
+import baseUrl from "../../../config/env";
+import sendRequest from "../../utils/axios";
 
 const userSchema = yup.object({
     full_name: yup.string().required("Full name is required").min(6),
@@ -37,6 +39,16 @@ const Signup = ({navigation}) => {
             validationSchema={userSchema}
             onSubmit={(values, actions) => {
                 console.log('submitted')
+                console.log(values)
+                actions.resetForm();
+                sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/auth/signup`})
+                .then((res)=>{
+                    console.log(res)
+                    navigation.navigate('Main');
+                })
+                .catch((err)=>{
+                    console.log(err.response.data)
+                })
             }}
             >
                 {(props) => (
