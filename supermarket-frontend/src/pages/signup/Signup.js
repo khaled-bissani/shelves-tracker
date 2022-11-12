@@ -42,12 +42,17 @@ const Signup = ({navigation}) => {
                 {(props) => (
                 <View style={styles.signup}>
                         <View style={styles.inputs}>
-                            <InputField type={"default"} placeholder={"Full Name"} value={props.values.full_name} onChange={props.handleChange('full_name')}/>
-                            <InputField type={"default"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange('username')}/>
-                            <InputField type={"email-address"} placeholder={"Email"} value={props.values.email} onChange={props.handleChange('email')}/>
-                            <InputField type={"number-pad"} placeholder={"Phone Number"} value={props.values.phone_number} onChange={props.handleChange('phone_number')}/>
-                            <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')}/>
-                            <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')}/>
+                            <InputField type={"default"} placeholder={"Full Name"} value={props.values.full_name} onChange={props.handleChange('full_name')} onBlur={props.handleBlur('full_name')}/>
+
+                            <InputField type={"default"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange('username')} onBlur={props.handleBlur('username')}/>
+
+                            <InputField type={"email-address"} placeholder={"Email"} value={props.values.email} onChange={props.handleChange('email')} onBlur={props.handleBlur('email')}/>
+
+                            <InputField type={"number-pad"} placeholder={"Phone Number"} value={props.values.phone_number} onChange={props.handleChange('phone_number')} onBlur={props.handleBlur('phone_number')}/>
+
+                            <InputField type={"default"} secureTextEntry={true} placeholder={"Password"} value={props.values.password} onChange={props.handleChange('password')} onBlur={props.handleBlur('password')}/>
+
+                            <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')} onBlur={props.handleBlur('confirm_password')}/>
                         </View>
                         <Buttons text={'CREATE ACCOUNT'} color={colors.primary} onClick={props.handleSubmit}/>
                     <View style={styles.textContainer}>
