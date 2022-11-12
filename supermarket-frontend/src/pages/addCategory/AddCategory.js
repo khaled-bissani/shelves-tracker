@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, Text, TextInput, View, ScrollView } from "react-native";
+import { Image, Text, TextInput, View, ScrollView, Pressable } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -36,11 +36,12 @@ const AddCategory = () => {
             {(props) => (
                 <View style={styles.pageContainer}>
                     <View style={styles.imageContainer}>
-                        <Image style={styles.image} source={{uri: image}}/>
+                        <Pressable onPress={pickImage}>
+                            <Image style={styles.image} source={{uri: image}}/>
+                        </Pressable>
                     </View>
                     <TextInput style={styles.input} placeholder={'Category'}/>
                     <View style={styles.buttonContainer}>
-                        <Buttons text={'UPLOAD IMAGE'} color={colors.primary} onClick={pickImage}/>
                         <Buttons text={'SAVE'} color={colors.primary}/>
                     </View>
                 </View>
