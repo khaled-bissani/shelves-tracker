@@ -7,6 +7,7 @@ import InputField from "../../components/InputField/InputField";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
 import sendRequest from "../../utils/axios";
+import baseUrl from "../../../config/env";
 
 const userSchema = yup.object({
     username: yup.string().required().min(6),
@@ -27,7 +28,7 @@ const Login = ({navigation}) => {
                         validationSchema={userSchema}
                         onSubmit={(values, actions) => {
                             actions.resetForm();
-                            sendRequest({method:"post",data:values,route:"http://192.168.44.144:3000/auth/login"})
+                            sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/auth/login`})
                             .then((res)=>{
                                 console.log(res)
                                 navigation.navigate('Main');
