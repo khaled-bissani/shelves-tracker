@@ -30,7 +30,12 @@ const AddCategory = () => {
         <Formik 
         initialValues={{
             category:'',
-            image: base64Image
+            image: ''
+        }}
+        onSubmit={(values, actions)=> {
+            values.image=base64Image
+            console.log(values)
+            
         }}
         >
             {(props) => (
@@ -40,9 +45,9 @@ const AddCategory = () => {
                             <Image style={styles.image} source={{uri: image}}/>
                         </Pressable>
                     </View>
-                    <TextInput style={styles.input} placeholder={'Category'}/>
+                    <TextInput value={props.values.category} onChangeText={props.handleChange('category')} style={styles.input} placeholder={'Category'}/>
                     <View style={styles.buttonContainer}>
-                        <Buttons text={'SAVE'} color={colors.primary}/>
+                        <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
                     </View>
                 </View>
             )}
