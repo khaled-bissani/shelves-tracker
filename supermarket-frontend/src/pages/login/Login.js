@@ -10,9 +10,9 @@ import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
 
 const userSchema = yup.object({
-    username: yup.string().required().min(6),
-    password: yup.string().required().min(8),
-    confirm_password: yup.string().required().min(8),
+    username: yup.string().required("Username is required").min(6),
+    password: yup.string().required("Password is required").min(8),
+    confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('password'), null], 'Passwords must match'),
 })
 
 const Login = ({navigation}) => {
