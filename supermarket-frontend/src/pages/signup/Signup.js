@@ -13,10 +13,6 @@ const Signup = ({navigation}) => {
         navigation.navigate('Login');
     }
 
-    const signupHandler = () => {
-        navigation.navigate('Main');
-    }
-
     return(
         <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <Formik 
@@ -27,6 +23,9 @@ const Signup = ({navigation}) => {
                 phone_number:'',
                 password: '',
                 confirm_password: ''
+            }}
+            onSubmit={(values, actions) => {
+                console.log('submitted')
             }}
             >
                 {(props) => (
@@ -39,7 +38,7 @@ const Signup = ({navigation}) => {
                             <InputField type={"default"} secureTextEntry={true} placeholder={"Password"}/>
                             <InputField type={"default"} secureTextEntry={true} placeholder={"Current Password"}/>
                         </View>
-                        <Buttons text={'CREATE ACCOUNT'} color={colors.primary} onClick={signupHandler}/>
+                        <Buttons text={'CREATE ACCOUNT'} color={colors.primary} onClick={props.handleSubmit}/>
                     <View style={styles.textContainer}>
                         <Text style={styles.text}>
                                 Already have an account?
