@@ -25,5 +25,10 @@ export default StyleSheet.create({
         width:'100%',
         borderBottomWidth: 2,
         borderBottomColor: colors.light_gray
+    },
+    errorText:{
+        textAlign: 'center',
+        color:'red',
+        fontWeight: fonts.bold,
     }
 })

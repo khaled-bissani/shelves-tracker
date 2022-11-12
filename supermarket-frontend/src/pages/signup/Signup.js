@@ -10,7 +10,7 @@ import styles from "./styles";
 
 const userSchema = yup.object({
     full_name: yup.string().required("Full name is required").min(6),
-    username: yup.string().required().min(6),
+    username: yup.string().required("Username is required").min(6),
     email: yup.string().email("Field should contain a valid email").max(255).required("Email is required"),
     phone_number: yup.number().min(8).required("Phone number is required"),
     password: yup.string().required("Password is required").min(8),
