@@ -8,6 +8,7 @@ import styles from "./styles";
 const AddCategory = () => {
 
     const [image, setImage] = useState(null);
+    const [base64Image, setBase64Image] = useState();
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -20,6 +21,7 @@ const AddCategory = () => {
 
         if (!result.cancelled) {
         setImage(result.uri);
+        setBase64Image(result.base64);
         }
     };
 
