@@ -11,6 +11,12 @@ export default StyleSheet.create({
         width:'100%',
         alignItems:'center'
     },
+    errorText: {
+        textAlign: 'center',
+        color:'red',
+        fontWeight: fonts.bold,
+        marginVertical:10
+    },
     imageContainer: {
         backgroundColor: colors.white,
         width:'75%',

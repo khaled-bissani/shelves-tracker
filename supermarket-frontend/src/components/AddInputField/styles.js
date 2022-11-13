@@ -8,6 +8,5 @@ export default StyleSheet.create({
         backgroundColor: colors.white,
         fontSize: fonts.text,
         paddingLeft:10,
-        marginBottom:20
     }
 })
