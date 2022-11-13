@@ -7,6 +7,7 @@ import styles from "./styles";
 import { Formik } from 'formik';
 import sendRequest from '../../utils/axios';
 import baseUrl from '../../../config/env';
+import AddInputField from '../../components/AddInputField/AddInputField';
 
 const AddCategory = () => {
 
@@ -54,7 +55,7 @@ const AddCategory = () => {
                             <Image style={styles.image} source={{uri: image}}/>
                         </Pressable>
                     </View>
-                    <TextInput value={props.values.category} onChangeText={props.handleChange('category')} style={styles.input} placeholder={'Category'}/>
+                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Category'} onBlur={props.handleBlur("category")}/>
                     <View style={styles.buttonContainer}>
                         <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
                     </View>
