@@ -12,14 +12,14 @@ export default StyleSheet.create({
     insideContainer:{
         flexDirection:'row',
         justifyContent:'center',
+        alignItems:'center',
         width:'100%',
-        height:'100%'
+        // height:'100%'
     },
     imageContainer:{
         width:36,
         height:36,
-        marginTop:10,
-        marginRight:10
+        marginRight:15
     },
     text: {
         color: colors.black,
