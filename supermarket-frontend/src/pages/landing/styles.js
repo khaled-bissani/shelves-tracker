@@ -6,6 +6,7 @@ export default StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'space-between',
+        marginBottom:30
     },
     image:{
         flex:3,

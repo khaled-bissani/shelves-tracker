@@ -5,7 +5,9 @@ const Buttons = (props) => {
     return(
         <View style={[styles.buttonContainer ,{backgroundColor:`${props.color}`}]}>
             <Pressable onPress={props.onClick} android_ripple={{color: '#ddd'}} style={({pressed}) => pressed && styles.pressedItem}>
-                <Text style={styles.text}>{props.text}</Text>
+                <View style={styles.textContainer}>
+                    <Text style={styles.text}>{props.text}</Text>
+                </View>
             </Pressable>
         </View>
     )

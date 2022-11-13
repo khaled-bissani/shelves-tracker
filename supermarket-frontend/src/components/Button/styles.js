@@ -3,17 +3,20 @@ import {colors, fonts} from '../../constants/palette';
 
 export default StyleSheet.create({
     buttonContainer:{
-        flexDirection:'column',
-        justifyContent:'center',
         width: '75%',
         height: 60,
         marginBottom:30
     },
-    text: {
-        textAlign:'center',
-        color: colors.white,
-        fontSize: fonts.text,
+    textContainer: {
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        height:'100%',
         width:'100%',
+    },
+    text: {
+        color: colors.white,
+        fontSize: fonts.text,  
     },
     pressedItem:{
         opacity:0.5,
