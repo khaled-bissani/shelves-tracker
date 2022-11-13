@@ -5,6 +5,8 @@ import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import { Formik } from 'formik';
+import sendRequest from '../../utils/axios';
+import baseUrl from '../../../config/env';
 
 const AddCategory = () => {
 
@@ -15,7 +17,6 @@ const AddCategory = () => {
         let result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.All,
         allowsEditing: true,
-        aspect: [4, 3],
         quality: 1,
         base64: true
         });
@@ -23,6 +24,7 @@ const AddCategory = () => {
         if (!result.cancelled) {
         setImage(result.uri);
         setBase64Image(result.base64);
+        // console.log(base64Image)
         }
     };
 
@@ -30,12 +32,20 @@ const AddCategory = () => {
         <Formik 
         initialValues={{
             category:'',
-            image: ''
+            image: '',
+            id:''
         }}
         onSubmit={(values, actions)=> {
             values.image=base64Image
-            console.log(values)
-            
+            values.id='636ef8497eb94fe486471d25'
+            actions.resetForm();
+            sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/category/add`})
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err.response.data)
+            })
         }}
         >
             {(props) => (
