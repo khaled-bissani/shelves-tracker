@@ -5,9 +5,14 @@ import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import { Formik } from 'formik';
+import * as yup from "yup";
 import sendRequest from '../../utils/axios';
 import baseUrl from '../../../config/env';
 import AddInputField from '../../components/AddInputField/AddInputField';
+
+const categorySchema = yup.object({
+    category: yup.string().required("Category is required")
+})
 
 const AddCategory = () => {
 
@@ -35,6 +40,7 @@ const AddCategory = () => {
             image: '',
             id:''
         }}
+        validationSchema={categorySchema}
         onSubmit={(values, actions)=> {
             values.image=base64Image
             values.id='636ef8497eb94fe486471d25'
@@ -55,7 +61,10 @@ const AddCategory = () => {
                             <Image style={styles.image} source={{uri: image}}/>
                         </Pressable>
                     </View>
-                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Category'} onBlur={props.handleBlur("category")}/>
+                    <View>
+                        <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Category'} onBlur={props.handleBlur('category')}/>
+                        <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
+                    </View>
                     <View style={styles.buttonContainer}>
                         <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
                     </View>
