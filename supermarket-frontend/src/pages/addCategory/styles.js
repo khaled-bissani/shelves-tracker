@@ -17,7 +17,7 @@ export default StyleSheet.create({
     imageContainer: {
         backgroundColor: colors.white,
         width:'75%',
-        height:200,
+        height:300,
         borderRadius:10
     },
     image: {

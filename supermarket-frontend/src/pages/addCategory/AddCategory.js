@@ -24,7 +24,6 @@ const AddCategory = () => {
         if (!result.cancelled) {
         setImage(result.uri);
         setBase64Image(result.base64);
-        // console.log(base64Image)
         }
     };
 
