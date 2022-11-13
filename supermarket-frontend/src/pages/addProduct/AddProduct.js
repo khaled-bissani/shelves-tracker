@@ -5,6 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import Barcode from "../../components/Barcode/Barcode";
+import { Formik } from 'formik';
 
 const AddProduct = () => {
 
@@ -35,22 +36,36 @@ const AddProduct = () => {
     }
 
     return <ScrollView contentContainerStyle={{flexGrow: 1}}>
-            <View style={styles.pageContainer}>
-            <View style={styles.imageContainer}>
-                <Pressable onPress={pickImage}>
-                    <Image style={styles.image} source={{uri: image}}/>
-                </Pressable>
+        <Formik
+        initialValues={{
+            product_name:'',
+            quantity_shelf:'',
+            expiry_date:'',
+            category: '',
+            barcode: '',
+            image: '',
+            id:''
+        }}
+        >
+            {(props) => (
+                <View style={styles.pageContainer}>
+                <View style={styles.imageContainer}>
+                    <Pressable onPress={pickImage}>
+                        <Image style={styles.image} source={{uri: image}}/>
+                    </Pressable>
+                </View>
+                <TextInput style={styles.input} placeholder={'Product Name'}/>
+                <TextInput style={styles.input} placeholder={'Product Quantity '}/>
+                <TextInput style={styles.input} placeholder={'Product Category'}/>
+                <TextInput style={styles.input} placeholder={'Product Expiry Date'}/>
+                {barcode ? <Barcode number={number}/> : null}
+                <View style={styles.buttonContainer}>
+                    <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
+                    <Buttons text={'SAVE'} color={colors.primary}/>
+                </View>
             </View>
-            <TextInput style={styles.input} placeholder={'Product Name'}/>
-            <TextInput style={styles.input} placeholder={'Product Quantity '}/>
-            <TextInput style={styles.input} placeholder={'Product Category'}/>
-            <TextInput style={styles.input} placeholder={'Product Expiry Date'}/>
-            {barcode ? <Barcode number={number}/> : null}
-            <View style={styles.buttonContainer}>
-                <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
-                <Buttons text={'SAVE'} color={colors.primary}/>
-            </View>
-        </View>
+            )}
+        </Formik>
     </ScrollView>
 }
 
