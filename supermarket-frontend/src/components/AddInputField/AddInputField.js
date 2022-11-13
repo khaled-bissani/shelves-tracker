@@ -1,7 +1,7 @@
-import { Text } from "react-native";
+import { TextInput } from "react-native";
 
 const AddInputField = () => {
-    return <Text>Add Input Field</Text>
+    return <TextInput placeholder={props.placeholder} value={props.value} onChangeText={props.onChange} onBlur={props.onBlur}/>
 }
 
 export default AddInputField;
