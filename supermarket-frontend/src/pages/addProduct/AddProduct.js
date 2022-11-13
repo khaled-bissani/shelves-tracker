@@ -6,7 +6,15 @@ import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import Barcode from "../../components/Barcode/Barcode";
 import { Formik } from 'formik';
+import * as yup from "yup";
 import AddInputField from "../../components/AddInputField/AddInputField";
+
+const productSchema = yup.object({
+    product_name:yup.string().required("Product Name is required"),
+    quantity_shelf:yup.string().required("Product Quantity is required"),
+    expiry_date:yup.string().required("Product Expiry Date is required"),
+    category: yup.string().required("Category is required")
+})
 
 const AddProduct = () => {
 
@@ -47,6 +55,10 @@ const AddProduct = () => {
             image: '',
             id:''
         }}
+        validationSchema={productSchema}
+        onSubmit={(values, actions) => {
+            console.log(values)
+        }}
         >
             {(props) => (
                 <View style={styles.pageContainer}>
@@ -57,17 +69,21 @@ const AddProduct = () => {
                 </View>
                 <View style={styles.inputContainer}>
                     <AddInputField value={props.values.product_name} onChange={props.handleChange('product_name')} placeholder={'Product Name'} onBlur={props.handleBlur('product_name')}/>
+                    <Text style={styles.errorText}>{props.touched.product_name && props.errors.product_name}</Text>
 
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
+                    <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>
 
                     <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Category'} onBlur={props.handleBlur('category')}/>
+                    <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
 
                     <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
+                    <Text style={styles.errorText}>{props.touched.expiry_date && props.errors.expiry_date}</Text>
                 </View>
                 {barcode ? <Barcode number={number}/> : null}
                 <View style={styles.buttonContainer}>
                     <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
-                    <Buttons text={'SAVE'} color={colors.primary}/>
+                    <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
                 </View>
             </View>
             )}
