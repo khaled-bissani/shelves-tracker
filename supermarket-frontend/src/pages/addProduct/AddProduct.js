@@ -6,6 +6,7 @@ import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import Barcode from "../../components/Barcode/Barcode";
 import { Formik } from 'formik';
+import AddInputField from "../../components/AddInputField/AddInputField";
 
 const AddProduct = () => {
 
@@ -54,10 +55,15 @@ const AddProduct = () => {
                         <Image style={styles.image} source={{uri: image}}/>
                     </Pressable>
                 </View>
-                <TextInput style={styles.input} placeholder={'Product Name'}/>
-                <TextInput style={styles.input} placeholder={'Product Quantity '}/>
-                <TextInput style={styles.input} placeholder={'Product Category'}/>
-                <TextInput style={styles.input} placeholder={'Product Expiry Date'}/>
+                <View>
+                    <AddInputField value={props.values.product_name} onChange={props.handleChange('product_name')} placeholder={'Product Name'} onBlur={props.handleBlur('product_name')}/>
+
+                    <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
+
+                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Category'} onBlur={props.handleBlur('category')}/>
+
+                    <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
+                </View>
                 {barcode ? <Barcode number={number}/> : null}
                 <View style={styles.buttonContainer}>
                     <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
