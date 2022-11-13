@@ -8,6 +8,8 @@ import Barcode from "../../components/Barcode/Barcode";
 import { Formik } from 'formik';
 import * as yup from "yup";
 import AddInputField from "../../components/AddInputField/AddInputField";
+import sendRequest from "../../utils/axios";
+import baseUrl from "../../../config/env";
 
 const productSchema = yup.object({
     product_name:yup.string().required("Product Name is required"),
@@ -57,7 +59,17 @@ const AddProduct = () => {
         }}
         validationSchema={productSchema}
         onSubmit={(values, actions) => {
-            console.log(values)
+            values.image=base64Image
+            values.id='636ef8497eb94fe486471d25'
+            values.barcode=barcode
+            actions.resetForm();
+            sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err.response.data)
+            })
         }}
         >
             {(props) => (
