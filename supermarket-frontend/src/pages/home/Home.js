@@ -10,15 +10,25 @@ import baseUrl from "../../../config/env";
 
 const Home = () => {
 
-    const [categories, setCategories] = useState()
+    const [categories, setCategories] = useState();
+    const [ products, setProducts] = useState();
 
     const navigation = useNavigation();
 
     useEffect(() => {
         const fetchData = async() => {
             try {
-                const allCategory = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
-                setCategories(allCategory)
+                // Fetching all the categories
+                const allCategories = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
+                setCategories(allCategories)
+
+                // Fetching all the products
+                const value ={
+                    id:"636ef8497eb94fe486471d25",
+                    category:"Fruits"
+                }
+                const allProducts = await sendRequest({method:"post" ,data:value,route:`${baseUrl.BASE_URL}/product/all`})
+                setProducts(allProducts)
             } catch (error) {
                 console.log(error)
             }
