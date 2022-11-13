@@ -7,13 +7,6 @@ export default StyleSheet.create({
         justifyContent:'space-evenly',
         alignItems:'center'
     },
-    input: {
-        width:'75%',
-        height:50,
-        backgroundColor: colors.white,
-        fontSize: fonts.text,
-        paddingLeft:10,
-    },
     imageContainer: {
         backgroundColor: colors.white,
         width:'75%',
@@ -25,6 +18,15 @@ export default StyleSheet.create({
         height:'100%',
         resizeMode:"cover",
         borderRadius:10
+    },
+    inputContainer: {
+        width:'100%',
+        alignItems:'center'
+    },
+    errorText: {
+        textAlign: 'center',
+        color:'red',
+        fontWeight: fonts.bold,
     },
     buttonContainer: {
         width:'100%',

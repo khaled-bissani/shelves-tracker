@@ -61,7 +61,7 @@ const AddCategory = () => {
                             <Image style={styles.image} source={{uri: image}}/>
                         </Pressable>
                     </View>
-                    <View>
+                    <View style={styles.inputContainer}>
                         <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Category'} onBlur={props.handleBlur('category')}/>
                         <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
                     </View>
