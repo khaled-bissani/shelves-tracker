@@ -7,12 +7,9 @@ export default StyleSheet.create({
         justifyContent:'space-evenly',
         alignItems:'center'
     },
-    input: {
-        width:'75%',
-        height:40,
-        backgroundColor: colors.white,
-        fontSize: fonts.text,
-        paddingLeft:10,
+    inputContainer: {
+        width:'100%',
+        alignItems:'center'
     },
     imageContainer: {
         backgroundColor: colors.white,

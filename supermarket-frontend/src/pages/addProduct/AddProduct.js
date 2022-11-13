@@ -55,7 +55,7 @@ const AddProduct = () => {
                         <Image style={styles.image} source={{uri: image}}/>
                     </Pressable>
                 </View>
-                <View>
+                <View style={styles.inputContainer}>
                     <AddInputField value={props.values.product_name} onChange={props.handleChange('product_name')} placeholder={'Product Name'} onBlur={props.handleBlur('product_name')}/>
 
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
