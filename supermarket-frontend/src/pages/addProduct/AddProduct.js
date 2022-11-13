@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, Text, TextInput, View } from "react-native";
+import { Image, Text, TextInput, View, Pressable } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -13,6 +13,7 @@ const AddProduct = () => {
     const [number, setNumber]=useState();
     const [barcode, setBarcode] = useState(false);
     const [image, setImage] = useState(null);
+    const [base64Image, setBase64Image] = useState();
 
     const showBarcode = () => {
         setBarcode(true);
@@ -23,19 +24,21 @@ const AddProduct = () => {
         let result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.All,
         allowsEditing: true,
-        aspect: [4, 3],
         quality: 1,
         base64: true
         });
 
         if (!result.cancelled) {
         setImage(result.uri);
+        setBase64Image(result.base64);
         }
     }
 
     return <View style={styles.pageContainer}>
     <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{uri: image}}/>
+        <Pressable onPress={pickImage}>
+            <Image style={styles.image} source={{uri: image}}/>
+        </Pressable>
     </View>
     <TextInput style={styles.input} placeholder={'Product Name'}/>
     <TextInput style={styles.input} placeholder={'Product Quantity '}/>
@@ -44,7 +47,6 @@ const AddProduct = () => {
     {barcode ? <Barcode number={number}/> : null}
     <View style={styles.buttonContainer}>
         <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
-        <Buttons text={'UPLOAD IMAGE'} color={colors.primary} onClick={pickImage}/>
         <Buttons text={'SAVE'} color={colors.primary}/>
     </View>
 </View>
