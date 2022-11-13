@@ -34,12 +34,12 @@ const Signup = ({navigation}) => {
                 email:'',
                 phone_number:'',
                 password: '',
-                confirm_password: ''
+                confirm_password: '',
+                user_type:''
             }}
             validationSchema={userSchema}
             onSubmit={(values, actions) => {
-                console.log('submitted')
-                console.log(values)
+                values.user_type="Supermarket"
                 actions.resetForm();
                 sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/auth/signup`})
                 .then((res)=>{
