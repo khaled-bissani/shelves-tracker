@@ -11,7 +11,7 @@ import baseUrl from "../../../config/env";
 const Home = () => {
 
     const [categories, setCategories] = useState([]);
-    const [ products, setProducts] = useState();
+    const [ products, setProducts] = useState([]);
 
     const navigation = useNavigation();
 
@@ -21,14 +21,6 @@ const Home = () => {
                 // Fetching all the categories
                 const allCategories = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
-
-                // Fetching all the products
-                const value ={
-                    id:"636ef8497eb94fe486471d25",
-                    category:"Fruits"
-                }
-                const allProducts = await sendRequest({method:"post" ,data:value,route:`${baseUrl.BASE_URL}/product/all`})
-                setProducts(allProducts)
             } catch (error) {
                 console.log(error)
             }
@@ -36,7 +28,7 @@ const Home = () => {
         fetchData()
     }, [])
 
-    return <>
+    return <ScrollView>
     <View style={styles.homeContainer}>
         <View style={styles.mainTitleContainer}>
             <Text style={styles.allCategoriesTitle}>All Categories</Text>
@@ -51,9 +43,13 @@ const Home = () => {
                     )
                 })}
         </ScrollView>
-        <SingleCategory categoryTitle={"Fruits"}/>
+        {categories.map((item)=>{
+            return (
+                <SingleCategory key={item._id} categoryTitle={item.category}/>
+            )
+        })}
     </View>
-    </>
+    </ScrollView>
 }
 
 export default Home;
