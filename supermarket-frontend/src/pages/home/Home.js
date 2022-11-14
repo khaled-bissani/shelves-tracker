@@ -10,7 +10,7 @@ import baseUrl from "../../../config/env";
 
 const Home = () => {
 
-    const [categories, setCategories] = useState();
+    const [categories, setCategories] = useState([]);
     const [ products, setProducts] = useState();
 
     const navigation = useNavigation();
@@ -20,7 +20,7 @@ const Home = () => {
             try {
                 // Fetching all the categories
                 const allCategories = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
-                setCategories(allCategories)
+                setCategories(allCategories.category)
 
                 // Fetching all the products
                 const value ={
@@ -43,9 +43,13 @@ const Home = () => {
             <PressableText onClick={()=> navigation.navigate('ViewMoreCategory')} text={'view more'} textColor={'#545454'} fontSize={12} />
         </View>
         <ScrollView horizontal={true}>
-            <View style={styles.categoriesContainer}>
-                <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={'Fruits'} imageURL={require('../../../assets/images/landing.png')} width={100} height={100}/>
-                </View>
+                {categories.map((item) => {
+                    return(
+                        <View style={styles.categoriesContainer} key={item._id}>
+                            <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={item.category} imageURL={{uri : `http://127.0.0.1:3000/images/${item.image}`}} width={100} height={100}/>
+                        </View>
+                    )
+                })}
         </ScrollView>
         <SingleCategory categoryTitle={"Fruits"}/>
     </View>
