@@ -11,7 +11,6 @@ import baseUrl from "../../../config/env";
 const Home = () => {
 
     const [categories, setCategories] = useState([]);
-    const [ products, setProducts] = useState([]);
 
     const navigation = useNavigation();
 
