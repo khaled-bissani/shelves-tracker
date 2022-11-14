@@ -36,9 +36,13 @@ const SingleCategory = (props) => {
             <PressableText onClick={()=>navigation.navigate('ViewMoreItem')} text={'view more'} textColor={'#545454'} fontSize={12}/>
         </View>
         <ScrollView horizontal={true}>
-            <View style={styles.singleItemContainer}>
-                <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={"item name"} quantity={'number'} width={130} height={130}/>
-            </View>
+            {products.map((item)=>{
+                    return (
+                        <View key={item._id} style={styles.singleItemContainer}>
+                            <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={item.product_name} quantity={item.quantity_shelf} width={130} height={130}/>
+                        </View>
+                    )
+                })}
         </ScrollView>
     </View>
 }
