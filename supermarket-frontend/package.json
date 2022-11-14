@@ -31,6 +31,7 @@
     "react-native-screens": "~3.15.0",
     "react-native-simple-animations": "^0.3.1",
     "react-redux": "^8.0.5",
+    "socket.io-client": "^4.5.3",
     "yup": "^0.32.11"
   },
   "devDependencies": {
