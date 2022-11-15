@@ -8,6 +8,7 @@ import { colors } from "../../constants/palette";
 import styles from "./styles";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const userSchema = yup.object({
     username: yup.string().required("Username is required").min(6),
@@ -31,6 +32,7 @@ const Login = ({navigation}) => {
                             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/auth/login`})
                             .then((res)=>{
                                 console.log(res)
+                                AsyncStorage.setItem('userId', res.user_id)
                                 navigation.navigate('Main');
                             })
                             .catch((err)=>{

@@ -7,10 +7,14 @@ import PressableText from "../../components/PressableText/PressableText";
 import SingleCategory from "../../components/SingleCategory/SingleCategory";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Home = () => {
 
+    const [userId, setUserId] = useState("");
     const [categories, setCategories] = useState([]);
+
+    AsyncStorage.getItem('userId').then((value)=>setUserId(value))
 
     const navigation = useNavigation();
 
@@ -18,7 +22,7 @@ const Home = () => {
         const fetchData = async() => {
             try {
                 // Fetching all the categories
-                const allCategories = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
+                const allCategories = await sendRequest({method:"get",data:userId,route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
             } catch (error) {
                 console.log(error)
