@@ -34,10 +34,19 @@ const MainStackNavigation = () => {
           headerTitle:'All Categories',
           headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
         }}/>
-        <Stack.Screen name='ViewMoreItem' component={ViewMoreItem} options={{
-          headerTitle:'Category name',
-          headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
-        }}/>
+        <Stack.Screen name='ViewMoreItem' component={ViewMoreItem} options={
+          ({route, navigation})=> {
+            const categoryName = route.params.categoryName
+            return{
+              title: categoryName
+            }
+          }
+        //   {
+        //   headerTitle:'Category name',
+        //   headerRight:() => <SearchButton color={'black'} onPress={()=> console.log('search')}/>,
+          
+        // }
+        }/>
         <Stack.Screen name='SingleItemView' component={SingleItemView} options={{
           headerTitle:''
         }}/>
