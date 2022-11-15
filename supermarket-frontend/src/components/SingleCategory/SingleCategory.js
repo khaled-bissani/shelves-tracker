@@ -6,15 +6,19 @@ import SingleItem from "../SingleItem/SingleItem";
 import styles from "./styles";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const SingleCategory = (props) => {
 
     const navigation= useNavigation();
 
+    const [userId, setUserId] = useState("");
     const [ products, setProducts] = useState([]);
+
+    AsyncStorage.getItem('userId').then((value)=>setUserId(value))
     
     const value ={
-        id:"636ef8497eb94fe486471d25",
+        id:userId,
         category:"Fruits "
     }
 
