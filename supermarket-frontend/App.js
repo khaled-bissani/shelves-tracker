@@ -1,13 +1,17 @@
 import {StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import MainStackNavigation from './src/navigation/MainStackNavigation';
+import { Provider } from 'react-redux';
+import { store } from './src/redux/store';
 
 export default function App() {
   return (
     <>
-      <NavigationContainer>
-        <MainStackNavigation/>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <MainStackNavigation/>
+        </NavigationContainer>
+      </Provider>
     </>    
   );
 }
