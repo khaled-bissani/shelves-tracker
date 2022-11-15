@@ -38,6 +38,7 @@ const Home = () => {
                     return(
                         <View style={styles.categoriesContainer} key={item._id}>
                             <Categories onClick={()=> navigation.navigate('ViewMoreItem',{
+                                categoryId: item._id,
                                 categoryName: item.category
                             })} label={item.category} imageUrl={item.image} width={100} height={100}/>
                         </View>

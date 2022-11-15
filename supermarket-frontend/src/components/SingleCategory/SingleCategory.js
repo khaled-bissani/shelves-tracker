@@ -12,15 +12,16 @@ const SingleCategory = (props) => {
     const navigation= useNavigation();
 
     const [ products, setProducts] = useState([]);
+    
+    const value ={
+        id:"636ef8497eb94fe486471d25",
+        category:"Fruits "
+    }
 
     useEffect(() => {
         const fetchData = async() => {
             try {
                 // Fetching all the products
-                const value ={
-                    id:"636ef8497eb94fe486471d25",
-                    category:"Fruits "
-                }
                 const allProducts = await sendRequest({method:"post" ,data:value,route:`${baseUrl.BASE_URL}/product/all`})
                 setProducts(allProducts[0].products)
             } catch (error) {
@@ -33,7 +34,9 @@ const SingleCategory = (props) => {
     return <View style={styles.singleCategoryContainer}>
         <View style={styles.singleCategoryTitleContainer}>
             <Text style={styles.singleCtegoryTitle}>{props.categoryTitle}</Text>
-            <PressableText onClick={()=>navigation.navigate('ViewMoreItem')} text={'view more'} textColor={'#545454'} fontSize={12}/>
+            <PressableText onClick={()=>navigation.navigate('ViewMoreItem' ,{
+                categoryName: value.category
+            })} text={'view more'} textColor={'#545454'} fontSize={12}/>
         </View>
         <ScrollView horizontal={true}>
             {products.map((item)=>{
