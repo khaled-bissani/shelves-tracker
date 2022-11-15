@@ -37,7 +37,7 @@ const Home = () => {
                 {categories.map((item) => {
                     return(
                         <View style={styles.categoriesContainer} key={item._id}>
-                            <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={item.category} imageURL={{uri : `http://127.0.0.1:3000/images/${item.image}`}} width={100} height={100}/>
+                            <Categories onClick={()=> navigation.navigate('ViewMoreItem')} label={item.category} imageUrl={item.image} width={100} height={100}/>
                         </View>
                     )
                 })}
