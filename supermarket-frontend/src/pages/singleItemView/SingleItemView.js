@@ -3,26 +3,35 @@ import { Text, View, Image } from "react-native";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
 
-const SingleItemView = () => {
+const SingleItemView = ({route}) => {
+
+    const productId = route.params.productId
+    const productName = route.params.productName
+    const productQuantity = route.params.productQuantity
+    const productImage = route.params.productImage
+    const productExpiryDate = route.params.productExpiryDate
+
+    const image = `http://192.168.44.144:3000/static/images/${productImage}`
+
     return <View style={styles.singleItemViewContainer}>
         <View style={styles.topContainer}>
             <View style={styles.imageContainer}>
-                <Image style={styles.image} source={require('../../../assets/images/landing.png')}/>
+                <Image style={styles.image} source={{uri: image}}/>
             </View>
         </View>
         <View style={styles.bottomContainer}>
             <View style={styles.textContainer}>
-                <Text style={styles.text}>Item Name</Text>
+                <Text style={styles.text}>{productName}</Text>
                 <Ionicons name="create-outline" color={colors.primary} size={36}/>
             </View>
             <View style={styles.elementContainer}>
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Quantity on shelves</Text>
-                    <Text style={styles.value}>Number</Text>
+                    <Text style={styles.value}>{productQuantity}</Text>
                 </View>
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Expiry Date</Text>
-                    <Text style={styles.value}>Number</Text>
+                    <Text style={styles.value}>{productExpiryDate}</Text>
                 </View>
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Bar Code</Text>

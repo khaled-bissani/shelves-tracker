@@ -19,7 +19,7 @@ const SingleCategory = (props) => {
                 // Fetching all the products
                 const value ={
                     id:"636ef8497eb94fe486471d25",
-                    category:"Fruits"
+                    category:"Fruits "
                 }
                 const allProducts = await sendRequest({method:"post" ,data:value,route:`${baseUrl.BASE_URL}/product/all`})
                 setProducts(allProducts[0].products)
@@ -39,7 +39,14 @@ const SingleCategory = (props) => {
             {products.map((item)=>{
                     return (
                         <View key={item._id} style={styles.singleItemContainer}>
-                            <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={item.product_name} quantity={item.quantity_shelf} imageUrl={item.image} width={130} height={130}/>
+                            <SingleItem onClick={()=>navigation.navigate('SingleItemView', {
+                                productId: item._id,
+                                productName: item.product_name,
+                                productQuantity: item.quantity_shelf,
+                                productImage: item.image,
+                                productExpiryDate: item.expiry_date
+                                })} 
+                                label={item.product_name} quantity={item.quantity_shelf} imageUrl={item.image} width={130} height={130}/>
                         </View>
                     )
                 })}
