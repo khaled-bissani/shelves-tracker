@@ -39,7 +39,7 @@ const SingleCategory = (props) => {
             {products.map((item)=>{
                     return (
                         <View key={item._id} style={styles.singleItemContainer}>
-                            <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={item.product_name} quantity={item.quantity_shelf} width={130} height={130}/>
+                            <SingleItem onClick={()=>navigation.navigate('SingleItemView')} label={item.product_name} quantity={item.quantity_shelf} imageUrl={item.image} width={130} height={130}/>
                         </View>
                     )
                 })}
