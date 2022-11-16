@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: 'password is required'
+        required: 'password is required',
+        select: false
     },
     phone_number: {
         type: String,
@@ -28,6 +29,9 @@ const userSchema = new mongoose.Schema({
     user_type: {
         type: String,            
         enum: ['Admin', 'Supplier', 'Supermarket'],
+    },
+    expoPushToken: {
+        type: String
     },
     category: [{
         category:{
