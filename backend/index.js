@@ -24,6 +24,9 @@ app.use('/profile', profileRouter);
 const clientRouter = require('./routes/client.routes');
 app.use('/client', clientRouter);
 
+const expoTokenRouter = require('./routes/notification.routes');
+app.use('/expo', expoTokenRouter);
+
 const path = require('path')
 app.use('/static',express.static(path.join(__dirname,'./public')));
 
