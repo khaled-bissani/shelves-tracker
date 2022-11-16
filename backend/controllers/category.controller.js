@@ -7,8 +7,7 @@ const addCategory = async(req,res) => {
 
     const image_id = crypto.randomBytes(16).toString("hex");
 
-    const base64Data = image.replace("data:image/png;base64,", "");
-    const new_image = Buffer.from(base64Data, "base64");
+    const new_image = Buffer.from(image, "base64");
 
     fs.writeFile(__dirname.replace('controllers', 'public/images/') + image_id + ".png", new_image, 
     (err) => {
