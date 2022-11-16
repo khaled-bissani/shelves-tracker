@@ -78,8 +78,13 @@ const Notification = () => {
     }, [userId,expoPushToken]);
 
     return <ScrollView>
-        <SingleNotification notification={"test notification"}/>
+        {notifications.map((item)=>{
+            return (
+                <SingleNotification key={item.id} notification={item.notification}/>
+            )
+        })}
     </ScrollView>
+
 }
 
 export default Notification;
