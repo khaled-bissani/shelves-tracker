@@ -2,6 +2,7 @@ const express = require('express');
 
 require('dotenv').config();
 require('./config/database.config');
+require('./controllers/scheduleNotification.controller')
 
 const app = express();
 app.use(express.json({limit:'50mb'}));
