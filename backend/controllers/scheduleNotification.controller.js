@@ -9,6 +9,12 @@ const notification = async(expoPushToken, message) => {
     }
 }
 
+// Calling the schedule function everyday at midnight
+cron.schedule('0 0 0 * * *', function () {
+    console.log('running at midnight');
+    schedule()
+});
+
 const schedule = async(req, res) => {
     const allUser = await User.find()
 
