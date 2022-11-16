@@ -40,6 +40,17 @@ const Notification = () => {
         registerForPushNotificationsAsync()
         }, [])
 
+    const notificationListener = useRef();
+
+    useEffect(() => {
+        // This listener is fired whenever a notification is received while the app is foregrounded
+        notificationListener.current = Notifications.addNotificationReceivedListener(response => {
+            const message = response.request.content.body;
+            setNotifications([...notifications,{id: notifications.length + 1, notification:message}]);
+            
+        });
+    }, [notificationListener])
+
     return <ScrollView>
         <SingleNotification notification={"test notification"}/>
     </ScrollView>
