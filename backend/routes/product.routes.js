@@ -3,7 +3,7 @@ const {addProduct, getProduct, getSingleProduct, updateSingleProduct} = require(
 const router = Router();
 
 router.post('/add',addProduct);
-router.get('/all', getProduct);
+router.post('/all', getProduct);
 router.get('/single_product', getSingleProduct);
 router.put('/single_product', updateSingleProduct)
 
