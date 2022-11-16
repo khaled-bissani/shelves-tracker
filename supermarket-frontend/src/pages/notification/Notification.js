@@ -16,6 +16,17 @@ Notifications.setNotificationHandler({
 
 const Notification = () => {
 
+    const [userId, setUserId] = useState("");
+    const [expoPushToken, setExpoPushToken] = useState("")
+    const [notifications, setNotifications] = useState([{id:0, notification:"Notification"}])
+
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value))
+
+    const data = {
+        id:userId,
+        expoPushToken: expoPushToken
+    }
+
     const registerForPushNotificationsAsync = async() => {
         let token;
     
