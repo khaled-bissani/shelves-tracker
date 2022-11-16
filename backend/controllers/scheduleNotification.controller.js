@@ -47,6 +47,10 @@ const schedule = async(req, res) => {
                 const message = `${singleProduct.product_name} is expiring in less than a week. ${remainingDay} days left`;
                 notification(expoPushToken, message)
             }
+            if(remainingDay == 0){
+                const message = `${singleProduct.product_name} is expired. Please make sure to remove it.`;
+                notification(expoPushToken, message)
+            }
         }
     }
 }
