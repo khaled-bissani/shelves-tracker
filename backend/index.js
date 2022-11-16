@@ -25,9 +25,9 @@ const clientRouter = require('./routes/client.routes');
 app.use('/client', clientRouter);
 
 const path = require('path')
-app.use(express.static(path.join(__dirname,'./public')));
+app.use('/static',express.static(path.join(__dirname,'./public')));
 
-app.listen(process.env.PORT, (err)=>{
+app.listen(process.env.PORT, process.env.IP_ADDRESS ,  (err)=>{
     if(err) console.log(err);
-    console.log(`Running server on port ${process.env.PORT}`);
+    console.log(`Running server on port ${process.env.PORT} and on IP address ${process.env.IP_ADDRESS}`);
 })
