@@ -19,7 +19,7 @@ const SingleCategory = (props) => {
     
     const value ={
         id:userId,
-        category:"Fruits "
+        category:props.categoryTitle
     }
 
     useEffect(() => {
@@ -32,8 +32,10 @@ const SingleCategory = (props) => {
                 console.log(error)
             }
         }
-        fetchData()
-    }, [])   
+        if(userId.length>0){
+            fetchData()
+        }
+    }, [userId])   
 
     return <View style={styles.singleCategoryContainer}>
         <View style={styles.singleCategoryTitleContainer}>

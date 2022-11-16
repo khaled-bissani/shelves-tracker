@@ -4,11 +4,7 @@ import { colors, fonts } from "../../constants/palette";
 import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
 
-const ViewMoreItem = ({navigation, route}) => {
-
-    const categoryId = route.params.categoryId
-    const categoryName = route.params.categoryName
-
+const ViewMoreItem = ({navigation}) => {
     return <View style={styles.pageContainer}>
         <View style={styles.iconContainer}>
             <Pressable>

@@ -15,7 +15,7 @@ const ViewMoreCategory = ({navigation}) => {
         const fetchData = async() => {
             try {
                 // Fetching all the categories
-                const allCategories = await sendRequest({method:"get",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
+                const allCategories = await sendRequest({method:"post",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
             } catch (error) {
                 console.log(error)

@@ -14,7 +14,7 @@ const Home = () => {
     const [userId, setUserId] = useState("");
     const [categories, setCategories] = useState([]);
 
-    AsyncStorage.getItem('userId').then((value)=>setUserId(value))
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value))
 
     const navigation = useNavigation();
 
@@ -22,14 +22,16 @@ const Home = () => {
         const fetchData = async() => {
             try {
                 // Fetching all the categories
-                const allCategories = await sendRequest({method:"get",data:userId,route:`${baseUrl.BASE_URL}/category/all`})
+                const allCategories = await sendRequest({method:"post",data:userId,route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
             } catch (error) {
                 console.log(error)
             }
         }
-        fetchData()
-    }, [])
+        if(userId.length>0){
+            fetchData()
+        }
+    }, [userId])
 
     return <ScrollView>
     <View style={styles.homeContainer}>
