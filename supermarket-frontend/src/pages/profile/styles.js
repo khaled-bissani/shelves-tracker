@@ -18,7 +18,8 @@ export default StyleSheet.create({
     profilePicture: {
         width:'100%',
         height:'100%',
-        resizeMode:"contain"
+        resizeMode:"cover",
+        borderRadius:100
     },
     profileName: {
         fontSize: fonts.title

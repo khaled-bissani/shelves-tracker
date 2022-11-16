@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, Image} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from 'expo-image-picker';
 import ProfileOption from "../../components/ProfileOption/ProfileOption";
 import styles from "./styles";
+import sendRequest from '../../utils/axios';
+import baseUrl from '../../../config/env';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Profile = () => {
 
     const navigation = useNavigation();
 
     const [image, setImage] = useState(null);
+    const [base64Image, setBase64Image] = useState("");
+    const [userId, setUserId] = useState("");
+
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value));
+
+    const values={
+        id: userId,
+        picture: base64Image
+    }
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -21,14 +33,30 @@ const Profile = () => {
         });
 
         if (!result.cancelled) {
-        setImage(result.base64);
+        setImage(result.uri);
+        setBase64Image(result.base64);        
         }
     };
+
+    useEffect(() => {
+        const fetchData = async() => {
+            try {
+                await sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/profile/picture`})
+                .then((res)=>{
+                console.log(res)})
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        if(userId.length>0 && base64Image.length>0){
+            fetchData()
+        }
+    }, [userId,base64Image])
     
     return <View>
         <View style={styles.container}>
             <View style={styles.profilePictureContainer}>
-                <Image style={styles.profilePicture} source={''}/>
+                <Image style={styles.profilePicture} source={{uri : image}}/>
             </View>
             <Text style={styles.profileName}>Supermarket</Text>
             <View style={styles.profileLine}></View>
