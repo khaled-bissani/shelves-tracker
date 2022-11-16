@@ -62,6 +62,21 @@ const Notification = () => {
         });
     }, [notificationListener])
 
+    useEffect(() => {
+        const fetchData = async() => {
+            try {
+                await sendRequest({method:"put",data:data,route:`${baseUrl.BASE_URL}/expo/token`})
+                .then((res)=>console.log(res))
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        if(userId.length>0 && expoPushToken.length>0){
+            console.log(data)
+            fetchData()
+        }
+    }, [userId,expoPushToken]);
+
     return <ScrollView>
         <SingleNotification notification={"test notification"}/>
     </ScrollView>
