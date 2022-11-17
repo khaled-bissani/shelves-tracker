@@ -53,9 +53,9 @@ const changePassword = async(req,res) => {
 
     const user = await User.findOne({id}).select("+password");
 
-    const matchPassword = bcrypt.compare(old_password, user.password);
+    const matchPassword = await bcrypt.compare(old_password, user.password);
     if(matchPassword) {
-        user.update({id},{password:new_password})
+        user.update({id},{password: await bcrypt.hash(new_password,6)})
         
         await user.save();
         return res.status(200).json({message: "Password changed"});
