@@ -4,6 +4,15 @@ import SignupLoginButton from '../../components/SignupLoginButton'
 import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 import {Formik} from 'formik'
+import * as yup from 'yup'
+
+const userSchema = yup.object({
+    full_name: yup.string().required("Full Name is required").min(6),
+    username: yup.string().required("Username is required").min(6),
+    email: yup.string().required("Email is required").min(6),
+    password: yup.string().required("Password is required").min(8),
+
+})
 
 const Signup = () => {
 
@@ -18,6 +27,7 @@ const Signup = () => {
         password:'',
         user_type:''
     }}
+    validationSchema={userSchema}
     onSubmit={(values,actions)=>{
         values.user_type="Supplier"
         console.log(values)
