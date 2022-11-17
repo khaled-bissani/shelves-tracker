@@ -8,7 +8,7 @@ import sendRequest from '../../utils/axios';
 import baseUrl from '../../../config/env';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const EditProfile = ({route}) => {
+const EditProfile = ({navigation,route}) => {
 
     const profilePicture=route.params.profilePicture
 
@@ -31,6 +31,17 @@ const EditProfile = ({route}) => {
         });
     }
 
+    const editProfile = () => {
+        sendRequest({method:"put",data:profile,route:`${baseUrl.BASE_URL}/profile/edit`})
+        .then((res)=>{
+            console.log(res)
+            navigation.navigate('Profile')
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+
     useEffect(() => {
         const fetchData = async() => {
             try {
@@ -41,6 +52,7 @@ const EditProfile = ({route}) => {
                     full_name : res.full_name,
                     email : res.email,
                     phone_number : res.phone_number,
+                    location: res.location
                 })
                 })
             } catch (error) {
@@ -62,7 +74,7 @@ const EditProfile = ({route}) => {
             <InputField type={"number-pad"} placeholder={"Phone Number"} value={profile.phone_number} onChange={handleChange.bind(this, 'phone_number')}/>
             <InputField type={"default"} placeholder={"Location"} value={profile.location} onChange={handleChange.bind(this, 'location')}/>
         </View>
-        <Buttons text={'SAVE'} color={colors.primary}/>
+        <Buttons text={'SAVE'} color={colors.primary} onClick={editProfile}/>
     </View>
 }
 
