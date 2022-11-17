@@ -38,12 +38,16 @@ const Signup = () => {
                 <div className='flex flex-col items-center justify-around w-[375px] h-[450px] bg-[#3AA346] mt-28 mr-56'>
                     <h1 className='font-sans font-bold text-[24px] text-white'>Signup</h1>
                     <TextInput label={"Name"} type={"text"} placeholder={"Name"} value={props.values.full_name} onChange={props.handleChange("full_name")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.full_name}</p>
 
                     <TextInput label={"Username"} type={"password"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange("username")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.username}</p>
 
                     <TextInput label={"Email"} type={"email"} placeholder={"Email"} value={props.values.email} onChange={props.handleChange("email")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.email}</p>
 
                     <TextInput label={"Password"} type={"password"} placeholder={"Password"} value={props.values.password} onChange={props.handleChange("password")}textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.password}</p>
 
                     <SignupLoginButton text={"SIGNUP"} onClick={props.handleSubmit}/>
                     <p className='font-sans'>Already have an account?
