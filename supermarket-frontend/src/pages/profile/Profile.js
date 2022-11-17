@@ -77,7 +77,7 @@ const Profile = () => {
             <View style={styles.profileLine}></View>
         </View>
         <View style={styles.profileOptionContainer}>
-            <ProfileOption onClick={()=>navigation.navigate('EditProfile')} icon={"create-outline"} text={"Edit profile"}/>
+            <ProfileOption onClick={()=>navigation.navigate('EditProfile',{profilePicture:profilePicture})} icon={"create-outline"} text={"Edit profile"}/>
             <ProfileOption onClick={pickImage} icon={"person-circle-outline"} text={"Change profile picture"}/>
             <ProfileOption onClick={()=>navigation.navigate('ChangePassword')} icon={"lock-closed-sharp"} text={"Change password"}/>
         </View>

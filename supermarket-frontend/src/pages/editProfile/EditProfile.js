@@ -4,10 +4,13 @@ import Buttons from "../../components/Button/Buttons";
 import InputField from "../../components/InputField/InputField";
 import styles from "./styles";
 
-const EditProfile = () => {
+const EditProfile = ({route}) => {
+
+    const profilePicture=route.params.profilePicture
+
     return <View style={styles.editProfileContainer}>
         <View style={styles.imageContainer}>
-            <Image style={styles.image} source={''}/>
+            <Image style={styles.image} source={{uri : profilePicture}}/>
         </View>
         <View style={styles.inputs}>
             <InputField type={"default"} placeholder={"Full Name"}/>
