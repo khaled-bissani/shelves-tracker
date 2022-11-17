@@ -9,18 +9,21 @@ const ChangePassword = () => {
     return <Formik 
     initialValues={{
         old_password:'',
-        new:'',
+        new_password:'',
         confirm_password:'',
+    }}
+    onSubmit={(values,actions)=>{
+        console.log(values)
     }}
     >
         {(props) => (
         <View style={styles.changePasswordContainer}>
             <View style={styles.inputs}>
-                <InputField type={"default"} secureTextEntry={true} placeholder={"Old Password"}/>
-                <InputField type={"default"} secureTextEntry={true} placeholder={"New Password"}/>
-                <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"}/>
+                <InputField type={"default"} secureTextEntry={true} placeholder={"Old Password"} value={props.values.old_password} onChange={props.handleChange('old_password')} onBlur={props.handleBlur('old_password')}/>
+                <InputField type={"default"} secureTextEntry={true} placeholder={"New Password"} value={props.values.new_password} onChange={props.handleChange('new_password')} onBlur={props.handleBlur('new_password')}/>
+                <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')} onBlur={props.handleBlur('confirm_password')}/>
             </View>
-            <Buttons text={'SAVE'} color={colors.primary}/>
+            <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
         </View>
 
         )}
