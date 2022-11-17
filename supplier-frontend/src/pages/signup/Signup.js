@@ -5,11 +5,12 @@ import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 import {Formik} from 'formik'
 import * as yup from 'yup'
+import sendRequest from '../../utils/axios'
 
 const userSchema = yup.object({
     full_name: yup.string().required("Full Name is required").min(6),
     username: yup.string().required("Username is required").min(6),
-    email: yup.string().required("Email is required").min(6),
+    email: yup.string().required("Email is required").min(6).email(),
     password: yup.string().required("Password is required").min(8),
 
 })
@@ -31,6 +32,16 @@ const Signup = () => {
     onSubmit={(values,actions)=>{
         values.user_type="Supplier"
         console.log(values)
+        actions.resetForm();
+        sendRequest({method:"post",data:values,route:`${process.env.REACT_APP_BASE_URL}/auth/signup`})
+        .then((res)=>{
+            console.log(res)
+            localStorage.setItem("userId",res._id)
+            navigate("/home")
+        })
+        .catch((err)=>{
+            console.log(err.response.data)
+        })
     }}
     >
         {(props) => (
@@ -40,7 +51,7 @@ const Signup = () => {
                     <TextInput label={"Name"} type={"text"} placeholder={"Name"} value={props.values.full_name} onChange={props.handleChange("full_name")} textColor="white" bgColor="white"/>
                     <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.full_name}</p>
 
-                    <TextInput label={"Username"} type={"password"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange("username")} textColor="white" bgColor="white"/>
+                    <TextInput label={"Username"} type={"text"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange("username")} textColor="white" bgColor="white"/>
                     <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.username}</p>
 
                     <TextInput label={"Email"} type={"email"} placeholder={"Email"} value={props.values.email} onChange={props.handleChange("email")} textColor="white" bgColor="white"/>
