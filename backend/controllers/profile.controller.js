@@ -40,6 +40,14 @@ const profilePicture = async(req,res) => {
     .catch((err)=>res.status(400).send(err))
 }
 
+const viewProfilePicture = async(req,res) => {
+    const {id} = req.body;
+
+    const profile = await User.findOne({id}).select("picture")
+
+    res.status(200).json(profile);
+}
+
 const changePassword = async(req,res) => {
     const {id, old_password, new_password} = req.body;
 
@@ -55,4 +63,4 @@ const changePassword = async(req,res) => {
     return res.status(404).json({message: "Wrong password"});
 }
 
-module.exports = {viewProfile, editProfile, profilePicture, changePassword};
+module.exports = {viewProfile, editProfile, profilePicture, viewProfilePicture, changePassword};
