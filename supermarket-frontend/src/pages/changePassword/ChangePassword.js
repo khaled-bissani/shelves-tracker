@@ -4,6 +4,13 @@ import InputField from "../../components/InputField/InputField";
 import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import {Formik} from "formik";
+import * as yup from "yup";
+
+const passwordSchema = yup.object({
+    old_password: yup.string().required("Old Password is required").min(8),
+    new_password: yup.string().required("New Password is required").min(8),
+    confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('new_password'), null], 'Passwords must match'),
+})
 
 const ChangePassword = () => {
     return <Formik 
@@ -12,6 +19,7 @@ const ChangePassword = () => {
         new_password:'',
         confirm_password:'',
     }}
+    validationSchema={passwordSchema}
     onSubmit={(values,actions)=>{
         console.log(values)
     }}
