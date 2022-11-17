@@ -10,6 +10,7 @@ import * as yup from "yup";
 import AddInputField from "../../components/AddInputField/AddInputField";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const productSchema = yup.object({
     product_name:yup.string().required("Product Name is required"),
@@ -26,6 +27,9 @@ const AddProduct = () => {
     const [barcode, setBarcode] = useState(false);
     const [image, setImage] = useState(null);
     const [base64Image, setBase64Image] = useState();
+    const [userId, setUserId] = useState("");
+
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
     const showBarcode = () => {
         setBarcode(true);
@@ -60,7 +64,7 @@ const AddProduct = () => {
         validationSchema={productSchema}
         onSubmit={(values, actions) => {
             values.image=base64Image
-            values.id='636ef8497eb94fe486471d25'
+            values.id=userId
             values.barcode=barcode
             actions.resetForm();
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
