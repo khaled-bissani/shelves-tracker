@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { colors } from "../../constants/palette";
 import InputField from "../../components/InputField/InputField";
 import Buttons from "../../components/Button/Buttons";
@@ -28,8 +28,13 @@ const ChangePassword = () => {
         <View style={styles.changePasswordContainer}>
             <View style={styles.inputs}>
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Old Password"} value={props.values.old_password} onChange={props.handleChange('old_password')} onBlur={props.handleBlur('old_password')}/>
+                <Text style={styles.errorText}>{props.touched.old_password && props.errors.old_password}</Text>
+
                 <InputField type={"default"} secureTextEntry={true} placeholder={"New Password"} value={props.values.new_password} onChange={props.handleChange('new_password')} onBlur={props.handleBlur('new_password')}/>
+                <Text style={styles.errorText}>{props.touched.new_password && props.errors.new_password}</Text>
+
                 <InputField type={"default"} secureTextEntry={true} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange('confirm_password')} onBlur={props.handleBlur('confirm_password')}/>
+                <Text style={styles.errorText}>{props.touched.confirm_password && props.errors.confirm_password}</Text>
             </View>
             <Buttons text={'SAVE'} color={colors.primary} onClick={props.handleSubmit}/>
         </View>

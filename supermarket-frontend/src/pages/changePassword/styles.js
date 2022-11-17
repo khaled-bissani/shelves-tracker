@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../constants/palette";
+import { colors, fonts } from "../../constants/palette";
 
 export default StyleSheet.create({
     changePasswordContainer: {
@@ -12,4 +12,10 @@ export default StyleSheet.create({
         justifyContent:'space-around',
         alignItems:'center',
     },
+    errorText: {
+        textAlign: 'center',
+        color:'red',
+        fontWeight: fonts.bold,
+        marginVertical:10
+    }
 })
