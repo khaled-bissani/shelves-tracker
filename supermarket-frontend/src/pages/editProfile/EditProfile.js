@@ -12,6 +12,12 @@ const EditProfile = ({route}) => {
 
     const profilePicture=route.params.profilePicture
 
+    const [profile, setProfile] = useState({
+        full_name:'',
+        email:'',
+        phone_number:'',
+        location:''
+    })
     const [userId, setUserId] = useState("");
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value));
@@ -21,7 +27,13 @@ const EditProfile = ({route}) => {
             try {
                 await sendRequest({method:"post",data:userId,route:`${baseUrl.BASE_URL}/profile/view`})
                 .then((res)=>{
-                console.log(res)})
+                console.log(res)
+                setProfile({
+                    full_name : res.full_name,
+                    email : res.email,
+                    phone_number : res.phone_number,
+                })
+                })
             } catch (error) {
                 console.log(error)
             }
@@ -36,10 +48,10 @@ const EditProfile = ({route}) => {
             <Image style={styles.image} source={{uri : profilePicture}}/>
         </View>
         <View style={styles.inputs}>
-            <InputField type={"default"} placeholder={"Full Name"}/>
-            <InputField type={"default"} placeholder={"Username"}/>
-            <InputField type={"email-address"} placeholder={"Email"}/>
-            <InputField type={"number-pad"} placeholder={"Phone Number"}/>
+            <InputField type={"default"} placeholder={"Full Name"} value={profile.full_name}/>
+            <InputField type={"email-address"} placeholder={"Email"} value={profile.email}/>
+            <InputField type={"number-pad"} placeholder={"Phone Number"} value={profile.phone_number}/>
+            <InputField type={"default"} placeholder={"Location"} />
         </View>
         <Buttons text={'SAVE'} color={colors.primary}/>
     </View>
