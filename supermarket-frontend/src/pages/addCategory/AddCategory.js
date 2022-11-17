@@ -9,6 +9,7 @@ import * as yup from "yup";
 import sendRequest from '../../utils/axios';
 import baseUrl from '../../../config/env';
 import AddInputField from '../../components/AddInputField/AddInputField';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const categorySchema = yup.object({
     category: yup.string().required("Category is required")
@@ -18,6 +19,9 @@ const AddCategory = () => {
 
     const [image, setImage] = useState(null);
     const [base64Image, setBase64Image] = useState();
+    const [userId, setUserId] = useState("");
+
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -43,7 +47,7 @@ const AddCategory = () => {
         validationSchema={categorySchema}
         onSubmit={(values, actions)=> {
             values.image=base64Image
-            values.id='636ef8497eb94fe486471d25'
+            values.id=userId
             actions.resetForm();
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/category/add`})
             .then((res)=>{
