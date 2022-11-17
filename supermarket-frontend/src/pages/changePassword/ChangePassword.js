@@ -1,10 +1,12 @@
-import { View, Text } from "react-native";
+import { View, Text, Alert } from "react-native";
 import { colors } from "../../constants/palette";
 import InputField from "../../components/InputField/InputField";
 import Buttons from "../../components/Button/Buttons";
 import styles from "./styles";
 import {Formik} from "formik";
 import * as yup from "yup";
+import sendRequest from "../../utils/axios";
+import baseUrl from "../../../config/env";
 
 const passwordSchema = yup.object({
     old_password: yup.string().required("Old Password is required").min(8),
@@ -12,7 +14,7 @@ const passwordSchema = yup.object({
     confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('new_password'), null], 'Passwords must match'),
 })
 
-const ChangePassword = () => {
+const ChangePassword = ({navigation}) => {
     return <Formik 
     initialValues={{
         old_password:'',
@@ -22,6 +24,16 @@ const ChangePassword = () => {
     validationSchema={passwordSchema}
     onSubmit={(values,actions)=>{
         console.log(values)
+        // actions.resetForm();
+        sendRequest({method:"put",data:values,route:`${baseUrl.BASE_URL}/profile/password`})
+        .then((res)=>{
+            console.log(res)
+            navigation.navigate('Profile');
+        })
+        .catch((err)=>{
+            Alert.alert('Invalid', 'Wrong password')
+            console.log(err.response.data)
+        })
     }}
     >
         {(props) => (
