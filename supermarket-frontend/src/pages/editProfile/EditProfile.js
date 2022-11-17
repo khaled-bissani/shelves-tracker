@@ -22,6 +22,15 @@ const EditProfile = ({route}) => {
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
+    const handleChange=(valueIdentifier,input)=> {
+        setProfile((currentValue)=>{
+            return {
+                ...currentValue,
+                [valueIdentifier]:input
+            };
+        });
+    }
+
     useEffect(() => {
         const fetchData = async() => {
             try {
@@ -48,10 +57,10 @@ const EditProfile = ({route}) => {
             <Image style={styles.image} source={{uri : profilePicture}}/>
         </View>
         <View style={styles.inputs}>
-            <InputField type={"default"} placeholder={"Full Name"} value={profile.full_name}/>
-            <InputField type={"email-address"} placeholder={"Email"} value={profile.email}/>
-            <InputField type={"number-pad"} placeholder={"Phone Number"} value={profile.phone_number}/>
-            <InputField type={"default"} placeholder={"Location"} />
+            <InputField type={"default"} placeholder={"Full Name"} value={profile.full_name} onChange={handleChange.bind(this, 'full_name')}/>
+            <InputField type={"email-address"} placeholder={"Email"} value={profile.email} onChange={handleChange.bind(this, 'email')}/>
+            <InputField type={"number-pad"} placeholder={"Phone Number"} value={profile.phone_number} onChange={handleChange.bind(this, 'phone_number')}/>
+            <InputField type={"default"} placeholder={"Location"} value={profile.location} onChange={handleChange.bind(this, 'location')}/>
         </View>
         <Buttons text={'SAVE'} color={colors.primary}/>
     </View>
