@@ -12,8 +12,8 @@ const Profile = () => {
 
     const navigation = useNavigation();
 
-    const [image, setImage] = useState(null);
     const [base64Image, setBase64Image] = useState("");
+    const [profile, setProfile] = useState()
     const [userId, setUserId] = useState("");
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value));
@@ -22,6 +22,8 @@ const Profile = () => {
         id: userId,
         picture: base64Image
     }
+
+    const profilePicture = `http://172.20.10.2:3000/static/images/${profile}`
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -33,10 +35,23 @@ const Profile = () => {
         });
 
         if (!result.cancelled) {
-        setImage(result.uri);
         setBase64Image(result.base64);        
         }
     };
+
+    useEffect(() => {
+        const fetchData = async() => {
+            try {
+                await sendRequest({method:"post",data:values.id,route:`${baseUrl.BASE_URL}/profile/view_picture`})
+                .then((res)=>{
+                setProfile(res.picture)})
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+    }, [])
+    
 
     useEffect(() => {
         const fetchData = async() => {
@@ -56,7 +71,7 @@ const Profile = () => {
     return <View>
         <View style={styles.container}>
             <View style={styles.profilePictureContainer}>
-                <Image style={styles.profilePicture} source={{uri : image}}/>
+                <Image style={styles.profilePicture} source={{uri : profilePicture}}/>
             </View>
             <Text style={styles.profileName}>Supermarket</Text>
             <View style={styles.profileLine}></View>
