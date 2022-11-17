@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { FontAwesome } from "@expo/vector-icons";
-import { ScrollView, Text, View, Pressable } from "react-native";
-import { colors, fonts } from "../../constants/palette";
+import { ScrollView, View} from "react-native";
 import SingleItem from "../../components/SingleItem/SingleItem";
 import styles from "./styles";
 import sendRequest from "../../utils/axios";
@@ -40,9 +38,6 @@ const ViewMoreItem = ({navigation, route}) => {
 
     return <View style={styles.pageContainer}>
         <View style={styles.iconContainer}>
-            <Pressable>
-                <FontAwesome name="sort-amount-asc" size={fonts.iconSize} color={colors.primary} />
-            </Pressable>
         </View>
         <ScrollView>
             <View style={styles.itemContainer}>
