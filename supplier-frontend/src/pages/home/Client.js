@@ -10,9 +10,19 @@ const Client = () => {
 
     const [user, setUser] = useState([])
     const [optionSelected, setOptionSelected] = useState()
+    const [displayed, setdisplayed] = useState([])
 
     const handleAdd = () =>{
-        console.log('Add')
+        console.log(user[0]._id)
+        for (let singleUser = 0; singleUser < user.length; singleUser++) {
+            const id = user[singleUser]._id;
+            if (id===optionSelected){
+                setdisplayed(current =>[...current, {id:user[singleUser]._id, full_name:user[singleUser].full_name, email:user[singleUser].email, image:user[singleUser].picture}])
+            }
+            
+        }
+        console.log(displayed)
+        
     }
 
     const handleEdit = () =>{
@@ -68,7 +78,9 @@ const Client = () => {
                 <div>
                     <TableHeader column1={"Client photo"} column2={"Client name"} column3={"Client email"} />
                     <div className='h-[300px] bg-[#D9D9D9] overflow-auto'>
-                        <TableRow/>
+                        {displayed.map((item)=>{
+                            return(<TableRow key={item.id} image={item.image} column1Placeholder={"Client Name"} column1Value={item.full_name} column2Placeholder={"Client Email"} column2Value={item.email} editable={false}/>)
+                        })}
                     </div>
                 </div>
             </div>
