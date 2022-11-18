@@ -22,16 +22,9 @@ const Client = () => {
         }
     }
 
-    const handleEdit = () =>{
-        console.log('Edit')
-    }
     const handleDelete = () =>{
         const deleted = displayed.filter(item => item.id !== deleteUser)
         setdisplayed(deleted)
-    }
-
-    const handleChat = () =>{
-        console.log('Chat')
     }
 
     const handleSelectChange = (e) => {
@@ -67,17 +60,15 @@ const Client = () => {
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <Title title={"Client"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
-                <div className='flex justify-between w-full'>
-                    <select className='border border-black' value={optionSelected} onChange={handleSelectChange}>
+                <div className='flex justify-evenly w-full'>
+                    <select inputMode='search' className='border border-black w-[170px] text-center' value={optionSelected} onChange={handleSelectChange}>
                         <option>User</option>
                         {user.map((item)=>{
                             return (<option key={item._id} value={item._id}>{item.full_name}</option>)
                         })} 
                     </select>
                     <Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"} onClick={handleAdd}/>
-                    <Button bgColor="#6EDA79" width="170px" height="46px" name={"EDIT"} onClick={handleEdit}/>
                     <Button bgColor="#FF0000" width="170px" height="46px" opacity="0.7" name={"DELETE"} onClick={handleDelete}/>
-                    <Button bgColor="#3AA346" width="170px" height="46px" name={"CHAT"} onClick={handleChat}/>
                 </div> 
                 <div>
                     <TableHeader column1={"Client photo"} column2={"Client name"} column3={"Client email"} />
