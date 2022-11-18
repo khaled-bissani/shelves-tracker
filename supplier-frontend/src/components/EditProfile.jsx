@@ -20,7 +20,6 @@ const EditProfile = () => {
   }) 
 
   useEffect(() => {
-    console.log(updated)
     setUpdated(true)
   }, [profile])
   
