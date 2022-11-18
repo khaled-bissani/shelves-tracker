@@ -62,7 +62,7 @@ const Signup = () => {
 
                     <SignupLoginButton text={"SIGNUP"} onClick={props.handleSubmit}/>
                     <p className='font-sans'>Already have an account?
-                        <span className='text-white cursor-pointer' onClick={() =>{navigate("/login")}}>
+                        <span className='text-white cursor-pointer ml-2' onClick={() =>{navigate("/login")}}>
                             Login
                         </span>
                     </p>
