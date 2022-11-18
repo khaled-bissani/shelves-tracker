@@ -1,29 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from "react-router-dom"
 import SignupLoginButton from '../../components/SignupLoginButton'
 import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 import {Formik} from 'formik'
+import * as yup from 'yup'
+
+const userSchema = yup.object({
+    username: yup.string().required("Username is required").min(6),
+    password: yup.string().required("Password is required").min(8),
+    confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('password'), null], 'Passwords must match'),
+})
 
 const Login = () => {
 
     const navigate = useNavigate();
-
-    const [user, setUser] = useState({
-        email: '',
-        password: '',
-        current_password: ''
-    });
-
-    const handleChange=(e,input)=> {
-        setUser({
-          ...user, [`${input}`]: e.target.value
-        });
-    }
-
-    const handleClick = async () => {
-        navigate("/home")
-    }
 
   return (
     <Formik
@@ -32,6 +23,7 @@ const Login = () => {
         password:'',
         confirm_password:''
     }}
+    validationSchema={userSchema}
     onSubmit={(values, actions)=>{
         console.log(values)
     }}
