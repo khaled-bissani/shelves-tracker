@@ -2,6 +2,13 @@ import React, {useState} from 'react'
 import Button from './Button'
 import TextInput from './TextInput'
 import {Formik} from 'formik'
+import * as yup from 'yup'
+
+const passwordSchema = yup.object({
+  old_password: yup.string().required("Old Password is required").min(8),
+  new_password: yup.string().required("New Password is required").min(8),
+  confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('new_password'), null], 'Passwords must match'),
+})
 
 const ChangePassword = () => {
 
@@ -13,6 +20,7 @@ const ChangePassword = () => {
       new_password: '',
       confirm_password: ''
     }}
+    validationSchema={passwordSchema}
     onSubmit={(values,actions)=>{
       console.log('submit')
     }}
