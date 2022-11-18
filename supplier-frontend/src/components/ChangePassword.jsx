@@ -3,14 +3,20 @@ import Button from './Button'
 import TextInput from './TextInput'
 import {Formik} from 'formik'
 import * as yup from 'yup'
+import { useNavigate } from "react-router-dom"
+import sendRequest from '../utils/axios'
 
 const passwordSchema = yup.object({
-  old_password: yup.string().required("Old Password is required").min(8),
-  new_password: yup.string().required("New Password is required").min(8),
+  old_password: yup.string().required("Old Password is required").min(8, 'Old Password must be at least 8 characters'),
+  new_password: yup.string().required("New Password is required").min(8, 'New Password must be at least 8 characters'),
   confirm_password: yup.string().required("Confirm password is required").oneOf([yup.ref('new_password'), null], 'Passwords must match'),
 })
 
 const ChangePassword = () => {
+
+  const userId = localStorage.getItem("userId")
+
+  const navigate = useNavigate();
 
   return (
     <Formik
@@ -22,7 +28,16 @@ const ChangePassword = () => {
     }}
     validationSchema={passwordSchema}
     onSubmit={(values,actions)=>{
-      console.log('submit')
+      values.id=userId
+      sendRequest({method:"put",data:values,route:`${process.env.REACT_APP_BASE_URL}/profile/password`})
+        .then((res)=>{
+            console.log(res)
+            actions.resetForm()
+            navigate("/profile")
+        })
+        .catch((err)=>{
+            console.log(err.response.data)
+        })
     }}
     >
       {(props)=>(
