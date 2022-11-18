@@ -32,6 +32,12 @@ useEffect(() => {
   }
   fetchData()
 }, [])
+
+useEffect(() => {
+  localStorage.setItem("userInfo", JSON.stringify(profile))
+
+}, [profile])
+
   
 
   return (
