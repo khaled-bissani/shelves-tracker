@@ -5,6 +5,7 @@ import TextInput from '../../components/TextInput'
 import Background from '../../assets/background.jpg'
 import {Formik} from 'formik'
 import * as yup from 'yup'
+import sendRequest from '../../utils/axios'
 
 const userSchema = yup.object({
     username: yup.string().required("Username is required").min(6),
@@ -25,7 +26,16 @@ const Login = () => {
     }}
     validationSchema={userSchema}
     onSubmit={(values, actions)=>{
-        console.log(values)
+        actions.resetForm();
+        sendRequest({method:"post",data:values,route:`${process.env.REACT_APP_BASE_URL}/auth/login`})
+        .then((res)=>{
+            console.log(res)
+            localStorage.setItem("userId",res.user_id)
+            navigate("/home")
+        })
+        .catch((err)=>{
+            console.log(err.response.data)
+        })
     }}
     >
         {(props)=> (

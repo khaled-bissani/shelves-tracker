@@ -31,7 +31,6 @@ const Signup = () => {
     validationSchema={userSchema}
     onSubmit={(values,actions)=>{
         values.user_type="Supplier"
-        console.log(values)
         actions.resetForm();
         sendRequest({method:"post",data:values,route:`${process.env.REACT_APP_BASE_URL}/auth/signup`})
         .then((res)=>{
