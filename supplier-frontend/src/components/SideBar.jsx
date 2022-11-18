@@ -27,7 +27,7 @@ const SideBar = () => {
                 <FaUser style={sidebarIconClass}/>
                 <p>Profile</p>
             </Link>
-            <Link className={sidebarLinkClass} to={"/"}>
+            <Link className={sidebarLinkClass} to={"/"} onClick={()=>window.localStorage.clear()}>
                 <FaSignOutAlt style={sidebarIconClass}/>
                 <p>Logout</p>
             </Link>
