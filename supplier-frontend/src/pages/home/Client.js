@@ -11,25 +11,23 @@ const Client = () => {
     const [user, setUser] = useState([])
     const [optionSelected, setOptionSelected] = useState()
     const [displayed, setdisplayed] = useState([])
+    const [deleteUser, setDeleteUser] = useState("")
 
     const handleAdd = () =>{
-        console.log(user[0]._id)
         for (let singleUser = 0; singleUser < user.length; singleUser++) {
             const id = user[singleUser]._id;
             if (id===optionSelected){
                 setdisplayed(current =>[...current, {id:user[singleUser]._id, full_name:user[singleUser].full_name, email:user[singleUser].email, image:user[singleUser].picture}])
             }
-            
         }
-        console.log(displayed)
-        
     }
 
     const handleEdit = () =>{
         console.log('Edit')
     }
     const handleDelete = () =>{
-        console.log('Delete')
+        const deleted = displayed.filter(item => item.id !== deleteUser)
+        setdisplayed(deleted)
     }
 
     const handleChat = () =>{
@@ -55,8 +53,14 @@ const Client = () => {
     useEffect(() => {
       console.log(optionSelected)
     }, [optionSelected])
-    
 
+    useEffect(() => {
+        console.log(deleteUser)
+        if(deleteUser.length>0){
+            handleDelete()
+        }
+      }, [deleteUser])
+    
   return (
     <div className='flex'>
         <SideBar/>
@@ -79,7 +83,7 @@ const Client = () => {
                     <TableHeader column1={"Client photo"} column2={"Client name"} column3={"Client email"} />
                     <div className='h-[300px] bg-[#D9D9D9] overflow-auto'>
                         {displayed.map((item)=>{
-                            return(<TableRow key={item.id} image={item.image} column1Placeholder={"Client Name"} column1Value={item.full_name} column2Placeholder={"Client Email"} column2Value={item.email} editable={false}/>)
+                            return(<TableRow key={item.id} onClick={()=>setDeleteUser(item.id)} image={item.image} column1Placeholder={"Client Name"} column1Value={item.full_name} column2Placeholder={"Client Email"} column2Value={item.email} editable={false}/>)
                         })}
                     </div>
                 </div>
