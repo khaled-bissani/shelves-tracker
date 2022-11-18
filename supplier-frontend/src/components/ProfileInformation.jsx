@@ -11,12 +11,12 @@ const ProfileInformation = () => {
     location:''
 })
 
-const userId = localStorage.getItem("userId")
+const user = {"id":localStorage.getItem("userId")}
 
 useEffect(() => {
   const fetchData = async() => {
       try {
-          await sendRequest({method:"post",data:userId,route:`${process.env.REACT_APP_BASE_URL}/profile/view`})
+          await sendRequest({method:"post",data:user,route:`${process.env.REACT_APP_BASE_URL}/profile/view`})
           .then((res)=>{
           console.log(res)
           setProfile({
@@ -30,18 +30,16 @@ useEffect(() => {
           console.log(error)
       }
   }
-  if(userId.length>0){
-      fetchData()
-  }
-}, [userId])
+  fetchData()
+}, [])
   
 
   return (
     <div className='flex flex-col items-center justify-around w-[400px] h-[370px] bg-white rounded-[10px] my-6'>
-        <TextInput label={"Name"} type={"text"} placeholder={"Name"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9"/>
-        <TextInput label={"Email"} type={"text"} placeholder={"Email"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9"/>
-        <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9"/>
-        <TextInput label={"Address"} type={"text"} placeholder={"Address"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9"/>
+        <TextInput label={"Name"} type={"text"} placeholder={"Name"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9" value={profile.full_name}/>
+        <TextInput label={"Email"} type={"text"} placeholder={"Email"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9" value={profile.email}/>
+        <TextInput label={"Phone Number"} type={"text"} placeholder={"Phone Number"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9" value={profile.phone_number}/>
+        <TextInput label={"Address"} type={"text"} placeholder={"Address"} readOnly={"readOnly"} textColor="black" bgColor="#D9D9D9" value={profile.location}/>
     </div>
   )
 }
