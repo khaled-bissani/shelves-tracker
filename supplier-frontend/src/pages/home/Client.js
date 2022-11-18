@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import Button from '../../components/Button'
-import InputField from '../../components/InputField'
 import SideBar from '../../components/SideBar'
 import TableHeader from '../../components/TableHeader'
 import TableRow from '../../components/TableRow'
@@ -9,13 +8,8 @@ import sendRequest from '../../utils/axios'
 
 const Client = () => {
 
-    const[name,setName]=useState('')
-
     const [user, setUser] = useState([])
-
-    const handleChange=(e)=> {
-        setName(e.target.value);
-    }
+    const [optionSelected, setOptionSelected] = useState()
 
     const handleAdd = () =>{
         console.log('Add')
@@ -32,6 +26,10 @@ const Client = () => {
         console.log('Chat')
     }
 
+    const handleSelectChange = (e) => {
+        setOptionSelected(e.target.value);
+      };
+    
     useEffect(() => {
         const fetchData = async() => {
             try {
@@ -44,6 +42,11 @@ const Client = () => {
         fetchData()
     }, [])
 
+    useEffect(() => {
+      console.log(optionSelected)
+    }, [optionSelected])
+    
+
   return (
     <div className='flex'>
         <SideBar/>
@@ -51,7 +54,7 @@ const Client = () => {
             <Title title={"Client"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-between w-full'>
-                    <select>
+                    <select className='border border-black' value={optionSelected} onChange={handleSelectChange}>
                         <option>User</option>
                         {user.map((item)=>{
                             return (<option key={item._id} value={item._id}>{item.full_name}</option>)
