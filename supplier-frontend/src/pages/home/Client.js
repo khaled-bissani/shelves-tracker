@@ -3,6 +3,7 @@ import Button from '../../components/Button'
 import InputField from '../../components/InputField'
 import SideBar from '../../components/SideBar'
 import TableHeader from '../../components/TableHeader'
+import TableRow from '../../components/TableRow'
 import Title from '../../components/Title'
 
 const Client = () => {
@@ -43,7 +44,9 @@ const Client = () => {
                 </div> 
                 <div>
                     <TableHeader column1={"Client photo"} column2={"Client name"} column3={"Client email"} />
-                    <div className='h-[300px] bg-[#D9D9D9] overflow-auto'></div>
+                    <div className='h-[300px] bg-[#D9D9D9] overflow-auto'>
+                        <TableRow/>
+                    </div>
                 </div>
             </div>
         </div>
