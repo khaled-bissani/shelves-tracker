@@ -33,8 +33,14 @@ const Login = () => {
                 <div className='flex flex-col items-center justify-around w-[375px] h-[450px] bg-[#3AA346] mt-28 mr-56'>
                     <h1 className='font-sans font-bold text-[24px] text-white'>Login</h1>
                     <TextInput label={"Username"} type={"text"} placeholder={"Username"} value={props.values.username} onChange={props.handleChange("username")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.username}</p>
+
                     <TextInput label={"Password"} type={"password"} placeholder={"Password"} value={props.values.password} onChange={props.handleChange("password")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.password}</p>
+
                     <TextInput label={"Confirm Password"} type={"password"} placeholder={"Confirm Password"} value={props.values.confirm_password} onChange={props.handleChange("confirm_password")} textColor="white" bgColor="white"/>
+                    <p className='font-bold text-[14px] text-[#ff0000]'>{props.errors.confirm_password}</p>
+
                     <SignupLoginButton text={"LOGIN"} onClick={props.handleSubmit}/>
                     <p className='font-sans'>Don't have an account?
                         <span className='text-white cursor-pointer ml-2' onClick={() =>{navigate("/")}}>
