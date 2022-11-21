@@ -48,7 +48,8 @@ const ViewMoreItem = ({navigation, route}) => {
                                 productName: item.product_name,
                                 productQuantity: item.quantity_shelf,
                                 productImage: item.image,
-                                productExpiryDate: item.expiry_date
+                                productExpiryDate: item.expiry_date,
+                                barcode: item.barcode
                                 })}/>
                                 )
                             })}
