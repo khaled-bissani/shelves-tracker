@@ -5,6 +5,6 @@ const router = Router();
 router.post('/add',addProduct);
 router.post('/all', getProduct);
 router.get('/single_product', getSingleProduct);
-router.put('/single_product', updateSingleProduct)
+router.post('/single_product', updateSingleProduct)
 
 module.exports= router;
