@@ -9,6 +9,15 @@ const notification = async(expoPushToken, message) => {
     }
 }
 
+const dateDiffInDays = (date1, date2) => {
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    // Discard the time and time-zone information.
+    const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+    const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+  
+    return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
 // Calling the schedule function everyday at midnight
 cron.schedule('0 0 0 * * *', function () {
     console.log('running at midnight');
@@ -42,7 +51,7 @@ const schedule = async(req, res) => {
         // Accessing the array of products to check if the expiry date of each product is within a week
         for (let i = 0; i < allProducts.length; i++) {
             const singleProduct = allProducts[i];
-            const remainingDay = new Date(singleProduct.expiry_date).getDate()-today.getDate()
+            const remainingDay = dateDiffInDays(today,new Date(singleProduct.expiry_date))
             if(remainingDay < 7){
                 const message = `${singleProduct.product_name} is expiring in less than a week. ${remainingDay} days left`;
                 notification(expoPushToken, message)
