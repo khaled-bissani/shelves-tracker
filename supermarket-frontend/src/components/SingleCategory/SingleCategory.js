@@ -53,7 +53,8 @@ const SingleCategory = (props) => {
                                 productName: item.product_name,
                                 productQuantity: item.quantity_shelf,
                                 productImage: item.image,
-                                productExpiryDate: item.expiry_date
+                                productExpiryDate: item.expiry_date,
+                                barcode: item.barcode
                                 })} 
                                 label={item.product_name} quantity={item.quantity_shelf} imageUrl={item.image} width={130} height={130}/>
                         </View>
