@@ -8,4 +8,13 @@ const getClient = async(req,res) => {
     res.status(200).json(user);
 }
 
-module.exports={getClient};
+const totalClient = async(req,res) => {
+    const {user_type} = req.body
+
+    User.countDocuments({user_type},(error, count)=>{
+        if(error) throw(error)
+        res.send({total:count})
+    })
+}
+
+module.exports={getClient, totalClient};
