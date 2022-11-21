@@ -57,8 +57,4 @@ export default StyleSheet.create({
     value: {
         fontSize:fonts.text,
     },
-    barCodeContainer: {
-        width: 80,
-        height:40,
-    },
 })

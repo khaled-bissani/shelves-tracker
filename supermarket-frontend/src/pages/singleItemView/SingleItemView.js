@@ -38,7 +38,7 @@ const SingleItemView = ({route}) => {
                 </View>
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Bar Code</Text>
-                    <View style={styles.barCodeContainer}>
+                    <View>
                         <Barcode number={barcode}/>
                     </View>
                 </View>
