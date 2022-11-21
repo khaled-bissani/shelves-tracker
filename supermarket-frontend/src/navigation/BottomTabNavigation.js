@@ -3,7 +3,6 @@ import { colors,fonts } from '../constants/palette';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../pages/home/Home';
 import Notification from '../pages/notification/Notification';
-import Chat from '../pages/chat/Chat';
 import Profile from '../pages/profile/Profile';
 import MenuButton from '../components/MenuButton/MenuButton';
 
@@ -27,9 +26,6 @@ const BottomTabNavigation = ({navigation}) => {
       }}/>
       <BottomTab.Screen name='Notification' component={Notification} options={{
         tabBarIcon: ({color}) => <Ionicons name='notifications-sharp' color={color} size={fonts.iconSize}/>
-      }}/>
-      <BottomTab.Screen name='Chat' component={Chat} options={{
-        tabBarIcon: ({color}) => <Ionicons name='chatbubble' color={color} size={fonts.iconSize}/>
       }}/>
       <BottomTab.Screen name='Profile' component={Profile} options={{
         tabBarIcon: ({color}) => <Ionicons name='person-circle-outline' color={color} size={fonts.iconSize}/>
