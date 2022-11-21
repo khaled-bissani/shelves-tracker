@@ -1,7 +1,8 @@
 const {Router} = require('express');
-const {getClient} = require('../controllers/client.controller');
+const {getClient, totalClient} = require('../controllers/client.controller');
 const router = Router();
 
-router.get('/all',getClient);
+router.post('/all',getClient);
+router.post('/total', totalClient)
 
 module.exports= router;
