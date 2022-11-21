@@ -18,7 +18,22 @@ const Home = () => {
       <SideBar/>
       <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
         <Title title={"Dashboard"}/>
-        <div className='w-[900px] h-[120px] bg-[#D9D9D9]'></div>
+        <div className='flex flex-row justify-evenly items-center w-[900px] h-[120px] bg-[#D9D9D9]'>
+          <div className='flex flex-col justify-between h-[80px]'>
+            <p>Number of Client</p>
+            <p className='text-center font-bold text-[26px]'>Number</p>
+          </div>
+          <div className='h-[100px] border border-black'></div>
+          <div className='flex flex-col justify-between h-[80px]'>
+            <p>Number of Product</p>
+            <p className='text-center font-bold text-[26px]'>Number</p>
+          </div>
+          <div className='h-[100px] border border-black'></div>
+          <div className='flex flex-col justify-between h-[80px]'>
+            <p>First Item to expire</p>
+            <p className='text-center font-bold text-[26px]'>Number</p>
+          </div>
+        </div>
           <div className='flex-col justify-center items-center w-[900px] h-[280px] bg-[#D9D9D9]'>
             <p className='text-center'>Waste products per Week</p>
             <BarChart width={850} height={250} data={data} className='mt-11'>
