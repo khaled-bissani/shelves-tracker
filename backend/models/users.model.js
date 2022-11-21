@@ -28,11 +28,16 @@ const userSchema = new mongoose.Schema({
     },
     user_type: {
         type: String,            
-        enum: ['Admin', 'Supplier', 'Supermarket'],
+        enum: ['Supplier', 'Supermarket'],
     },
     expoPushToken: {
         type: String
     },
+    notifications:[{
+        single_notification:{
+            type: String
+        }
+    }],
     category: [{
         category:{
             type: String,
