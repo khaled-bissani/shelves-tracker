@@ -2,7 +2,6 @@ import { Text, View, ScrollView } from "react-native";
 import {Formik} from "formik";
 import * as yup from "yup";
 import Buttons from "../../components/Button/Buttons";
-import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import InputField from "../../components/InputField/InputField";
 import PressableText from "../../components/PressableText/PressableText";
 import { colors, fonts } from "../../constants/palette";
@@ -79,8 +78,6 @@ const Signup = ({navigation}) => {
                         </Text>
                         <PressableText text={"Login"} textColor={colors.primary} fontSize={fonts.text} onClick={goToLogin}/>
                     </View>  
-                    <View style={styles.horizontalLine}></View>
-                    <GoogleButton text={'Sign Up with Google'}/>
                 </View>
                 )}
             </Formik>

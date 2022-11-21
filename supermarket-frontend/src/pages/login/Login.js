@@ -2,7 +2,6 @@ import { Text, View, ScrollView, Alert } from "react-native";
 import {Formik} from "formik";
 import * as yup from "yup";
 import Buttons from "../../components/Button/Buttons";
-import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import InputField from "../../components/InputField/InputField";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
@@ -28,15 +27,15 @@ const Login = ({navigation}) => {
                         }}
                         validationSchema={userSchema}
                         onSubmit={(values, actions) => {
-                            actions.resetForm();
                             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/auth/login`})
                             .then((res)=>{
                                 console.log(res)
+                                actions.resetForm();
                                 AsyncStorage.setItem('userId', res.user_id)
                                 navigation.navigate('Main');
                             })
                             .catch((err)=>{
-                                Alert.alert('Invalid', 'Wrong username or password')
+                                Alert.alert("Invalid", "Wrong username or password")
                                 console.log(err.response.data)
                             })
                         }}
@@ -58,8 +57,6 @@ const Login = ({navigation}) => {
                             </View>
                         )}
                     </Formik>
-                <Text style={styles.text}>or</Text>
-                <GoogleButton text={'Continue with Google'}/>
             </View>
         </ScrollView>
     )
