@@ -18,7 +18,7 @@ const Notification = () => {
 
     const [userId, setUserId] = useState("");
     const [expoPushToken, setExpoPushToken] = useState("")
-    const [notifications, setNotifications] = useState([{id:0, notification:"Notification"}])
+    const [notifications, setNotifications] = useState([{id:0, single_notification:"Notification"}])
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value))
 
@@ -56,16 +56,19 @@ const Notification = () => {
     useEffect(() => {
         // This listener is fired whenever a notification is received while the app is foregrounded
         notificationListener.current = Notifications.addNotificationReceivedListener(response => {
+            console.log(response)
             const message = response.request.content.body;
-            setNotifications([...notifications,{id: notifications.length + 1, notification:message}]);
-            
+            setNotifications((notification)=>[...notification,{ single_notification:message}]);
         });
-    }, [notificationListener])
+    }, [])
 
     useEffect(() => {
         const fetchData = async() => {
             try {
-                await sendRequest({method:"put",data:data,route:`${baseUrl.BASE_URL}/expo/token`})
+                await sendRequest({method:"post",data:{
+                    id:userId,
+                    expoPushToken: expoPushToken
+                },route:`${baseUrl.BASE_URL}/expo/token`})
                 .then((res)=>console.log(res))
             } catch (error) {
                 console.log(error)
@@ -80,7 +83,7 @@ const Notification = () => {
     return <ScrollView>
         {notifications.map((item)=>{
             return (
-                <SingleNotification key={item.id} notification={item.notification}/>
+                <SingleNotification key={item.id} notification={item.single_notification}/>
             )
         })}
     </ScrollView>
