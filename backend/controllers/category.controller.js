@@ -7,7 +7,8 @@ const addCategory = async(req,res) => {
 
     const image_id = crypto.randomBytes(16).toString("hex");
 
-    const new_image = Buffer.from(image, "base64");
+    const base64Data = image.replace("data:image/png;base64,", "");
+    const new_image = Buffer.from(base64Data, "base64");
 
     fs.writeFile(__dirname.replace('controllers', 'public/images/') + image_id + ".png", new_image, 
     (err) => {
@@ -15,7 +16,7 @@ const addCategory = async(req,res) => {
     })
 
     try {
-        const user = await User.findOne({id});
+        const user = await User.findById(id);
 
         user.category.push({
             category, 
@@ -35,7 +36,7 @@ const addCategory = async(req,res) => {
 const getCategory = async(req,res) => {
     const {id} = req.body;
 
-    const categories = await User.findOne({id}).select('category._id category.category category.image');
+    const categories = await User.findById(id).select('category._id category.category category.image');
 
     res.status(200).json(categories);
 }
