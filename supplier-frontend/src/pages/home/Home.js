@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from '../../components/SideBar'
 import Title from '../../components/Title'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+import DashboardHeader from '../../components/DashboardHeader';
 
 const data = [
   {name: 'Monday', uv: 400}, 
@@ -19,20 +20,11 @@ const Home = () => {
       <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
         <Title title={"Dashboard"}/>
         <div className='flex flex-row justify-evenly items-center w-[900px] h-[120px] bg-[#D9D9D9]'>
-          <div className='flex flex-col justify-between h-[80px]'>
-            <p>Number of Client</p>
-            <p className='text-center font-bold text-[26px]'>Number</p>
-          </div>
+          <DashboardHeader text={"Number of Client"} value={"number"}/>
           <div className='h-[100px] border border-black'></div>
-          <div className='flex flex-col justify-between h-[80px]'>
-            <p>Number of Product</p>
-            <p className='text-center font-bold text-[26px]'>Number</p>
-          </div>
+          <DashboardHeader text={"Number of Product"} value={"number"}/>
           <div className='h-[100px] border border-black'></div>
-          <div className='flex flex-col justify-between h-[80px]'>
-            <p>First Item to expire</p>
-            <p className='text-center font-bold text-[26px]'>Number</p>
-          </div>
+          <DashboardHeader text={"First Item to expire"} value={"number"}/>
         </div>
           <div className='flex-col justify-center items-center w-[900px] h-[280px] bg-[#D9D9D9]'>
             <p className='text-center'>Waste products per Week</p>
