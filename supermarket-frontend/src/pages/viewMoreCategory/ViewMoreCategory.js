@@ -4,22 +4,28 @@ import styles from "./styles";
 import Categories from "../../components/Categories/Categories";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const ViewMoreCategory = ({navigation}) => {
 
     const [categories, setCategories] = useState([]);
+    const [userId, setUserId] = useState("");
+
+    AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
     useEffect(() => {
         const fetchData = async() => {
             try {
                 // Fetching all the categories
-                const allCategories = await sendRequest({method:"post",data:"636ef8497eb94fe486471d25",route:`${baseUrl.BASE_URL}/category/all`})
+                const allCategories = await sendRequest({method:"post",data:{id:userId},route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
             } catch (error) {
                 console.log(error)
             }
         }
-        fetchData()
+        if(userId.length>0){
+            fetchData()
+        }
     }, [])
 
     return <View style={styles.pageContainer}>
