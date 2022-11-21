@@ -1,7 +1,8 @@
 const {Router} = require('express');
-const {expoToken} = require('../controllers/notification.controller');
+const {expoToken, saveNotification} = require('../controllers/notification.controller');
 const router = Router();
 
-router.put('/token' , expoToken)
+router.post('/token' , expoToken)
+router.post('/save' , saveNotification)
 
 module.exports= router;
