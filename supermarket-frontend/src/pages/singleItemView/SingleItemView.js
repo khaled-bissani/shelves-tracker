@@ -1,7 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Text, View, Image } from "react-native";
+import Barcode from "../../components/Barcode/Barcode";
 import { colors } from "../../constants/palette";
 import styles from "./styles";
+import baseUrl from "../../../config/env";
 
 const SingleItemView = ({route}) => {
 
@@ -10,8 +12,9 @@ const SingleItemView = ({route}) => {
     const productQuantity = route.params.productQuantity
     const productImage = route.params.productImage
     const productExpiryDate = route.params.productExpiryDate
+    const barcode = route.params.barcode
 
-    const image = `http://192.168.44.144:3000/static/images/${productImage}`
+    const image = `${baseUrl.BASE_URL}/static/images/${productImage}`
 
     return <View style={styles.singleItemViewContainer}>
         <View style={styles.topContainer}>
@@ -36,7 +39,7 @@ const SingleItemView = ({route}) => {
                 <View style={styles.boxContainer}>
                     <Text style={styles.textElement}>Bar Code</Text>
                     <View style={styles.barCodeContainer}>
-                        <Image style={styles.image} source={''}/>
+                        <Barcode number={barcode}/>
                     </View>
                 </View>
             </View>

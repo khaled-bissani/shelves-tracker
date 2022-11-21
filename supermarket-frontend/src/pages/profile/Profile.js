@@ -23,7 +23,7 @@ const Profile = () => {
         picture: base64Image
     }
 
-    const profilePicture = `http://172.20.10.2:3000/static/images/${profile}`
+    const profilePicture = `${baseUrl.BASE_URL}/static/images/${profile}`
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -42,7 +42,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchData = async() => {
             try {
-                await sendRequest({method:"post",data:values.id,route:`${baseUrl.BASE_URL}/profile/view_picture`})
+                await sendRequest({method:"post",data:{id:userId},route:`${baseUrl.BASE_URL}/profile/view_picture`})
                 .then((res)=>{
                 setProfile(res.picture)})
             } catch (error) {
