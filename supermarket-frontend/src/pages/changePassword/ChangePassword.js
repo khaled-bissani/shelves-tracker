@@ -23,8 +23,7 @@ const ChangePassword = ({navigation}) => {
     }}
     validationSchema={passwordSchema}
     onSubmit={(values,actions)=>{
-        console.log(values)
-        // actions.resetForm();
+        actions.resetForm();
         sendRequest({method:"put",data:values,route:`${baseUrl.BASE_URL}/profile/password`})
         .then((res)=>{
             console.log(res)

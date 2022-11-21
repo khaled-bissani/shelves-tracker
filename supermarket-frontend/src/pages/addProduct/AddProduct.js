@@ -65,7 +65,7 @@ const AddProduct = () => {
         onSubmit={(values, actions) => {
             values.image=base64Image
             values.id=userId
-            values.barcode=barcode
+            values.barcode=number.toString()
             actions.resetForm();
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
             .then((res)=>{

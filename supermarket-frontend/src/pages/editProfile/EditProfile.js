@@ -13,6 +13,7 @@ const EditProfile = ({navigation,route}) => {
     const profilePicture=route.params.profilePicture
 
     const [profile, setProfile] = useState({
+        id:userId,
         full_name:'',
         email:'',
         phone_number:'',
@@ -45,7 +46,7 @@ const EditProfile = ({navigation,route}) => {
     useEffect(() => {
         const fetchData = async() => {
             try {
-                await sendRequest({method:"post",data:userId,route:`${baseUrl.BASE_URL}/profile/view`})
+                await sendRequest({method:"post",data:{id:userId},route:`${baseUrl.BASE_URL}/profile/view`})
                 .then((res)=>{
                 console.log(res)
                 setProfile({
