@@ -22,7 +22,7 @@ const Home = () => {
         const fetchData = async() => {
             try {
                 // Fetching all the categories
-                const allCategories = await sendRequest({method:"post",data:userId,route:`${baseUrl.BASE_URL}/category/all`})
+                const allCategories = await sendRequest({method:"post",data:{id:userId},route:`${baseUrl.BASE_URL}/category/all`})
                 setCategories(allCategories.category)
             } catch (error) {
                 console.log(error)

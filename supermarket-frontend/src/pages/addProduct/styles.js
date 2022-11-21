@@ -15,13 +15,15 @@ export default StyleSheet.create({
         textAlign: 'center',
         color:'red',
         fontWeight: fonts.bold,
-        marginVertical:10
+        marginBottom:15,
+        marginTop:10
     },
     imageContainer: {
         backgroundColor: colors.white,
         width:'75%',
         height:150,
-        borderRadius:10
+        borderRadius:10,
+        marginBottom:50
     },
     image: {
         width:'100%',
@@ -30,6 +32,7 @@ export default StyleSheet.create({
         borderRadius:10
     },
     buttonContainer: {
+        marginTop:25,
         width:'100%',
         alignItems:'center'
     }
