@@ -101,4 +101,32 @@ const updateSingleProduct = async(req,res) => {
     }
 }
 
-module.exports={addProduct, getProduct, getSingleProduct, updateSingleProduct};
+const deleteSingleProduct = async(req,res) =>{
+    const {id, category_id, product_name} = req.body;
+
+    try {
+        const user = await User.findByIdAndUpdate(id,
+            {
+                $pull: {
+                "category.$[outer].products": {
+                    product_name:product_name
+                },
+                }
+            },
+            {
+                arrayFilters: [
+                { "outer._id": category_id}
+            ]
+            }
+        );
+            
+        res.status(200).json(user)
+        
+    } catch (error) {
+        res.status(400).json({
+            message: error.message
+        });
+    }
+}
+
+module.exports={addProduct, getProduct, getSingleProduct, updateSingleProduct, deleteSingleProduct};
