@@ -44,10 +44,6 @@ const Client = () => {
     }, [])
 
     useEffect(() => {
-      console.log(optionSelected)
-    }, [optionSelected])
-
-    useEffect(() => {
         console.log(deleteUser)
         if(deleteUser.length>0){
             handleDelete()
@@ -67,7 +63,7 @@ const Client = () => {
                             return (<option key={item._id} value={item._id}>{item.full_name}</option>)
                         })} 
                     </select>
-                    <Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"} onClick={handleAdd}/>
+                    <Button bgColor="#6EDA79" width="170px" height="46px" name={"ADD"} onClick={handleAdd}/>
                     <Button bgColor="#FF0000" width="170px" height="46px" opacity="0.7" name={"DELETE"} onClick={handleDelete}/>
                 </div> 
                 <div>
