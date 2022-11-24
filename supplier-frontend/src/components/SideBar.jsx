@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { FaTachometerAlt,FaUsers,FaRegCalendarAlt,FaUser,FaSignOutAlt} from "react-icons/fa";
+import { FaTachometerAlt,FaUsers,FaStore,FaUser,FaSignOutAlt} from "react-icons/fa";
 
 const SideBar = () => {
 
@@ -20,8 +20,8 @@ const SideBar = () => {
                 <p>Client</p>
             </Link>
             <Link className={sidebarLinkClass} to={"/expiry"}>
-                <FaRegCalendarAlt style={sidebarIconClass}/>
-                <p>Expiry Date</p>
+                <FaStore style={sidebarIconClass}/>
+                <p>Product</p>
             </Link>
             <Link className={sidebarLinkClass} to={"/profile"}>
                 <FaUser style={sidebarIconClass}/>
