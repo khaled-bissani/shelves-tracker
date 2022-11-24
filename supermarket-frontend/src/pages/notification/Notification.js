@@ -56,7 +56,6 @@ const Notification = () => {
     useEffect(() => {
         // This listener is fired whenever a notification is received while the app is foregrounded
         notificationListener.current = Notifications.addNotificationReceivedListener(response => {
-            console.log(response)
             const message = response.request.content.body;
             setNotifications((notification)=>[...notification,{ single_notification:message}]);
         });
@@ -75,7 +74,6 @@ const Notification = () => {
             }
         }
         if(userId.length>0 && expoPushToken.length>0){
-            console.log(data)
             fetchData()
         }
     }, [userId,expoPushToken]);

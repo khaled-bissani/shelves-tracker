@@ -33,12 +33,12 @@ const ViewMoreCategory = ({navigation}) => {
         </View>
         <ScrollView>
             <View style={styles.itemContainer} >
-        {categories.map((item) => { 
-            return (
-                    <Categories key={item._id} label={item.category} imageUrl={item.image} width={135} height={135} onClick={()=> navigation.navigate('ViewMoreItem', {
-                        categoryId: item._id,
-                        categoryName: item.category
-                    })}/>
+                {categories.map((item) => { 
+                    return (
+                        <Categories key={item._id} label={item.category} imageUrl={item.image} width={135} height={135} onClick={()=> navigation.navigate('ViewMoreItem', {
+                            categoryId: item._id,
+                            categoryName: item.category
+                        })}/>
                     )
                 })}
             </View>
