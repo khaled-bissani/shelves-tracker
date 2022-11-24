@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, Text, View, ScrollView, Pressable } from "react-native";
+import { Image, Text, View, ScrollView, Pressable, Alert } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -48,10 +48,12 @@ const AddCategory = () => {
         onSubmit={(values, actions)=> {
             values.image=base64Image
             values.id=userId
-            actions.resetForm();
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/category/add`})
             .then((res)=>{
                 console.log(res)
+                actions.resetForm();
+                setImage(null)
+                Alert.alert("Confirm","Category added sucessfully")
             })
             .catch((err)=>{
                 console.log(err.response.data)
