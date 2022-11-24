@@ -1,22 +1,7 @@
 const cron = require('node-cron');
 const User = require('../models/users.model');
-const { Expo } = require('expo-server-sdk');
-const sendPushNotification = require('../utilities/pushNotifications');
-
-const notification = async(expoPushToken, message) => {
-    if (Expo.isExpoPushToken(expoPushToken)) {
-        await sendPushNotification(expoPushToken, message);
-    }
-}
-
-const dateDiffInDays = (date1, date2) => {
-    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-    // Discard the time and time-zone information.
-    const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
-    const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
-  
-    return Math.floor((utc2 - utc1) / _MS_PER_DAY);
-}
+const {dateDiffInDays} = require('../utilities/dateDifference')
+const {notification} = require('../utilities/notification')
 
 // Calling the schedule function everyday at midnight
 cron.schedule('0 0 0 * * *', function () {
