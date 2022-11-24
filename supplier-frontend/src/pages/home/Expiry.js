@@ -1,18 +1,47 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import SideBar from '../../components/SideBar'
 import Button from '../../components/Button'
 import InputField from '../../components/InputField'
 import TableHeader from '../../components/TableHeader'
 import Title from '../../components/Title'
 import Popup from 'reactjs-popup'
+import TextInput from '../../components/TextInput'
+import sendRequest from '../../utils/axios'
 
 const Expiry = () => {
 
-    const[name,setName]=useState('')
+    const userId = localStorage.getItem("userId")
+    const [allProducts, setAllProducts] = useState([])
+    const [selectedRow, setSelectedRow] = useState()
+    const [categoryId, setCategoryId] = useState()
+    const [product, setProduct] = useState({
+        product_name:"",
+        quantity_shelf:"",
+        expiry_date:"",
+        image:"",
+        barcode:"",
+        category:"supplier",
+        id:userId
+    })
 
-    const handleChange=(e)=> {
-        setName(e.target.value);
-    }
+    const addProduct = async() => {
+        try {
+            const products = await sendRequest({method:"post",data:product,route:`${process.env.REACT_APP_BASE_URL}/product/add`})
+            setProduct({
+                product_name:"",
+                quantity_shelf:"",
+                expiry_date:"",
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }    
+
+    const handleChange=(e,feild)=> {
+        setProduct({
+          ...product, [`${feild}`]: e.target.value
+        });
+      }
 
     const handleAdd = () =>{
         console.log('Add')
