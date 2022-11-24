@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, Text, TextInput, View, Pressable, ScrollView, Alert } from "react-native";
+import { Image, Text, View, Pressable, ScrollView } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -11,6 +11,7 @@ import AddInputField from "../../components/AddInputField/AddInputField";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import DropDownPicker from 'react-native-dropdown-picker';
 
 const productSchema = yup.object({
     product_name:yup.string().required("Product Name is required"),
@@ -28,6 +29,13 @@ const AddProduct = () => {
     const [image, setImage] = useState(null);
     const [base64Image, setBase64Image] = useState();
     const [userId, setUserId] = useState("");
+
+    const [open, setOpen] = useState(false);
+    const [value, setValue] = useState(null);
+    const [items, setItems] = useState([
+        {label: 'Apple', value: 'apple'},
+        {label: 'Banana', value: 'banana'}
+    ]);
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
@@ -66,14 +74,10 @@ const AddProduct = () => {
             values.image=base64Image
             values.id=userId
             values.barcode=number.toString()
+            actions.resetForm();
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
             .then((res)=>{
                 console.log(res)
-                actions.resetForm();
-                setImage(null)
-                setBarcode(false)
-                setNumber()
-                Alert.alert("Confirm","Product added sucessfully")
             })
             .catch((err)=>{
                 console.log(err.response.data)
@@ -92,14 +96,25 @@ const AddProduct = () => {
                     <Text style={styles.errorText}>{props.touched.product_name && props.errors.product_name}</Text>
 
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
-                    <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>
+                    <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>                    
 
-                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Category'} onBlur={props.handleBlur('category')}/>
-                    <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
+                    <DropDownPicker
+                        listMode="SCROLLVIEW"
+                        searchable={true}
+                        bottomOffset="auto"
+                        containerStyle={styles.containerStyle}
+                        open={open}
+                        value={value}
+                        items={items}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                        setItems={setItems}
+                    />
 
                     <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
                     <Text style={styles.errorText}>{props.touched.expiry_date && props.errors.expiry_date}</Text>
                 </View>
+                
                 {barcode ? <Barcode number={number}/> : null}
                 <View style={styles.buttonContainer}>
                     <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>
