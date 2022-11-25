@@ -129,10 +129,14 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/khaled-bissani/shelves-tracker.git
    ```
+
+For the backend:
+
 2. Navigate to the backend folder (nodejs) and run
    ```sh
    cd backend
    npm install
+   npm start
    ```
 3. In the backend folder create an .env file and include the following
     ```sh
@@ -144,11 +148,15 @@ This is an example of how to list things you need to use the software and how to
 
     JWT_SECRET_KEY = any string fot the jwt
     ```
+
+For the frontend:
+
 4. Navigate to the Supermarket frontend (react native) folder and run
    ```sh
    cd frontend
    cd supermarket-frontend
    npm install
+   npm start
    ```
 5. In the Supermarket frontend folder create an .env file and include the following
     ```sh
@@ -159,12 +167,14 @@ This is an example of how to list things you need to use the software and how to
    cd frontend
    cd supplier-frontend
    npm install
+   npm start
    ```
 7. In the Supplier frontend folder create an .env file and include the following
     ```sh
     REACT_APP_BASE_URL = http://your-ip-address:PORT
     ```
-8. In case of error while using npm
-    ```sh
-    npm install --legacy-peer-deps
-    ```
+
+In case of error while using npm
+```sh
+npm install --legacy-peer-deps
+```
