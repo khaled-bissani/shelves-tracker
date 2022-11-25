@@ -31,9 +31,9 @@
 | Website - Wireframes: |
 | ----------------------|
 
-| Landing  | 
-| -----------------| 
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-landing-page-wireframe.png) |
+| Landing-Signup  | Landing-Login|
+| -----------------| ---|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-landing-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-landing-login-page-wireframe.png)
 
 | Dashboard  | Client  |
 | -----------------| -----|
