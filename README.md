@@ -46,17 +46,17 @@
 | Website - Mockups: |
 | ----------------------|
 
-| Landing  | Dashboard  |
+| Landing-Signup  | Landing-Login|
 | -----------------| -----|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-landing-page-mockup.png) | ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-home-page-mockup.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-landing-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-landing-login-page-mockup.png) |
 
-| Chat  | Client  |
+| Dashboard  | Client  |
 | -----------------| -----|
-| ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Chat-page-mockup.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Client-page-mockup.png) |
+| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-home-page-mockup.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-Client-page-mockup.png) |
 
 | Expiry  | Profile  |
 | -----------------| -----|
-| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/website/Supplier-profile-page-mockup.png) |
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-profile-page-mockup.png) |
 
 | Application - Wireframes: |
 | ----------------------|
