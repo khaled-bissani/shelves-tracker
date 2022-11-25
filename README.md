@@ -123,6 +123,22 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/profile-website.PNG) |
 
+| Application : |
+| ----------------------|
+
+| Landing  | Signup  | Login  | Home  |
+| -----------------| -----|------|------|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/landing-app.jpg) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/signup-app.jpg) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/login-app.jpg) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/home-app.jpg) |
+
+| View-more  | Single-item  | Notification  | Add Category  |
+| -----------------| -----|------|------|
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/view-more-app.jpg) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/single-item-app.jpg) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/notification-app.jpg) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-app.jpg) |
+
+| Add Product  | Profile  | Edit-profile  | Change-password  |
+| -----------------| -----|------|------|
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-app.jpg) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/profile-app.jpg) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/edit-profile-app.jpg) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/change-password-app.jpg) |
+
+
 
 <br><br>
 <img src="./readme/title6.svg"/>
