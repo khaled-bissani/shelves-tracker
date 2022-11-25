@@ -12,6 +12,7 @@ import ExpiryRow from '../../components/ExpiryRow'
 const Expiry = () => {
 
     const userId = localStorage.getItem("userId")
+    const supplierName = localStorage.getItem("supplierName")
     const [allProducts, setAllProducts] = useState([])
     const [selectedRow, setSelectedRow] = useState()
     const [categoryId, setCategoryId] = useState()
@@ -77,7 +78,7 @@ const Expiry = () => {
 
   return (
     <div className='flex'>
-        <SideBar/>
+        <SideBar supplierName={supplierName}/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <Title title={"Product"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>

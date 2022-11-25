@@ -35,7 +35,7 @@ useEffect(() => {
 
 useEffect(() => {
   localStorage.setItem("userInfo", JSON.stringify(profile))
-
+  localStorage.setItem("supplierName", profile.full_name)
 }, [profile])
 
   

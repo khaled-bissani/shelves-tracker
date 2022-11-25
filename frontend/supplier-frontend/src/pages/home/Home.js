@@ -8,6 +8,7 @@ import sendRequest from '../../utils/axios'
 const Home = () => {
 
   const userId = {"id":localStorage.getItem("userId")}
+  const supplierName = localStorage.getItem("supplierName")
   const [data, setData] = useState()
   const [client, setClient] = useState()
   const [product, setProduct] = useState()
@@ -31,7 +32,7 @@ const Home = () => {
 
   return (
     <div className='flex'>
-      <SideBar/>
+      <SideBar supplierName={supplierName}/>
       <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
         <Title title={"Dashboard"}/>
         <div className='flex flex-row justify-evenly items-center w-[900px] h-[120px] bg-[#D9D9D9]'>

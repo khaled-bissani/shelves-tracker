@@ -11,6 +11,7 @@ const Profile = () => {
   const buttonClass=`flex text-black text-[16px] font-sans`
   const iconClass={color: "#3AA346", fontSize:"25px", marginRight:"10px"}
 
+  const supplierName = localStorage.getItem("supplierName")
   const [clicked, setClicked] = useState({
     edit:false,
     password:false
@@ -32,7 +33,7 @@ const Profile = () => {
 
   return (
     <div className='flex'>
-        <SideBar/>
+        <SideBar supplierName={supplierName}/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <Title title={"Profile"}/>
             <div className='flex justify-center w-[900px] h-[420px] bg-[#D9D9D9] rounded-[10px]'>
