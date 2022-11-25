@@ -108,6 +108,22 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 
 > Using the above mentioned tech stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
 
+| Website : |
+| ----------------------|
+
+| Landing-Signup  | Landing-Login|
+| -----------------| ---|
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/signup-website.PNG) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/login-website.PNG)
+
+| Dashboard  | Client  |
+| -----------------| -----|
+| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/dashboard-website.PNG) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/client-website.PNG) |
+
+| Expiry  | Profile  |
+| -----------------| -----|
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/profile-website.PNG) |
+
+
 <br><br>
 <img src="./readme/title6.svg"/>
 
