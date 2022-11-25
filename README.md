@@ -65,28 +65,28 @@
 | -----------------| -----|------|------|
 | ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-landing-page-wireframe.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-signup-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
 
-| View-more  | Single-item  | notification  | Add Category  |
+| View-more  | Single-item  | Notification  | Add Category  |
 | -----------------| -----|------|------|
-| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-view-more-page-wireframe.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-single-page-wireframe.png) | ![notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-notification-page-wireframe.png) | ![category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-category-page-wireframe.png) |
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-view-more-page-wireframe.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-single-page-wireframe.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-notification-page-wireframe.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-category-page-wireframe.png) |
 
 | Add Product  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
-| ![product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-product-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-profile-page-wireframe.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-edit-profile-page-wireframe.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-change-password-page-wireframe.png) |
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-product-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-profile-page-wireframe.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-edit-profile-page-wireframe.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-change-password-page-wireframe.png) |
 
 | Application - Mockups: |
 | ----------------------|
 
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-landing-page-mockup.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-signup-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-login-page-mockup.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-home-page-mockup.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-landing-page-mockup.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-signup-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-login-page-mockup.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-home-page-mockup.png) |
 
-| View-more  | Single-item  | notification  | Chat  |
+| View-more  | Single-item  | Notification  | Add Category  |
 | -----------------| -----|------|------|
-| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-single-page-mockup.png) | ![notification](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page-mockup.png) |
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-single-page-mockup.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-add-category-page-mockup.png) |
 
-| Chat  | Profile  | Edit-profile  | Change-password  |
+| Add Product  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
-| ![Chat](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-Chat-page2-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/readme/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-add-product-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
 
 <br><br>
 
