@@ -103,7 +103,7 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 <br><br>
 <img src="./readme/title5.svg"/>
 
-> Uing the above mentioned tecch stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
+> Using the above mentioned tech stacks and the wireframes build with figma from the user sotries we have, the implementation of the app is shown as below, these are screenshots from the real app
 
 <br><br>
 <img src="./readme/title6.svg"/>
@@ -115,3 +115,53 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/khaled-bissani/shelves-tracker.git
+   ```
+2. Navigate to the backend folder (nodejs) and run
+   ```sh
+   cd backend
+   npm install
+   ```
+3. In the backend folder create an .env file and include the following
+    ```sh
+    PORT = any port number
+
+    IP_ADDRESS = your ip address
+
+    DATABASE_URL = mongodb://localhost:port/databse-name
+
+    JWT_SECRET_KEY = any string fot the jwt
+    ```
+4. Navigate to the Supermarket frontend (react native) folder and run
+   ```sh
+   cd frontend
+   cd supermarket-frontend
+   npm install
+   ```
+5. In the Supermarket frontend folder create an .env file and include the following
+    ```sh
+    BASE_URL = http://your-ip-address:PORT
+    ```
+6. Navigate to the Supplier frontend (react) folder and run
+   ```sh
+   cd frontend
+   cd supplier-frontend
+   npm install
+   ```
+7. In the Supplier frontend folder create an .env file and include the following
+    ```sh
+    REACT_APP_BASE_URL = http://your-ip-address:PORT
+    ```
+8. In case of error while using npm
+    ```sh
+    npm install --legacy-peer-deps
+    ```
