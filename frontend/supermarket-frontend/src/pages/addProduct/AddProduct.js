@@ -90,7 +90,7 @@ const AddProduct = () => {
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
                     <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>                    
 
-                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Quantity'} onBlur={props.handleBlur('category')}/>
+                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Category'} onBlur={props.handleBlur('category')}/>
                     <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
 
                     <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
