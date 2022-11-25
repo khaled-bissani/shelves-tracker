@@ -98,7 +98,10 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 - For the website, this project uses [React](https://reactjs.org/) . React is a JavaScript library for building user interfaces.  React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
 - For the server side, the app uses [NodeJs](https://nodejs.org/)  JavaScript runtime. NodeJS is used for server-side programming, and primarily deployed for non-blocking, event-driven servers, such as traditional web sites and back-end API services.
 - For the NodeJs, the app uses [Express](https://expressjs.com/) framework. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- For database, the app uses the [Mongo](https://www.mongodb.com/) database . MongoDB is a document database used to build highly available and scalable internet applications. With its flexible schema approach, it's popular with development teams using agile methodologies.
+- For database, the app uses the [Mongo](https://www.mongodb.com/) database. MongoDB is a document database used to build highly available and scalable internet applications. With its flexible schema approach, it's popular with development teams using agile methodologies.
+- For the Mongodb, the app uses the [Mongoose](https://mongoosejs.com/) library. Mongoose  is a JavaScript object-oriented programming library that creates a connection between MongoDB and the Node.js JavaScript runtime environment.
+- For the hardware, the app uses the [Arduino](https://www.arduino.cc/). Arduino is an open-source electronics platform based on easy-to-use hardware and software.
+- The component used in the hardware are: [ESP8266 Arduino](https://create.arduino.cc/projecthub/Niv_the_anonymous/esp8266-beginner-tutorial-project-6414c8) / Load Cell sensor (measure the weight) / [HX711](https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all) load cell amplifier / Connecting wires / Breadboard.
 
 <br><br>
 <img src="./readme/title5.svg"/>
