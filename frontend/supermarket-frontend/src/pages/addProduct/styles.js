@@ -5,7 +5,8 @@ export default StyleSheet.create({
     pageContainer: {
         flex:1,
         justifyContent:'space-evenly',
-        alignItems:'center'
+        alignItems:'center',
+        marginTop:25
     },
     inputContainer: {
         width:'100%',

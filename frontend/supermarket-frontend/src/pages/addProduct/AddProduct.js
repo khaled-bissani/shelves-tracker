@@ -11,7 +11,6 @@ import AddInputField from "../../components/AddInputField/AddInputField";
 import sendRequest from "../../utils/axios";
 import baseUrl from "../../../config/env";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import DropDownPicker from 'react-native-dropdown-picker';
 
 const productSchema = yup.object({
     product_name:yup.string().required("Product Name is required"),
@@ -29,13 +28,6 @@ const AddProduct = () => {
     const [image, setImage] = useState(null);
     const [base64Image, setBase64Image] = useState();
     const [userId, setUserId] = useState("");
-
-    const [open, setOpen] = useState(false);
-    const [value, setValue] = useState(null);
-    const [items, setItems] = useState([
-        {label: 'Apple', value: 'apple'},
-        {label: 'Banana', value: 'banana'}
-    ]);
 
     AsyncStorage.getItem('userId').then((value)=> setUserId(value));
 
@@ -98,18 +90,8 @@ const AddProduct = () => {
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
                     <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>                    
 
-                    <DropDownPicker
-                        listMode="SCROLLVIEW"
-                        searchable={true}
-                        bottomOffset="auto"
-                        containerStyle={styles.containerStyle}
-                        open={open}
-                        value={value}
-                        items={items}
-                        setOpen={setOpen}
-                        setValue={setValue}
-                        setItems={setItems}
-                    />
+                    <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Quantity'} onBlur={props.handleBlur('category')}/>
+                    <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
 
                     <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
                     <Text style={styles.errorText}>{props.touched.expiry_date && props.errors.expiry_date}</Text>
