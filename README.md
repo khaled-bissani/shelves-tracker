@@ -143,6 +143,10 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 | -----------------| -----|------|------|
 | ![Signup-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/signup-validation.jpg) | ![Login-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/login-validation.jpg) | ![Category-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-vlidation.jpg) | ![Product-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-validation.jpg) |
 
+| Wrong username or password | Category Confirmation  |  Product Confirmation |
+| -----------------| -----|------|
+| ![Wrong](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/wrong-login.jpg) | ![Category-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-confirmation.jpg) | ![Product-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-confirmation.jpg) |
+
 
 | Hardware : |
 | ----------------------|
