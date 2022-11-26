@@ -92,7 +92,7 @@
 
 <img src="./readme/title4.svg"/>
 
-Here's a brief high-level overview of the tech stack the Well app uses:
+Here's a brief high-level overview of the tech stack the Shelves Tracker app uses:
 
 - This project uses [Expo React Native](https://expo.dev/). Expo is a toolchain built around React Native to help you quickly start an app. It provides a set of tools that simplify the development and testing of React Native app and arms you with the components of users interface and services that are usually available in third-party native React Native components.
 - For the website, this project uses [React](https://reactjs.org/) . React is a JavaScript library for building user interfaces.  React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
