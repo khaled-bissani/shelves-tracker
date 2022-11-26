@@ -83,6 +83,7 @@ void loop() {
     Serial.print(scale.get_units(), 1);
     Serial.print("\t| average:\t");
     Serial.println(scale.get_units(10), 5);
+    quantity=scale.get_units(10)
 
     scale.power_down(); 
     delay(5000);
