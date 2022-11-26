@@ -124,9 +124,9 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/profile-website.PNG) |
 
-| Website Implementation : |
+| Dashboard Implementation : |
 | ----------------------|
-| ![Website](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/chart.gif) |
+| ![Dashbord](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/chart.gif) |
 
 | Application : |
 | ----------------------|
@@ -150,6 +150,10 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 | Wrong username or password | Category Confirmation  |  Product Confirmation |
 | -----------------| -----|------|
 | ![Wrong](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/wrong-login.jpg) | ![Category-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-confirmation.jpg) | ![Product-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-confirmation.jpg) |
+
+| Home Implementation | Single View Implementation  |  Notification Implementation |
+| -----------------| -----|------|
+| ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/home.gif) | ![Single-view](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/single-item.gif) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/notification.gif) |
 
 
 | Hardware : |
