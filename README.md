@@ -140,6 +140,17 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 | ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-app.jpg) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/profile-app.jpg) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/edit-profile-app.jpg) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/change-password-app.jpg) |
 
 
+| Hardware : |
+| ----------------------|
+
+| Board  | Load Cell  |
+| -----------------| -----|
+| ![Board](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/arduino-board.jpg) | ![LoadCell](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/load-cell.jpg) |
+
+| Arduino Implementation  |
+| ----------------------|
+| ![Arduino](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/arduino.gif)  |
+
 
 <br><br>
 <img src="./readme/title6.svg"/>
