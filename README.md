@@ -124,6 +124,10 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 | -----------------| -----|
 | ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/profile-website.PNG) |
 
+| Website Implementation : |
+| ----------------------|
+| ![Website](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/chart.gif) |
+
 | Application : |
 | ----------------------|
 
