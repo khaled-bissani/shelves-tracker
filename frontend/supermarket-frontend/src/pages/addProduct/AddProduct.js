@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, Text, View, Pressable, ScrollView } from "react-native";
+import { Image, Text, View, Pressable, ScrollView, Alert } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -70,6 +70,11 @@ const AddProduct = () => {
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
             .then((res)=>{
                 console.log(res)
+                actions.resetForm();
+                setImage(null)
+                setBarcode(false)
+                setNumber()
+                Alert.alert("Confirm","Product added sucessfully")
             })
             .catch((err)=>{
                 console.log(err.response.data)
