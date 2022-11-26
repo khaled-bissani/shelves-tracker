@@ -8,6 +8,7 @@ import sendRequest from '../../utils/axios'
 
 const Client = () => {
 
+    const supplierName = localStorage.getItem("supplierName")
     const [user, setUser] = useState([])
     const [optionSelected, setOptionSelected] = useState()
     const [displayed, setdisplayed] = useState([])
@@ -52,7 +53,7 @@ const Client = () => {
     
   return (
     <div className='flex'>
-        <SideBar/>
+        <SideBar supplierName={supplierName}/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <Title title={"Client"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>

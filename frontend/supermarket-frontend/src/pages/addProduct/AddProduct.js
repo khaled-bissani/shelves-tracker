@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, Text, TextInput, View, Pressable, ScrollView } from "react-native";
+import { Image, Text, View, Pressable, ScrollView, Alert } from "react-native";
 import { colors } from "../../constants/palette";
 import * as ImagePicker from 'expo-image-picker';
 import Buttons from "../../components/Button/Buttons";
@@ -70,6 +70,11 @@ const AddProduct = () => {
             sendRequest({method:"post",data:values,route:`${baseUrl.BASE_URL}/product/add`})
             .then((res)=>{
                 console.log(res)
+                actions.resetForm();
+                setImage(null)
+                setBarcode(false)
+                setNumber()
+                Alert.alert("Confirm","Product added sucessfully")
             })
             .catch((err)=>{
                 console.log(err.response.data)
@@ -88,7 +93,7 @@ const AddProduct = () => {
                     <Text style={styles.errorText}>{props.touched.product_name && props.errors.product_name}</Text>
 
                     <AddInputField value={props.values.quantity_shelf} onChange={props.handleChange('quantity_shelf')} placeholder={'Product Quantity'} onBlur={props.handleBlur('quantity_shelf')}/>
-                    <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>
+                    <Text style={styles.errorText}>{props.touched.quantity_shelf && props.errors.quantity_shelf}</Text>                    
 
                     <AddInputField value={props.values.category} onChange={props.handleChange('category')} placeholder={'Product Category'} onBlur={props.handleBlur('category')}/>
                     <Text style={styles.errorText}>{props.touched.category && props.errors.category}</Text>
@@ -96,6 +101,7 @@ const AddProduct = () => {
                     <AddInputField value={props.values.expiry_date} onChange={props.handleChange('expiry_date')} placeholder={'Product Expiry Date'} onBlur={props.handleBlur('expiry_date')}/>
                     <Text style={styles.errorText}>{props.touched.expiry_date && props.errors.expiry_date}</Text>
                 </View>
+                
                 {barcode ? <Barcode number={number}/> : null}
                 <View style={styles.buttonContainer}>
                     <Buttons text={'GENERATE BARCODE'} color={colors.primary} onClick={showBarcode}/>

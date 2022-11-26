@@ -12,6 +12,7 @@ import ExpiryRow from '../../components/ExpiryRow'
 const Expiry = () => {
 
     const userId = localStorage.getItem("userId")
+    const supplierName = localStorage.getItem("supplierName")
     const [allProducts, setAllProducts] = useState([])
     const [selectedRow, setSelectedRow] = useState()
     const [categoryId, setCategoryId] = useState()
@@ -77,14 +78,14 @@ const Expiry = () => {
 
   return (
     <div className='flex'>
-        <SideBar/>
+        <SideBar supplierName={supplierName}/>
         <div className='flex flex-col justify-between mt-[90px] mb-[60px] mx-[100px]'>
             <Title title={"Product"}/>
             <div className='flex flex-col justify-between w-[900px] h-[420px]'>
                 <div className='flex justify-evenly w-full'>
                     <InputField placeholder={"Product Name"} value={selectedRow}/>
                     
-                    <Popup contentStyle={{background: '#3AA346', width: '500px', height:'430px', borderRadius: '10px'}} position='center center' overlayStyle={{background: 'rgba(0,0,0,0.5)' }} modal={true} trigger={<Button bgColor="#3AA346" width="170px" height="46px" name={"ADD"}/>} >
+                    <Popup contentStyle={{background: '#3AA346', width: '500px', height:'430px', borderRadius: '10px'}} position='center center' overlayStyle={{background: 'rgba(0,0,0,0.5)' }} modal={true} trigger={<Button bgColor="#6EDA79" width="170px" height="46px" name={"ADD"}/>} >
                     {close => (
                         <div>
                             <div className='flex justify-end mt-1 mr-6'>
