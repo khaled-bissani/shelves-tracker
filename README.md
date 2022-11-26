@@ -102,6 +102,7 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 - For the Mongodb, the app uses the [Mongoose](https://mongoosejs.com/) library. Mongoose  is a JavaScript object-oriented programming library that creates a connection between MongoDB and the Node.js JavaScript runtime environment.
 - For the hardware, the app uses the [Arduino](https://www.arduino.cc/). Arduino is an open-source electronics platform based on easy-to-use hardware and software.
 - The component used in the hardware are: [ESP8266 Arduino](https://create.arduino.cc/projecthub/Niv_the_anonymous/esp8266-beginner-tutorial-project-6414c8) / Load Cell sensor (measure the weight) / [HX711](https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all) load cell amplifier / Connecting wires / Breadboard.
+- For the design, the app uses [Figma](https://www.figma.com/) application. Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows.
 
 <br><br>
 <img src="./readme/title5.svg"/>
