@@ -33,60 +33,60 @@
 
 | Landing-Signup  | Landing-Login|
 | -----------------| ---|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-landing-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-landing-login-page-wireframe.png)
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-landing-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-landing-login-page-wireframe.png)
 
 | Dashboard  | Client  |
 | -----------------| -----|
-| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-home-page-wireframe.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-Client-page-wireframe.png) |
+| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-home-page-wireframe.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-Client-page-wireframe.png) |
 
 | Expiry  | Profile  |
 | -----------------| -----|
-| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-Expiry-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/website/Supplier-profile-page-wireframe.png) |
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-Expiry-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/website/Supplier-profile-page-wireframe.png) |
 
 | Website - Mockups: |
 | ----------------------|
 
 | Landing-Signup  | Landing-Login|
 | -----------------| -----|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-landing-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-landing-login-page-mockup.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-landing-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-landing-login-page-mockup.png) |
 
 | Dashboard  | Client  |
 | -----------------| -----|
-| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-home-page-mockup.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-Client-page-mockup.png) |
+| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-home-page-mockup.png) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-Client-page-mockup.png) |
 
 | Expiry  | Profile  |
 | -----------------| -----|
-| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/website/Supplier-profile-page-mockup.png) |
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-Expiry-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/website/Supplier-profile-page-mockup.png) |
 
 | Application - Wireframes: |
 | ----------------------|
 
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-landing-page-wireframe.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-signup-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-landing-page-wireframe.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-signup-page-wireframe.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-login-page-wireframe.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-home-page-wireframe.png) |
 
 | View-more  | Single-item  | Notification  | Add Category  |
 | -----------------| -----|------|------|
-| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-view-more-page-wireframe.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-single-page-wireframe.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-notification-page-wireframe.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-category-page-wireframe.png) |
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-view-more-page-wireframe.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-single-page-wireframe.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-notification-page-wireframe.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-add-category-page-wireframe.png) |
 
 | Add Product  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
-| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-add-product-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-profile-page-wireframe.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-edit-profile-page-wireframe.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/wireframes/application/Supermarket-change-password-page-wireframe.png) |
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-add-product-page-wireframe.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-profile-page-wireframe.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-edit-profile-page-wireframe.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/wireframes/application/Supermarket-change-password-page-wireframe.png) |
 
 | Application - Mockups: |
 | ----------------------|
 
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-landing-page-mockup.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-signup-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-login-page-mockup.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-home-page-mockup.png) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-landing-page-mockup.png) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-signup-page-mockup.png) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-login-page-mockup.png) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-home-page-mockup.png) |
 
 | View-more  | Single-item  | Notification  | Add Category  |
 | -----------------| -----|------|------|
-| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-single-page-mockup.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-add-category-page-mockup.png) |
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-view-more-page-mockup.png) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-single-page-mockup.png) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-notification-page-mockup.png) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-add-category-page-mockup.png) |
 
 | Add Product  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
-| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-add-product-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-add-product-page-mockup.png) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-profile-page-mockup.png) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-edit-profile-page-mockup.png) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/mockups/application/Supermarket-change-password-page-mockup.png) |
 
 <br><br>
 
@@ -114,46 +114,46 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 
 | Landing-Signup  | Landing-Login|
 | -----------------| ---|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/signup-website.PNG) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/login-website.PNG)
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/signup-website.PNG) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/login-website.PNG)
 
 | Dashboard  | Client  |
 | -----------------| -----|
-| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/dashboard-website.PNG) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/client-website.PNG) |
+| ![Dashboard](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/dashboard-website.PNG) | ![Client](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/client-website.PNG) |
 
 | Expiry  | Profile  |
 | -----------------| -----|
-| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/website/profile-website.PNG) |
+| ![Expiry](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/product-website.PNG) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/website/profile-website.PNG) |
 
 | Dashboard Implementation : |
 | ----------------------|
-| ![Dashbord](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/chart.gif) |
+| ![Dashbord](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/video/chart.gif) |
 
 | Application : |
 | ----------------------|
 
 | Landing  | Signup  | Login  | Home  |
 | -----------------| -----|------|------|
-| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/landing-app.jpg) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/signup-app.jpg) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/login-app.jpg) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/home-app.jpg) |
+| ![Landing](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/landing-app.jpg) | ![Signup](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/signup-app.jpg) | ![Login](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/login-app.jpg) | ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/home-app.jpg) |
 
 | View-more  | Single-item  | Notification  | Add Category  |
 | -----------------| -----|------|------|
-| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/view-more-app.jpg) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/single-item-app.jpg) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/notification-app.jpg) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-app.jpg) |
+| ![View-more](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/view-more-app.jpg) | ![Single-item](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/single-item-app.jpg) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/notification-app.jpg) | ![Category](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-category-app.jpg) |
 
 | Add Product  | Profile  | Edit-profile  | Change-password  |
 | -----------------| -----|------|------|
-| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-app.jpg) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/profile-app.jpg) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/edit-profile-app.jpg) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/change-password-app.jpg) |
+| ![Product](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-product-app.jpg) | ![Profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/profile-app.jpg) | ![Edit-profile](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/edit-profile-app.jpg) | ![Change-password](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/change-password-app.jpg) |
 
 | Signup Validation | Login Validation  | Add Category Validation | Add Product Validation |
 | -----------------| -----|------|------|
-| ![Signup-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/signup-validation.jpg) | ![Login-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/login-validation.jpg) | ![Category-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-vlidation.jpg) | ![Product-validation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-validation.jpg) |
+| ![Signup-validation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/signup-validation.jpg) | ![Login-validation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/login-validation.jpg) | ![Category-validation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-category-vlidation.jpg) | ![Product-validation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-product-validation.jpg) |
 
 | Wrong username or password | Category Confirmation  |  Product Confirmation |
 | -----------------| -----|------|
-| ![Wrong](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/wrong-login.jpg) | ![Category-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-category-confirmation.jpg) | ![Product-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/application/add-product-confirmation.jpg) |
+| ![Wrong](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/wrong-login.jpg) | ![Category-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-category-confirmation.jpg) | ![Product-confirmation](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/application/add-product-confirmation.jpg) |
 
 | Home Implementation | Single View Implementation  |  Notification Implementation |
 | -----------------| -----|------|
-| ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/home.gif) | ![Single-view](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/single-item.gif) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/video/notification.gif) |
+| ![Home](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/video/home.gif) | ![Single-view](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/video/single-item.gif) | ![Notification](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/video/notification.gif) |
 
 
 | Hardware : |
@@ -161,11 +161,11 @@ Here's a brief high-level overview of the tech stack the Shelves Tracker app use
 
 | Board  | Load Cell  |
 | -----------------| -----|
-| ![Board](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/arduino-board.jpg) | ![LoadCell](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/load-cell.jpg) |
+| ![Board](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/arduino/arduino-board.jpg) | ![LoadCell](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/arduino/load-cell.jpg) |
 
 | Arduino Implementation  |
 | ----------------------|
-| ![Arduino](https://github.com/khaled-bissani/shelves-tracker/blob/develop/readme/implementation/arduino/arduino.gif)  |
+| ![Arduino](https://github.com/khaled-bissani/shelves-tracker/blob/master/readme/implementation/arduino/arduino.gif)  |
 
 
 <br><br>
